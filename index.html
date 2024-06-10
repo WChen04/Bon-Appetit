@@ -3,53 +3,111 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./script.js"></script>
+    <script src="./dropdown.js"></script>
     <title>Yelp API Call via Proxy</title>
   </head>
   <body>
-    <script>
-      const ENDPOINT = "http://localhost:3000/api/yelp";
-
-      // Define parameters for the search
-      const PARAMETERS = {
-        term: "food",
-        location: "Troy, New York",
-        limit: 50,
-        open_now: true,
-      };
-
-      // Construct the URL with parameters
-      const url = new URL(ENDPOINT);
-      Object.keys(PARAMETERS).forEach((key) =>
-        url.searchParams.append(key, PARAMETERS[key])
-      );
-
-      // Make the request to the Yelp API via the proxy server
-      fetch(url)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(
-              "Network response was not ok " + response.statusText
-            );
-          }
-          return response.json();
-        })
-        .then((data) => {
-          console.log(data); // Handle the response data
-          // For example, you can display the results on the web page
-          const resultsContainer = document.createElement("div");
-          data.businesses.forEach((business) => {
-            const businessDiv = document.createElement("div");
-            businessDiv.innerHTML = `<h3>${business.name}</h3><p>${business.location.address1}</p><p>Rating: ${business.rating}</p><img src="${business.image_url}" style="width:50%"></img><p>Phone:${business.display_phone}</p>`;
-            resultsContainer.appendChild(businessDiv);
-          });
-          document.body.appendChild(resultsContainer);
-        })
-        .catch((error) => {
-          console.error(
-            "There has been a problem with your fetch operation:",
-            error
-          );
-        });
-    </script>
+    <header>
+      <div class="BA">
+        <img id="logo" src="./imgs/BA_Logo.png" alt="#" />
+        <h1>Bon Appetit</h1>
+      </div>
+      <div class="tabs">
+        <a id="aboutus" href="./aboutus.html"><h1>About Us</h1></a>
+        <h1>Location</h1>
+        <h1>Name</h1>
+        <img id="profile" src="./imgs/default.png" alt="#" />
+      </div>
+    </header>
+    <div class="filters">
+      <div class="dropdown">
+        <button class="dropbtn">Distance</button>
+        <div class="dropdown-content">
+          <label
+            ><input type="checkbox" name="distance" value="1km" /> 1 km</label
+          >
+          <label
+            ><input type="checkbox" name="distance" value="5km" /> 5 km</label
+          >
+          <label
+            ><input type="checkbox" name="distance" value="10km" /> 10 km</label
+          >
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Cuisine</button>
+        <div class="dropdown-content">
+          <label
+            ><input type="checkbox" name="cuisine" value="Italian" />
+            Italian</label
+          >
+          <label
+            ><input type="checkbox" name="cuisine" value="Chinese" />
+            Chinese</label
+          >
+          <label
+            ><input type="checkbox" name="cuisine" value="Indian" />
+            Indian</label
+          >
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Rating</button>
+        <div class="dropdown-content">
+          <label
+            ><input type="checkbox" name="rating" value="1" /> 1 Star</label
+          >
+          <label
+            ><input type="checkbox" name="rating" value="2" /> 2 Stars</label
+          >
+          <label
+            ><input type="checkbox" name="rating" value="3" /> 3 Stars</label
+          >
+          <label
+            ><input type="checkbox" name="rating" value="4" /> 4 Stars</label
+          >
+          <label
+            ><input type="checkbox" name="rating" value="5" /> 5 Stars</label
+          >
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Price</button>
+        <div class="dropdown-content">
+          <label><input type="checkbox" name="price" value="$" />$</label>
+          <label><input type="checkbox" name="price" value="$$" />$$</label>
+          <label><input type="checkbox" name="price" value="$$$" />$$$</label>
+          <label><input type="checkbox" name="price" value="$$$$" />$$$$</label>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Opening Times</button>
+        <div class="dropdown-content">
+          <label
+            ><input type="checkbox" name="opening" value="Morning" />
+            Morning</label
+          >
+          <label
+            ><input type="checkbox" name="opening" value="Afternoon" />
+            Afternoon</label
+          >
+          <label
+            ><input type="checkbox" name="opening" value="Evening" />
+            Evening</label
+          >
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Delivery</button>
+        <div class="dropdown-content">
+          <label
+            ><input type="checkbox" name="delivery" value="Yes" /> Yes</label
+          >
+          <label><input type="checkbox" name="delivery" value="No" /> No</label>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
