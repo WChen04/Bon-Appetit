@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+header {
+  background-color: #fbf9f5;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.BA {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#logo {
+  width: 10vh;
+  margin: 0 1em 0 1em;
+}
+.tabs {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1em;
+}
+#aboutus {
+  text-decoration: none;
+  color: black;
+}
+#profile {
+  width: 5vh;
+  border-radius: 20em;
+}
+.filters {
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  justify-content: space-evenly;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  color: white;
+  background-color: black;
+  z-index: 1;
+}
