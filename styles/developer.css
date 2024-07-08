@@ -305,11 +305,8 @@ button a {
   justify-content: space-evenly;
 }
 #CompanyName {
-  font-size: 2em;
-  color: white;
   text-decoration: none;
-  align-items: center;
-  justify-content: space-around;
+  color: black;
 }
 .timeline {
   font-family: "Poppins", sans-serif;
