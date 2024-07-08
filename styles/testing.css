@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+iframe {
+  border: none;
+  height: 65vh;
+  width: 100%;
+}
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  background-color: #fbf9f5;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 75%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 1.5em;
+  width: 5em;
+  margin: 0 0.5em;
+  background-color: #bbb;
+  border-radius: 1em;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  animation: slideInFromLeft 0.5s ease forwards;
+}
+.dots {
+  background-color: #d4d4ea;
+  border-radius: 1em;
+  height: 2.5em;
+  width: 35%;
+  margin: 2em;
+  justify-content: center;
+  align-content: center;
+  animation: slideInFromLeft 0.5s ease forwards;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+header {
+  background-color: #fbf9f5;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.BA {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  animation: slideInFromLeft 0.5s ease forwards;
+}
+#logo {
+  width: 10vh;
+  margin: 0 1em 0 1em;
+}
+.tabs {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1em;
+  animation: slideIn 0.5s ease forwards;
+}
+#aboutus {
+  text-decoration: none;
+  color: black;
+}
+#profile {
+  width: 5vh;
+  border-radius: 20em;
+}
+.body-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#list {
+  width: 30%;
+  margin: 2em;
+  animation: slideIn 0.5s ease forwards;
+}
+#modeToggle {
+  /* position: fixed; */
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#modeToggle {
+  animation: slideIn 0.5s ease forwards;
+}
