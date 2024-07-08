@@ -47,8 +47,8 @@
   border-radius: 50%;
   cursor: pointer;
   border: 0;
-  background: radial-gradient(#fdcf3b 50%, #d88a40 85%);
-  color: #c66e16;
+  background: radial-gradient(#b1cfe3 50%, #68aede 85%);
+  color: #080401;
   text-transform: uppercase;
   font-size: 1.8em;
   letter-spacing: 0.1em;
@@ -60,6 +60,7 @@ img {
   top: 45%;
   right: -8%;
 }
+
 #final-value {
   font-size: 1.5em;
   text-align: center;
