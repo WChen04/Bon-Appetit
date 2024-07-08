@@ -9,38 +9,45 @@
     <title>Bon Appetit Wheel</title>
   </head>
   <body>
-    <canvas id="canvas" width="500" height="500"></canvas>
-    <button id="spinButton" onclick="startSpin()">Spin the Wheel</button>
+    <div class="wheel-container">
+      <div class="triangle-pointer"></div>
+      <canvas id="canvas" width="500" height="500"></canvas>
+      <button id="spinButton" onclick="startSpin()">Spin</button>
+    </div>
     <script>
         let myWheel = new Winwheel({
             'canvasId'    : 'canvas',
             'numSegments' : 4,
             'segments'    : [
-                {'fillStyle' : '#eae56f', 'text' : 'Segment 1'},
-                {'fillStyle' : '#89f26e', 'text' : 'Segment 2'},
-                {'fillStyle' : '#7de6ef', 'text' : 'Segment 3'},
-                {'fillStyle' : '#e7706f', 'text' : 'Segment 4'}
+              {'fillStyle' : '#eae56f', 'text' : 'Segment 1'},
+              {'fillStyle' : '#89f26e', 'text' : 'Segment 2'},
+              {'fillStyle' : '#7de6ef', 'text' : 'Segment 3'},
+              {'fillStyle' : '#e7706f', 'text' : 'Segment 4'}
             ],
             'animation' : {
-                'type'     : 'spinToStop',
-                'duration' : 5,
-                'spins'    : 8,
-                'callbackFinished' : 'resetWheel()'
+              'type'     : 'spinToStop',
+              'duration' : 5,
+              'spins'    : 8,
+              'callbackFinished' : alertPrize
             }
         });
 
         function startSpin() {
-            console.log('Spin button clicked');
-            myWheel.startAnimation();
-            document.getElementById('spinButton').disabled = true;
+          myWheel.startAnimation();
+          document.getElementById('spinButton').disabled = true;
+        }
+
+        function alertPrize() {
+          let winningSegment = myWheel.getIndicatedSegment();
+          window.alert('Congratulations! You have won: ' + winningSegment.text);
+          resetWheel();
         }
 
         function resetWheel() {
-            console.log('Spin complete, resetting wheel');
-            myWheel.stopAnimation(false);
-            myWheel.rotationAngle = 0;
-            myWheel.draw();
-            document.getElementById('spinButton').disabled = false;
+          myWheel.stopAnimation(false);
+          myWheel.rotationAngle = 0;
+          myWheel.draw();
+          document.getElementById('spinButton').disabled = false;
         }
     </script>
   </body>

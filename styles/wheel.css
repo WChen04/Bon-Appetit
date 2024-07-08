@@ -7,3 +7,45 @@ body {
     rgba(0, 212, 255, 1) 100%
   );
 }
+
+.triangle-pointer {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 30px solid rgb(233, 176, 255); /* Flip the triangle */
+  position: absolute;
+  top: -10px; /* Adjust this value to position the triangle correctly */
+  left: 230px; /* Adjust this value to position the triangle correctly */
+  z-index: 10; /* Ensure the triangle is above the canvas */
+}
+.wheel-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+}
+
+#spinButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f1bef9;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+}
+#spinButton:disabled {
+  background-color: #bc65a9;
+}
