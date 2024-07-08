@@ -1,0 +1,26 @@
+h1 {
+  color: red;
+}
+body {
+  background: hsla(16, 100%, 76%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(16, 100%, 76%, 1) 0%,
+    hsla(49, 100%, 81%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(16, 100%, 76%, 1) 0%,
+    hsla(49, 100%, 81%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(16, 100%, 76%, 1) 0%,
+    hsla(49, 100%, 81%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFA585", endColorstr="#FFEDA0", GradientType=1 );
+}
