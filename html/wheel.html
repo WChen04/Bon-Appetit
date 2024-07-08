@@ -4,36 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/wheel.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="../js/Winwheel.js"></script>
-    <title>Document</title>
+    <title>Bon Appetit Wheel</title>
   </head>
   <body>
-    <h1>WHEEL</h1>
     <canvas id="canvas" width="500" height="500"></canvas>
-    <button onclick="startSpin()">Spin the Wheel</button>
+    <button id="spinButton" onclick="startSpin()">Spin the Wheel</button>
     <script>
-      let myWheel = new Winwheel({
-        'canvasId'    : 'canvas',
-        'numSegments' : 4,
-        'segments'    :
-        [
-            {'fillStyle' : '#eae56f', 'text' : 'Segment 1'},
-            {'fillStyle' : '#89f26e', 'text' : 'Segment 2'},
-            {'fillStyle' : '#7de6ef', 'text' : 'Segment 3'},
-            {'fillStyle' : '#e7706f', 'text' : 'Segment 4'}
-        ],
-        'animation' :
-        {
-            'type'     : 'spinToStop',
-            'duration' : 5,
-            'spins'    : 8,
-        }
-      });
+        let myWheel = new Winwheel({
+            'canvasId'    : 'canvas',
+            'numSegments' : 4,
+            'segments'    : [
+                {'fillStyle' : '#eae56f', 'text' : 'Segment 1'},
+                {'fillStyle' : '#89f26e', 'text' : 'Segment 2'},
+                {'fillStyle' : '#7de6ef', 'text' : 'Segment 3'},
+                {'fillStyle' : '#e7706f', 'text' : 'Segment 4'}
+            ],
+            'animation' : {
+                'type'     : 'spinToStop',
+                'duration' : 5,
+                'spins'    : 8,
+                'callbackFinished' : 'resetWheel()'
+            }
+        });
 
-      // Function to spin the wheel
-      function startSpin() {
-        myWheel.startAnimation();
-      }
+        function startSpin() {
+            console.log('Spin button clicked');
+            myWheel.startAnimation();
+            document.getElementById('spinButton').disabled = true;
+        }
+
+        function resetWheel() {
+            console.log('Spin complete, resetting wheel');
+            myWheel.stopAnimation(false);
+            myWheel.rotationAngle = 0;
+            myWheel.draw();
+            document.getElementById('spinButton').disabled = false;
+        }
     </script>
   </body>
 </html>
