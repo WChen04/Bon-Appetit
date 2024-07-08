@@ -8,26 +8,23 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>WHEEL</h1>
     <canvas id="canvas" width="500" height="500"></canvas>
     <button onclick="startSpin()">Spin the Wheel</button>
     <script>
       let myWheel = new Winwheel({
-        'canvasId'    : 'canvas',
-        'numSegments' : 4,
-        'segments'    :
-        [
-            {'fillStyle' : '#eae56f', 'text' : 'Segment 1'},
-            {'fillStyle' : '#89f26e', 'text' : 'Segment 2'},
-            {'fillStyle' : '#7de6ef', 'text' : 'Segment 3'},
-            {'fillStyle' : '#e7706f', 'text' : 'Segment 4'}
+        canvasId: "canvas",
+        numSegments: 4,
+        segments: [
+          { fillStyle: "#eae56f", text: "Segment 1" },
+          { fillStyle: "#89f26e", text: "Segment 2" },
+          { fillStyle: "#7de6ef", text: "Segment 3" },
+          { fillStyle: "#e7706f", text: "Segment 4" },
         ],
-        'animation' :
-        {
-            'type'     : 'spinToStop',
-            'duration' : 5,
-            'spins'    : 8,
-        }
+        animation: {
+          type: "spinToStop",
+          duration: 5,
+          spins: 8,
+        },
       });
 
       // Function to spin the wheel
