@@ -15,7 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const restaurantItem = document.createElement('div');
             restaurantItem.className = 'restaurant-item';
             restaurantItem.textContent = restaurant.name;
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.name = 'add-to-list';
+
+            restaurantItem.appendChild(checkbox);
             restaurantList.appendChild(restaurantItem);
+
+            restaurantItem.addEventListener('click', (event) => {
+                if (event.target !== checkbox) {
+                    checkbox.checked = !checkbox.checked;
+                }
+            });
         });
     }
 
