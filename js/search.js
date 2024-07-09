@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.name = 'add-to-list';
-            checkbox.id = `checkbox-${restaurant.name.replace(/\s+/g, '-')}`; // Unique ID for each checkbox
+            checkbox.id = `checkbox-${restaurant.name.replace(/\s+/g, '-')}`;
             checkbox.addEventListener('change', () => {
                 const listFrame = parent.document.getElementById('list').contentWindow;
                 if (checkbox.checked) {
@@ -72,26 +72,19 @@ document.addEventListener('DOMContentLoaded', () => {
     searchBar.addEventListener('input', filterRestaurants);
     filters.forEach(filter => filter.addEventListener('change', filterRestaurants));
 
-    // Handle removeRestaurant event
     window.addEventListener('message', (event) => {
         if (event.origin !== window.location.origin) {
             return;
         }
 
         if (event.data && event.data.type === 'removeRestaurant') {
-            console.log(`Removing restaurant: ${event.data.name}`); // Debugging
             const checkboxId = `checkbox-${event.data.name.replace(/\s+/g, '-')}`;
-            console.log(`Checkbox ID: ${checkboxId}`); // Debugging
             const checkbox = document.getElementById(checkboxId);
             if (checkbox) {
-                console.log(`Unchecking checkbox with ID: ${checkboxId}`); // Debugging
                 checkbox.checked = false;
-            } else {
-                console.log(`Checkbox with ID: ${checkboxId} not found`); // Debugging
             }
         }
     });
 
-    // Initial display
     displayRestaurants(restaurants);
 });
