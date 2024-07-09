@@ -1,26 +1,23 @@
 h1 {
   color: red;
 }
-body {
-  background: hsla(16, 100%, 76%, 1);
 
+body {
   background: linear-gradient(
     90deg,
     hsla(16, 100%, 76%, 1) 0%,
     hsla(49, 100%, 81%, 1) 100%
   );
+}
 
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(16, 100%, 76%, 1) 0%,
-    hsla(49, 100%, 81%, 1) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    90deg,
-    hsla(16, 100%, 76%, 1) 0%,
-    hsla(49, 100%, 81%, 1) 100%
-  );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFA585", endColorstr="#FFEDA0", GradientType=1 );
+.minus-button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 2px 5px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1;
 }

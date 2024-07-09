@@ -1,55 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/list.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-    <h1>norrrr</h1>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/list.css">
+    <title>Restaurant List</title>
+    <style>
+        .minus-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selected Restaurants</h1>
+    <div id="selectedRestaurants"></div>
+    <script>
+        window.addEventListener('message', (event) => {
+            if (event.origin !== window.location.origin) {
+                return;
+            }
+
+            if (event.data && event.data.type === 'addRestaurant') {
+                addRestaurantToList(event.data.name);
+            } else if (event.data && event.data.type === 'removeRestaurant') {
+                removeRestaurantFromList(event.data.name);
+            }
+        });
+
+        function addRestaurantToList(restaurantName) {
+            const selectedRestaurantsContainer = document.getElementById('selectedRestaurants');
+            const restaurantItem = document.createElement('div');
+            restaurantItem.className = 'restaurant-item';
+            restaurantItem.style.display = 'flex';
+            restaurantItem.style.alignItems = 'center';
+            restaurantItem.style.justifyContent = 'space-between';
+            restaurantItem.style.padding = '10px';
+            restaurantItem.style.border = '1px solid #ccc';
+            restaurantItem.style.borderRadius = '5px';
+            restaurantItem.style.borderColor = 'black';
+            restaurantItem.style.marginBottom = '5px';
+            restaurantItem.style.cursor = 'pointer';
+            restaurantItem.style.backgroundColor = '#f9f9f9';
+
+            const nameSpan = document.createElement('span');
+            nameSpan.textContent = restaurantName;
+
+            const minusButton = document.createElement('button');
+            minusButton.className = 'minus-button';
+            minusButton.textContent = '-';
+            minusButton.addEventListener('click', () => {
+                selectedRestaurantsContainer.removeChild(restaurantItem);
+                const searchFrame = parent.document.getElementById('searchFrame').contentWindow;
+                searchFrame.postMessage({ type: 'removeRestaurant', name: restaurantName }, '*');
+            });
+
+            restaurantItem.appendChild(nameSpan);
+            restaurantItem.appendChild(minusButton);
+            selectedRestaurantsContainer.appendChild(restaurantItem);
+        }
+
+        function removeRestaurantFromList(restaurantName) {
+            const selectedRestaurantsContainer = document.getElementById('selectedRestaurants');
+            const items = selectedRestaurantsContainer.getElementsByClassName('restaurant-item');
+            for (let i = items.length - 1; i >= 0; i--) {
+                if (items[i].firstChild.textContent === restaurantName) {
+                    selectedRestaurantsContainer.removeChild(items[i]);
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
 </html>

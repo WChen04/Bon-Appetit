@@ -7,6 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Restaurant 1', distance: '1km', cuisine: 'Italian', rating: '5', price: '$$', opening: 'Morning', delivery: 'Yes' },
         { name: 'Restaurant 2', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Evening', delivery: 'No' },
         { name: 'Restaurant 3', distance: '10km', cuisine: 'Indian', rating: '3', price: '$$$', opening: 'Afternoon', delivery: 'Yes' },
+        { name: 'Restaurant 4', distance: '1km', cuisine: 'Italian', rating: '5', price: '$$$$', opening: 'Morning', delivery: 'Yes' },
+        { name: 'Restaurant 5', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Evening', delivery: 'No' },
+        { name: 'Restaurant 6', distance: '1km', cuisine: 'Chinese', rating: '3', price: '$$', opening: 'Afternoon', delivery: 'No' },
+        { name: 'Restaurant 7', distance: '5km', cuisine: 'Italian', rating: '5', price: '$$', opening: 'Evening', delivery: 'Yes' },
+        { name: 'Restaurant 8', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Afternoon', delivery: 'No' },
+        { name: 'Restaurant 9', distance: '10km', cuisine: 'Indian', rating: '5', price: '$$$$', opening: 'Afternoon', delivery: 'Yes' },
+        { name: 'Restaurant 10', distance: '10km', cuisine: 'Indian', rating: '5', price: '$$', opening: 'Morning', delivery: 'No' },
+        { name: 'Restaurant 12', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Afternoon', delivery: 'No' },
+        { name: 'Restaurant 13', distance: '10km', cuisine: 'Italian', rating: '3', price: '$$$', opening: 'Afternoon', delivery: 'Yes' },
     ];
 
     function displayRestaurants(filteredRestaurants) {
@@ -19,6 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.name = 'add-to-list';
+            checkbox.id = `checkbox-${restaurant.name.replace(/\s+/g, '-')}`; // Unique ID for each checkbox
+            checkbox.addEventListener('change', () => {
+                const listFrame = parent.document.getElementById('list').contentWindow;
+                if (checkbox.checked) {
+                    listFrame.postMessage({ type: 'addRestaurant', name: restaurant.name }, '*');
+                } else {
+                    listFrame.postMessage({ type: 'removeRestaurant', name: restaurant.name }, '*');
+                }
+            });
 
             restaurantItem.appendChild(checkbox);
             restaurantList.appendChild(restaurantItem);
@@ -26,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             restaurantItem.addEventListener('click', (event) => {
                 if (event.target !== checkbox) {
                     checkbox.checked = !checkbox.checked;
+                    checkbox.dispatchEvent(new Event('change'));
                 }
             });
         });
@@ -52,6 +71,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchBar.addEventListener('input', filterRestaurants);
     filters.forEach(filter => filter.addEventListener('change', filterRestaurants));
+
+    // Handle removeRestaurant event
+    window.addEventListener('message', (event) => {
+        if (event.origin !== window.location.origin) {
+            return;
+        }
+
+        if (event.data && event.data.type === 'removeRestaurant') {
+            console.log(`Removing restaurant: ${event.data.name}`); // Debugging
+            const checkboxId = `checkbox-${event.data.name.replace(/\s+/g, '-')}`;
+            console.log(`Checkbox ID: ${checkboxId}`); // Debugging
+            const checkbox = document.getElementById(checkboxId);
+            if (checkbox) {
+                console.log(`Unchecking checkbox with ID: ${checkboxId}`); // Debugging
+                checkbox.checked = false;
+            } else {
+                console.log(`Checkbox with ID: ${checkboxId} not found`); // Debugging
+            }
+        }
+    });
 
     // Initial display
     displayRestaurants(restaurants);
