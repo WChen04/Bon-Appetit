@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const restaurantList = document.getElementById('restaurantList');
     const filters = document.querySelectorAll('.filters input[type="checkbox"]');
 
+    // this will be replaced with a call to the backend to get the list of restaurants
     const restaurants = [
+        // Array of restaurants with the following properties: name, distance, cuisine, rating, price, opening, delivery
         { name: 'Restaurant 1', distance: '1km', cuisine: 'Italian', rating: '5', price: '$$', opening: 'Morning', delivery: 'Yes' },
         { name: 'Restaurant 2', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Evening', delivery: 'No' },
         { name: 'Restaurant 3', distance: '10km', cuisine: 'Indian', rating: '2', price: '$$$', opening: 'Afternoon', delivery: 'Yes' },
@@ -17,8 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Restaurant 11', distance: '20km', cuisine: 'Italian', rating: '1', price: '$$$', opening: 'Evening', delivery: 'No' },
         { name: 'Restaurant 12', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Afternoon', delivery: 'No' },
         { name: 'Restaurant 13', distance: '10km', cuisine: 'Italian', rating: '3', price: '$$$', opening: 'Afternoon', delivery: 'Yes' },
+        // Add more restaurants here
     ];
 
+    // function to display the list of restaurants
     function displayRestaurants(filteredRestaurants) {
         restaurantList.innerHTML = '';
         filteredRestaurants.forEach(restaurant => {
@@ -74,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // function to filter the list of restaurants based on the search bar and filters
     function filterRestaurants() {
         const searchText = searchBar.value.toLowerCase();
         const activeFilters = Array.from(filters).filter(filter => filter.checked).reduce((acc, filter) => {
@@ -83,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             acc[filter.name].push(filter.value);
             return acc;
         }, {});
-
+        
         const filteredRestaurants = restaurants.filter(restaurant => {
             const matchesSearch = restaurant.name.toLowerCase().includes(searchText);
             const matchesFilters = Object.keys(activeFilters).every(filter => activeFilters[filter].includes(restaurant[filter]));
