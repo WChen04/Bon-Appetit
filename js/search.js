@@ -25,12 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const restaurantItem = document.createElement('div');
             restaurantItem.className = 'restaurant-item';
 
-            // Create the main restaurant name element
             const restaurantName = document.createElement('div');
             restaurantName.textContent = restaurant.name;
             restaurantName.className = 'restaurant-name';
 
-            // Create the dropdown info container, initially hidden
+            // create the dropdown info container that is hidden by default
             const dropdownInfo = document.createElement('div');
             dropdownInfo.className = 'dropdown-info';
             dropdownInfo.innerHTML = `
@@ -41,10 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Opening: ${restaurant.opening}</p>
                 <p>Delivery: ${restaurant.delivery}</p>
             `;
-
-            // Create the checkbox container
-            const checkboxContainer = document.createElement('div');
-            checkboxContainer.className = 'checkbox-container';
 
             // Create the checkbox
             const checkbox = document.createElement('input');
@@ -60,7 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Append the checkbox to the container
+            const checkboxContainer = document.createElement('div');
+            checkboxContainer.className = 'checkbox-container';
             checkboxContainer.appendChild(checkbox);
 
             // Append elements to the restaurant item
@@ -69,18 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
             restaurantItem.appendChild(dropdownInfo);
             restaurantList.appendChild(restaurantItem);
 
-            // Add click event to toggle the dropdown info for the entire item
+            // toggle dropdown info on click for restaurants
             restaurantItem.addEventListener('click', (event) => {
-                if (event.target !== checkbox && event.target !== checkboxContainer) {
-                    if (restaurantItem.classList.contains('show')) {
-                        dropdownInfo.style.height = '0';
-                        setTimeout(() => {
-                            restaurantItem.classList.remove('show');
-                        }, 300); // Match the transition duration
-                    } else {
-                        restaurantItem.classList.add('show');
-                        dropdownInfo.style.height = dropdownInfo.scrollHeight + 'px';
-                    }
+                if (event.target !== checkbox) {
+                    restaurantItem.classList.toggle('show');
                 }
             });
         });

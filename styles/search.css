@@ -142,25 +142,24 @@ header {
 .restaurant-item .dropdown-info {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
     background-color: #fff;
     padding: 0 15px;
-    border-top: none;
-    border-bottom: none;
-    margin-top: 10px;
     width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .restaurant-item.show .dropdown-info {
     max-height: 300px;
+    padding: 15px;
+    margin-top: 10px;
 }
 
 .restaurant-item input[type="checkbox"] {
     transform: scale(1.5);
 }
 
-/* Changes the scrollbar */
+/* changes the scrollbar */
 ::-webkit-scrollbar {
     width: 5px;
 }
