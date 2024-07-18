@@ -3,22 +3,82 @@ document.addEventListener('DOMContentLoaded', () => {
     const restaurantList = document.getElementById('restaurantList');
     const filters = document.querySelectorAll('.filters input[type="checkbox"]');
 
+    // this will be replaced with a call to the backend to get the list of restaurants
     const restaurants = [
+        // Array of restaurants with the following properties: name, distance, cuisine, rating, price, opening, delivery
         { name: 'Restaurant 1', distance: '1km', cuisine: 'Italian', rating: '5', price: '$$', opening: 'Morning', delivery: 'Yes' },
         { name: 'Restaurant 2', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Evening', delivery: 'No' },
-        { name: 'Restaurant 3', distance: '10km', cuisine: 'Indian', rating: '3', price: '$$$', opening: 'Afternoon', delivery: 'Yes' },
+        { name: 'Restaurant 3', distance: '10km', cuisine: 'Indian', rating: '2', price: '$$$', opening: 'Afternoon', delivery: 'Yes' },
+        { name: 'Restaurant 4', distance: '1km', cuisine: 'Italian', rating: '5', price: '$$$$', opening: 'Morning', delivery: 'Yes' },
+        { name: 'Restaurant 5', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Evening', delivery: 'No' },
+        { name: 'Restaurant 6', distance: '1km', cuisine: 'Chinese', rating: '3', price: '$$', opening: 'Afternoon', delivery: 'No' },
+        { name: 'Restaurant 7', distance: '5km', cuisine: 'Italian', rating: '5', price: '$$', opening: 'Evening', delivery: 'Yes' },
+        { name: 'Restaurant 8', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Afternoon', delivery: 'No' },
+        { name: 'Restaurant 9', distance: '10km', cuisine: 'Indian', rating: '5', price: '$$$$', opening: 'Afternoon', delivery: 'Yes' },
+        { name: 'Restaurant 10', distance: '10km', cuisine: 'Indian', rating: '5', price: '$$', opening: 'Morning', delivery: 'No' },
+        { name: 'Restaurant 11', distance: '20km', cuisine: 'Italian', rating: '1', price: '$$$', opening: 'Evening', delivery: 'No' },
+        { name: 'Restaurant 12', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Afternoon', delivery: 'No' },
+        { name: 'Restaurant 13', distance: '10km', cuisine: 'Italian', rating: '3', price: '$$$', opening: 'Afternoon', delivery: 'Yes' },
+        // Add more restaurants here
     ];
 
+    // function to display the list of restaurants
     function displayRestaurants(filteredRestaurants) {
         restaurantList.innerHTML = '';
         filteredRestaurants.forEach(restaurant => {
             const restaurantItem = document.createElement('div');
             restaurantItem.className = 'restaurant-item';
-            restaurantItem.textContent = restaurant.name;
+
+            const restaurantName = document.createElement('div');
+            restaurantName.textContent = restaurant.name;
+            restaurantName.className = 'restaurant-name';
+
+            // create the dropdown info container that is hidden by default
+            const dropdownInfo = document.createElement('div');
+            dropdownInfo.className = 'dropdown-info';
+            dropdownInfo.innerHTML = `
+                <p>Distance: ${restaurant.distance}</p>
+                <p>Cuisine: ${restaurant.cuisine}</p>
+                <p>Rating: ${restaurant.rating}</p>
+                <p>Price: ${restaurant.price}</p>
+                <p>Opening: ${restaurant.opening}</p>
+                <p>Delivery: ${restaurant.delivery}</p>
+            `;
+
+            // Create the checkbox
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.name = 'add-to-list';
+            checkbox.id = `checkbox-${restaurant.name.replace(/\s+/g, '-')}`;
+            checkbox.addEventListener('change', () => {
+                const listFrame = parent.document.getElementById('list').contentWindow;
+                if (checkbox.checked) {
+                    listFrame.postMessage({ type: 'addRestaurant', name: restaurant.name }, '*');
+                } else {
+                    listFrame.postMessage({ type: 'removeRestaurant', name: restaurant.name }, '*');
+                }
+            });
+
+            const checkboxContainer = document.createElement('div');
+            checkboxContainer.className = 'checkbox-container';
+            checkboxContainer.appendChild(checkbox);
+
+            // Append elements to the restaurant item
+            restaurantItem.appendChild(restaurantName);
+            restaurantItem.appendChild(checkboxContainer);
+            restaurantItem.appendChild(dropdownInfo);
             restaurantList.appendChild(restaurantItem);
+
+            // toggle dropdown info on click for restaurants
+            restaurantItem.addEventListener('click', (event) => {
+                if (event.target !== checkbox) {
+                    restaurantItem.classList.toggle('show');
+                }
+            });
         });
     }
 
+    // function to filter the list of restaurants based on the search bar and filters
     function filterRestaurants() {
         const searchText = searchBar.value.toLowerCase();
         const activeFilters = Array.from(filters).filter(filter => filter.checked).reduce((acc, filter) => {
@@ -28,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             acc[filter.name].push(filter.value);
             return acc;
         }, {});
-
+        
         const filteredRestaurants = restaurants.filter(restaurant => {
             const matchesSearch = restaurant.name.toLowerCase().includes(searchText);
             const matchesFilters = Object.keys(activeFilters).every(filter => activeFilters[filter].includes(restaurant[filter]));
@@ -41,6 +101,19 @@ document.addEventListener('DOMContentLoaded', () => {
     searchBar.addEventListener('input', filterRestaurants);
     filters.forEach(filter => filter.addEventListener('change', filterRestaurants));
 
-    // Initial display
+    window.addEventListener('message', (event) => {
+        if (event.origin !== window.location.origin) {
+            return;
+        }
+
+        if (event.data && event.data.type === 'removeRestaurant') {
+            const checkboxId = `checkbox-${event.data.name.replace(/\s+/g, '-')}`;
+            const checkbox = document.getElementById(checkboxId);
+            if (checkbox) {
+                checkbox.checked = false;
+            }
+        }
+    });
+
     displayRestaurants(restaurants);
 });

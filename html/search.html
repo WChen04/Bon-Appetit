@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search Restaurants</title>
     <link rel="stylesheet" href="../styles/search.css">
-  </head>
-  <body>
-    <div class="search-container">
-        <input type="text" id="searchBar" placeholder="Search for restaurants...">
+</head>
+<body>
+    <div class="sticky-container">
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search for restaurants...">
+        </div>
+        <div class="filters">
+            <div class="dropdown">
+                <button class="dropbtn">Distance</button>
+                <div class="dropdown-content">
+                    <label><input type="checkbox" name="distance" value="1km"> 1 km</label>
+                    <label><input type="checkbox" name="distance" value="5km"> 5 km</label>
+                    <label><input type="checkbox" name="distance" value="10km"> 10 km</label>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Cuisine</button>
+                <div class="dropdown-content">
+                    <label><input type="checkbox" name="cuisine" value="Italian"> Italian</label>
+                    <label><input type="checkbox" name="cuisine" value="Chinese"> Chinese</label>
+                    <label><input type="checkbox" name="cuisine" value="Indian"> Indian</label>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Rating</button>
+                <div class="dropdown-content">
+                    <label><input type="checkbox" name="rating" value="1"> 1 Star</label>
+                    <label><input type="checkbox" name="rating" value="2"> 2 Stars</label>
+                    <label><input type="checkbox" name="rating" value="3"> 3 Stars</label>
+                    <label><input type="checkbox" name="rating" value="4"> 4 Stars</label>
+                    <label><input type="checkbox" name="rating" value="5"> 5 Stars</label>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Price</button>
+                <div class="dropdown-content">
+                    <label><input type="checkbox" name="price" value="$">$</label>
+                    <label><input type="checkbox" name="price" value="$$">$$</label>
+                    <label><input type="checkbox" name="price" value="$$$">$$$</label>
+                    <label><input type="checkbox" name="price" value="$$$$">$$$$</label>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Opening Times</button>
+                <div class="dropdown-content">
+                    <label><input type="checkbox" name="opening" value="Morning"> Morning</label>
+                    <label><input type="checkbox" name="opening" value="Afternoon"> Afternoon</label>
+                    <label><input type="checkbox" name="opening" value="Evening"> Evening</label>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Delivery</button>
+                <div class="dropdown-content">
+                    <label><input type="checkbox" name="delivery" value="Yes"> Yes</label>
+                    <label><input type="checkbox" name="delivery" value="No"> No</label>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="filters">
-        <div class="dropdown">
-            <button class="dropbtn">Distance</button>
-            <div class="dropdown-content">
-                <label><input type="checkbox" name="distance" value="1km"> 1 km</label>
-                <label><input type="checkbox" name="distance" value="5km"> 5 km</label>
-                <label><input type="checkbox" name="distance" value="10km"> 10 km</label>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Cuisine</button>
-            <div class="dropdown-content">
-                <label><input type="checkbox" name="cuisine" value="Italian"> Italian</label>
-                <label><input type="checkbox" name="cuisine" value="Chinese"> Chinese</label>
-                <label><input type="checkbox" name="cuisine" value="Indian"> Indian</label>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Rating</button>
-            <div class="dropdown-content">
-                <label><input type="checkbox" name="rating" value="1"> 1 Star</label>
-                <label><input type="checkbox" name="rating" value="2"> 2 Stars</label>
-                <label><input type="checkbox" name="rating" value="3"> 3 Stars</label>
-                <label><input type="checkbox" name="rating" value="4"> 4 Stars</label>
-                <label><input type="checkbox" name="rating" value="5"> 5 Stars</label>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Price</button>
-            <div class="dropdown-content">
-                <label><input type="checkbox" name="price" value="$">$</label>
-                <label><input type="checkbox" name="price" value="$$">$$</label>
-                <label><input type="checkbox" name="price" value="$$$">$$$</label>
-                <label><input type="checkbox" name="price" value="$$$$">$$$$</label>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Opening Times</button>
-            <div class="dropdown-content">
-                <label><input type="checkbox" name="opening" value="Morning"> Morning</label>
-                <label><input type="checkbox" name="opening" value="Afternoon"> Afternoon</label>
-                <label><input type="checkbox" name="opening" value="Evening"> Evening</label>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Delivery</button>
-            <div class="dropdown-content">
-                <label><input type="checkbox" name="delivery" value="Yes"> Yes</label>
-                <label><input type="checkbox" name="delivery" value="No"> No</label>
-            </div>
-        </div>
-    </div>
-    <div class="restaurant-list" id="restaurantList">
-      
-    </div>
+    <div class="restaurant-list" id="restaurantList"></div>
     <script src="../js/search.js"></script>
-  </body>
+</body>
 </html>

@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 header {
     background-color: #fbf9f5;
     text-align: center;
@@ -13,46 +14,42 @@ header {
     justify-content: space-between;
     padding: 10px 20px;
 }
-#logo {
-    width: 10vh;
-    margin: 0 1em 0 1em;
+
+
+.sticky-container {
+    position: sticky;
+    top: 0;
+    background-color: #fbf9f5;
+    z-index: 1;
+    padding: 10px 0;
 }
-.tabs {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 1em;
-}
-#aboutus {
-    text-decoration: none;
-    color: black;
-}
-#profile {
-    width: 5vh;
-    border-radius: 20em;
-}
+
 .search-container {
     text-align: center;
-    margin: 20px;
+    margin: 0 20px 20px 20px;
 }
+
 #searchBar {
     width: 80%;
     padding: 10px;
     font-size: 16px;
     margin-bottom: 20px;
 }
+
 .filters {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 2%;
     margin-bottom: 20px;
 }
+
+/* Dropdown Menu Styles */
 .dropdown {
     position: relative;
     display: inline-block;
 }
+
 .dropbtn {
     padding: 10px;
     font-size: 16px;
@@ -62,6 +59,7 @@ header {
     width: 150px;
     text-align: center;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -71,17 +69,21 @@ header {
     z-index: 1;
     width: 120px;
 }
+
 .dropdown-content label {
     display: block;
 }
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 .restaurant-list {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .restaurant-item {
     width: 80%;
     padding: 15px;
@@ -89,4 +91,64 @@ header {
     background-color: #f2f2f2;
     border: 1px solid #ddd;
     border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+    flex-direction: column;
+}
+
+.restaurant-item:hover {
+    background-color: #e0e0e0;
+}
+
+.restaurant-item .restaurant-name {
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+}
+
+.restaurant-item .checkbox-container {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+/* Restaurant Info Dropdown Styles */
+.restaurant-item .dropdown-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    background-color: #fff;
+    padding: 0 15px;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.restaurant-item.show .dropdown-info {
+    max-height: 300px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.restaurant-item input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
