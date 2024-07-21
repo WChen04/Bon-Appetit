@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add more restaurants here
     ];
 
-    // function to display the list of restaurants
+    // Function to display the list of restaurants
     function displayRestaurants(filteredRestaurants) {
         restaurantList.innerHTML = '';
         filteredRestaurants.forEach(restaurant => {
@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
             restaurantName.textContent = restaurant.name;
             restaurantName.className = 'restaurant-name';
 
-            // create the dropdown info container that is hidden by default
-            const dropdownInfo = document.createElement('div');
-            dropdownInfo.className = 'dropdown-info';
-            dropdownInfo.innerHTML = `
+            // Create the info container that is shown by default
+            const info = document.createElement('div');
+            info.className = 'info';
+            info.innerHTML = `
                 <p>Distance: ${restaurant.distance}</p>
                 <p>Cuisine: ${restaurant.cuisine}</p>
                 <p>Rating: ${restaurant.rating}</p>
@@ -45,40 +45,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Delivery: ${restaurant.delivery}</p>
             `;
 
-            // Create the checkbox
-            const checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
-            checkbox.name = 'add-to-list';
-            checkbox.id = `checkbox-${restaurant.name.replace(/\s+/g, '-')}`;
-            checkbox.addEventListener('change', () => {
-                const listFrame = parent.document.getElementById('list').contentWindow;
-                if (checkbox.checked) {
-                    listFrame.postMessage({ type: 'addRestaurant', name: restaurant.name }, '*');
-                } else {
-                    listFrame.postMessage({ type: 'removeRestaurant', name: restaurant.name }, '*');
-                }
-            });
-
-            const checkboxContainer = document.createElement('div');
-            checkboxContainer.className = 'checkbox-container';
-            checkboxContainer.appendChild(checkbox);
-
             // Append elements to the restaurant item
             restaurantItem.appendChild(restaurantName);
-            restaurantItem.appendChild(checkboxContainer);
-            restaurantItem.appendChild(dropdownInfo);
+            restaurantItem.appendChild(info);
             restaurantList.appendChild(restaurantItem);
 
-            // toggle dropdown info on click for restaurants
-            restaurantItem.addEventListener('click', (event) => {
-                if (event.target !== checkbox) {
-                    restaurantItem.classList.toggle('show');
-                }
+            // Add to list on click
+            restaurantItem.addEventListener('click', () => {
+                const listFrame = parent.document.getElementById('list').contentWindow;
+                listFrame.postMessage({ type: 'addRestaurant', name: restaurant.name }, '*');
             });
         });
     }
 
-    // function to filter the list of restaurants based on the search bar and filters
+    // Function to filter the list of restaurants based on the search bar and filters
     function filterRestaurants() {
         const searchText = searchBar.value.toLowerCase();
         const activeFilters = Array.from(filters).filter(filter => filter.checked).reduce((acc, filter) => {
@@ -107,11 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (event.data && event.data.type === 'removeRestaurant') {
-            const checkboxId = `checkbox-${event.data.name.replace(/\s+/g, '-')}`;
-            const checkbox = document.getElementById(checkboxId);
-            if (checkbox) {
-                checkbox.checked = false;
-            }
+            // Handle remove restaurant message if needed
         }
     });
 
