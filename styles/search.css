@@ -5,6 +5,7 @@ body {
     padding: 0;
 }
 
+/* Header styling */
 header {
     background-color: #fbf9f5;
     text-align: center;
@@ -15,7 +16,7 @@ header {
     padding: 10px 20px;
 }
 
-
+/* Sticky container styling */
 .sticky-container {
     position: sticky;
     top: 0;
@@ -24,11 +25,13 @@ header {
     padding: 10px 0;
 }
 
+/* Search container styling */
 .search-container {
     text-align: center;
     margin: 0 20px 20px 20px;
 }
 
+/* Search bar styling */
 #searchBar {
     width: 80%;
     padding: 10px;
@@ -36,6 +39,7 @@ header {
     margin-bottom: 20px;
 }
 
+/* Filters styling */
 .filters {
     display: flex;
     flex-wrap: wrap;
@@ -78,12 +82,26 @@ header {
     display: block;
 }
 
+/* Clear filters button styling */
+.clear-filters {
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    color: rgb(255, 0, 0);
+    background-color: #f9f9f9;
+    width: 100px;
+    text-align: center;
+}
+
 .restaurant-list {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Restaurant item styling */
 .restaurant-item {
     width: 80%;
     padding: 15px;
@@ -93,7 +111,6 @@ header {
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     cursor: pointer;
     transition: background-color 0.3s;
     position: relative;
@@ -111,44 +128,48 @@ header {
     text-align: left;
 }
 
+/* Hides the checkbox, but allows adding to list to function properly */
 .restaurant-item .checkbox-container {
-    position: absolute;
-    right: 15px;
-    top: 15px;
+    display: none;
 }
 
-/* Restaurant Info Dropdown Styles */
-.restaurant-item .dropdown-info {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
-    background-color: #fff;
-    padding: 0 15px;
-    width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+/* Info styling */
+.restaurant-item .info {
+    flex-grow: 1;
+    text-align: left;
+    margin-right: 20px;
 }
 
-.restaurant-item.show .dropdown-info {
-    max-height: 300px;
-    padding: 15px;
-    margin-top: 10px;
+/* Image container styling */
+.img-container {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.restaurant-item input[type="checkbox"] {
-    transform: scale(1.5);
+.img-container img {
+    /* ----- for now ----- */
+    display: none;
+    /* ------------------- */
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 5px;
 }
 
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
     width: 5px;
 }
+
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
