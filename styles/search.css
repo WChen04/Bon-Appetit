@@ -111,6 +111,11 @@ header {
     text-align: left;
 }
 
+/* Hides the checkbox, but allows adding to list to function properly */
+.restaurant-item .checkbox-container {
+    display: none;
+}
+
 /* Info styling */
 .restaurant-item .info {
     flex-grow: 1;
