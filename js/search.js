@@ -45,9 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Delivery: ${restaurant.delivery}</p>
             `;
 
+            // Create the image container
+            const imgContainer = document.createElement('div');
+            imgContainer.className = 'img-container';
+            const img = document.createElement('img');
+            img.src = 'path/to/placeholder-image.jpg'; // Replace with actual image path
+            img.alt = 'Restaurant Image';
+            imgContainer.appendChild(img);
+
             // Append elements to the restaurant item
             restaurantItem.appendChild(restaurantName);
             restaurantItem.appendChild(info);
+            restaurantItem.appendChild(imgContainer);
             restaurantList.appendChild(restaurantItem);
 
             // Add to list on click
