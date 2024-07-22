@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchBar = document.getElementById('searchBar');
     const restaurantList = document.getElementById('restaurantList');
     const filters = document.querySelectorAll('.filters input[type="checkbox"]');
+    const clearFiltersButton = document.getElementById('clearFiltersButton');
 
     // This will be replaced with a call to the backend to get the list of restaurants
     const restaurants = [
@@ -21,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Restaurant 13', distance: '10km', cuisine: 'Italian', rating: '3', price: '$$$', opening: 'Afternoon', delivery: 'Yes' },
         // Add more restaurants here
     ];
-
 
     // Function to display the list of restaurants
     function displayRestaurants(filteredRestaurants) {
@@ -109,8 +109,18 @@ document.addEventListener('DOMContentLoaded', () => {
         displayRestaurants(filteredRestaurants);
     }
 
+    // Function to clear all filters
+    function clearFilters() {
+        filters.forEach(filter => {
+            filter.checked = false;
+        });
+        searchBar.value = '';
+        displayRestaurants(restaurants);
+    }
+
     searchBar.addEventListener('input', filterRestaurants);
     filters.forEach(filter => filter.addEventListener('change', filterRestaurants));
+    clearFiltersButton.addEventListener('click', clearFilters);
 
     window.addEventListener('message', (event) => {
         if (event.origin !== window.location.origin) {
