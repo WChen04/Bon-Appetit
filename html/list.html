@@ -19,6 +19,7 @@
 <body>
     <h1>Selected Restaurants</h1>
     <div id="selectedRestaurants"></div>
+    <button onclick="clearAllRestaurants()">Clear All</button>
     <script>
         window.addEventListener('message', (event) => {
             if (event.origin !== window.location.origin) {
@@ -74,6 +75,15 @@
                 }
             }
         }
+
+        function clearAllRestaurants() {
+            const selectedRestaurantsContainer = document.getElementById('selectedRestaurants');
+            const items = selectedRestaurantsContainer.getElementsByClassName('restaurant-item');
+            for (let i = items.length - 1; i >= 0; i--) {
+                selectedRestaurantsContainer.removeChild(items[i]);
+            }
+        }
+
     </script>
 </body>
 </html>
