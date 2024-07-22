@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const restaurantList = document.getElementById('restaurantList');
     const filters = document.querySelectorAll('.filters input[type="checkbox"]');
 
-    // this will be replaced with a call to the backend to get the list of restaurants
+    // This will be replaced with a call to the backend to get the list of restaurants
     const restaurants = [
         // Array of restaurants with the following properties: name, distance, cuisine, rating, price, opening, delivery
         { name: 'Restaurant 1', distance: '1km', cuisine: 'Italian', rating: '5', price: '$$', opening: 'Morning', delivery: 'Yes' },
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Restaurant 13', distance: '10km', cuisine: 'Italian', rating: '3', price: '$$$', opening: 'Afternoon', delivery: 'Yes' },
         // Add more restaurants here
     ];
+
 
     // Function to display the list of restaurants
     function displayRestaurants(filteredRestaurants) {
@@ -53,16 +54,37 @@ document.addEventListener('DOMContentLoaded', () => {
             img.alt = 'Restaurant Image';
             imgContainer.appendChild(img);
 
+            // Create the checkbox
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.name = 'add-to-list';
+            checkbox.id = `checkbox-${restaurant.name.replace(/\s+/g, '-')}`;
+            checkbox.addEventListener('change', () => {
+                const listFrame = parent.document.getElementById('list').contentWindow;
+                if (checkbox.checked) {
+                    listFrame.postMessage({ type: 'addRestaurant', name: restaurant.name }, '*');
+                } else {
+                    listFrame.postMessage({ type: 'removeRestaurant', name: restaurant.name }, '*');
+                }
+            });
+
+            const checkboxContainer = document.createElement('div');
+            checkboxContainer.className = 'checkbox-container';
+            checkboxContainer.appendChild(checkbox);
+
             // Append elements to the restaurant item
             restaurantItem.appendChild(restaurantName);
             restaurantItem.appendChild(info);
             restaurantItem.appendChild(imgContainer);
+            restaurantItem.appendChild(checkboxContainer);
             restaurantList.appendChild(restaurantItem);
 
             // Add to list on click
-            restaurantItem.addEventListener('click', () => {
-                const listFrame = parent.document.getElementById('list').contentWindow;
-                listFrame.postMessage({ type: 'addRestaurant', name: restaurant.name }, '*');
+            restaurantItem.addEventListener('click', (event) => {
+                if (event.target !== checkbox) {
+                    checkbox.checked = !checkbox.checked;
+                    checkbox.dispatchEvent(new Event('change'));
+                }
             });
         });
     }
@@ -96,7 +118,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (event.data && event.data.type === 'removeRestaurant') {
-            // Handle remove restaurant message if needed
+            const checkboxId = `checkbox-${event.data.name.replace(/\s+/g, '-')}`;
+            const checkbox = document.getElementById(checkboxId);
+            if (checkbox) {
+                checkbox.checked = false;
+            }
         }
     });
 
