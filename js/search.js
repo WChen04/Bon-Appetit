@@ -23,6 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add more restaurants here
     ];
 
+    // Function to check if the restaurant is currently open
+    function isOpen(openingTime) {
+        const currentHour = new Date().getHours();
+        if (openingTime === 'Morning' && currentHour >= 6 && currentHour < 12) return true;
+        if (openingTime === 'Afternoon' && currentHour >= 12 && currentHour < 18) return true;
+        if (openingTime === 'Evening' && currentHour >= 18 && currentHour < 24) return true;
+        return false;
+    }
+
     // Function to display the list of restaurants
     function displayRestaurants(filteredRestaurants) {
         restaurantList.innerHTML = '';
@@ -99,10 +108,15 @@ document.addEventListener('DOMContentLoaded', () => {
             acc[filter.name].push(filter.value);
             return acc;
         }, {});
-        
+
         const filteredRestaurants = restaurants.filter(restaurant => {
-            const matchesSearch = restaurant.name.toLowerCase().includes(searchText);
+            const matchesSearch = restaurant.name.toLowerCase().includes(searchText) ||
+                restaurant.cuisine.toLowerCase().includes(searchText) ||
+                (searchText === 'open now' && isOpen(restaurant.opening)) ||
+                (searchText === 'near me' && restaurant.distance === '1km');
+            
             const matchesFilters = Object.keys(activeFilters).every(filter => activeFilters[filter].includes(restaurant[filter]));
+            
             return matchesSearch && matchesFilters;
         });
 
