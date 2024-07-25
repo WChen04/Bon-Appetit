@@ -19,6 +19,8 @@
 <body>
     <h1>Selected Restaurants</h1>
     <div id="selectedRestaurants"></div>
+    <button onclick="clearAllRestaurants()" style="background-color:rgb(132, 131, 215); color:rgb(255, 255, 255); border-color:rgb(132, 131, 215);" >Clear All</button>
+    <script src="script.js"></script>
     <script>
         window.addEventListener('message', (event) => {
             if (event.origin !== window.location.origin) {
@@ -34,6 +36,13 @@
 
         function addRestaurantToList(restaurantName) {
             const selectedRestaurantsContainer = document.getElementById('selectedRestaurants');
+            const items = selectedRestaurantsContainer.getElementsByClassName('restaurant-item');
+            for (let i = items.length - 1; i >= 0; i--) {
+                if (items[i].firstChild.textContent === restaurantName) {
+                    return;
+                }
+            }
+
             const restaurantItem = document.createElement('div');
             restaurantItem.className = 'restaurant-item';
             restaurantItem.style.display = 'flex';
@@ -74,6 +83,15 @@
                 }
             }
         }
+
+        function clearAllRestaurants() {
+            const selectedRestaurantsContainer = document.getElementById('selectedRestaurants');
+            const items = selectedRestaurantsContainer.getElementsByClassName('restaurant-item');
+            for (let i = items.length - 1; i >= 0; i--) {
+                selectedRestaurantsContainer.removeChild(items[i]);
+            }
+        }
+
     </script>
 </body>
 </html>
