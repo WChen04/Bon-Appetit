@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const restaurantList = document.getElementById('restaurantList');
     const filters = document.querySelectorAll('.filters input[type="checkbox"]');
     const clearFiltersButton = document.getElementById('clearFiltersButton');
+    const addAllButtonRestaurants = document.getElementById('addAllButtonRestaurants');
 
     // This will be replaced with a call to the backend to get the list of restaurants
     const restaurants = [
@@ -131,9 +132,38 @@ document.addEventListener('DOMContentLoaded', () => {
         displayRestaurants(restaurants);
     }
 
+    // Function to all restaurants on the filter list to the wheel list
+    function addAllRestaurants() {
+        const searchText = searchBar.value.toLowerCase();
+        const activeFilters = Array.from(filters).filter(filter => filter.checked).reduce((acc, filter) => {
+            if (!acc[filter.name]) {
+                acc[filter.name] = [];
+            }
+            acc[filter.name].push(filter.value);
+            return acc;
+        }, {});
+
+        const filteredRestaurants = restaurants.filter(restaurant => {
+            const matchesSearch = restaurant.name.toLowerCase().includes(searchText) ||
+                restaurant.cuisine.toLowerCase().includes(searchText) ||
+                (searchText === 'open now' && isOpen(restaurant.opening)) ||
+                (searchText === 'near me' && restaurant.distance === '1km');
+            
+            const matchesFilters = Object.keys(activeFilters).every(filter => activeFilters[filter].includes(restaurant[filter]));
+            
+            return matchesSearch && matchesFilters;
+        });
+
+        filteredRestaurants.forEach(restaurant => {
+            const listFrame = parent.document.getElementById('list').contentWindow;
+            listFrame.postMessage({ type: 'addRestaurant', name: restaurant.name }, '*');
+        });
+    }
+
     searchBar.addEventListener('input', filterRestaurants);
     filters.forEach(filter => filter.addEventListener('change', filterRestaurants));
     clearFiltersButton.addEventListener('click', clearFilters);
+    addAllButtonRestaurants.addEventListener('click', addAllRestaurants);
 
     window.addEventListener('message', (event) => {
         if (event.origin !== window.location.origin) {
