@@ -1,54 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/wheel.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="../js/Winwheel.js"></script>
     <title>Bon Appetit Wheel</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="wheel-container">
-      <div class="triangle-pointer"></div>
-      <canvas id="canvas" width="500" height="500"></canvas>
-      <button id="spinButton" onclick="startSpin()">Spin</button>
+        <div class="triangle-pointer"></div>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <button id="spinButton" onclick="startSpin()">SPIN</button>
     </div>
     <script>
-        let myWheel = new Winwheel({
-            'canvasId'    : 'canvas',
-            'numSegments' : 4,
-            'segments'    : [
-              {'fillStyle' : '#68aede', 'text' : 'Segment 1'},
-              {'fillStyle' : '#9cd6ea', 'text' : 'Segment 2'},
-              {'fillStyle' : '#68aede', 'text' : 'Segment 3'},
-              {'fillStyle' : '#9cd6ea', 'text' : 'Segment 4'}
-            ],
-            'animation' : {
-              'type'     : 'spinToStop',
-              'duration' : 5,
-              'spins'    : 8,
-              'callbackFinished' : alertPrize
+        let myWheel;
+
+        function createWheel(segments) {
+            if (segments.length === 0) {
+                segments = ['']; // Default segment when no restaurants are added
             }
-        });
+            myWheel = new Winwheel({
+                'canvasId': 'canvas',
+                'numSegments': segments.length,
+                'segments': segments.map((restaurant, index) => ({
+                    'fillStyle': (index % 2 === 0) ? '#68aede' : '#9cd6ea',
+                    'text': restaurant
+                })),
+                'animation': {
+                    'type': 'spinToStop',
+                    'duration': 5,
+                    'spins': 8,
+                    'callbackFinished': alertPrize
+                }
+            });
+        }
 
         function startSpin() {
-          myWheel.startAnimation();
-          document.getElementById('spinButton').disabled = true;
+            if (myWheel.numSegments > 1 || (myWheel.segments[1].text !== '')) {
+                myWheel.startAnimation();
+                document.getElementById('spinButton').disabled = true;
+            } else {
+                alert("Please add at least one restaurant to the list before spinning.");
+            }
         }
 
         function alertPrize() {
-          let winningSegment = myWheel.getIndicatedSegment();
-          window.alert('Congratulations! You have won: ' + winningSegment.text);
-          resetWheel();
+            let winningSegment = myWheel.getIndicatedSegment();
+            window.alert('Restaurant: ' + winningSegment.text);
+            resetWheel();
         }
 
         function resetWheel() {
-          myWheel.stopAnimation(false);
-          myWheel.rotationAngle = 0;
-          myWheel.draw();
-          document.getElementById('spinButton').disabled = false;
+            myWheel.stopAnimation(false);
+            myWheel.rotationAngle = 0;
+            myWheel.draw();
+            document.getElementById('spinButton').disabled = false;
         }
+
+        window.addEventListener('message', (event) => {
+            if (event.origin !== window.location.origin) {
+                return;
+            }
+
+            if (event.data && event.data.type === 'updateWheel') {
+                createWheel(event.data.restaurants);
+            }
+        });
+
+        // Initial wheel setup with default segment
+        createWheel([]);
     </script>
-  </body>
+</body>
 </html>
