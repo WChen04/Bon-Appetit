@@ -1,75 +1,41 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-.wrapper {
-  width: 90%;
-  max-width: 34.37em;
-  max-height: 90vh;
-  /* background-color: #ffffff; */
+.triangle-pointer {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 30px solid #bee8f9; /* Flip the triangle */
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  padding: 0em 3em 0em 3em;
-  border-radius: 1em;
-  /* box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2); */
+  top: -10px; /* Adjust this value to position the triangle correctly */
+  left: 230px; /* Adjust this value to position the triangle correctly */
+  z-index: 10; /* Ensure the triangle is above the canvas */
 }
-.container {
+.wheel-container {
   position: relative;
-  width: 100%;
-  height: 100%;
-}
-#wheel {
-  max-height: inherit;
-  width: inherit;
-  top: 0;
-  padding: 0;
-}
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-#spin-btn {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  height: 26%;
-  width: 26%;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 0;
-  background: radial-gradient(#b1cfe3 50%, #68aede 85%);
-  color: #080401;
-  text-transform: uppercase;
-  font-size: 1.8em;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-}
-img {
-  position: absolute;
-  width: 4em;
-  top: 45%;
-  right: -8%;
+  width: 500px;
+  height: 500px;
+  margin: auto;
 }
 
-#final-value {
-  font-size: 1.5em;
-  text-align: center;
-  margin-top: 1.5em;
-  color: #202020;
-  font-weight: 500;
+canvas {
+  display: block;
+  margin: auto;
 }
-@media screen and (max-width: 768px) {
-  .wrapper {
-    font-size: 12px;
-  }
-  img {
-    right: -5%;
-  }
+
+#spinButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #bee8f9;
+  color: black;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+}
+#spinButton:disabled {
+  background-color: #afc6ff;
 }
