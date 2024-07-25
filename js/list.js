@@ -6,11 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
         restaurantItem.className = 'restaurant-item';
         restaurantItem.textContent = restaurantName;
         selectedRestaurantsContainer.appendChild(restaurantItem);
+        sendSelectedRestaurants();
+    }
+
+    function sendSelectedRestaurants() {
+        const restaurantNames = Array.from(selectedRestaurantsContainer.children).map(item => item.textContent);
+        parent.postMessage({ type: 'updateWheel', restaurants: restaurantNames }, '*');
     }
 
     window.addEventListener('message', (event) => {
         if (event.origin !== window.location.origin) {
-            // Ignore messages from different origins
             return;
         }
 
@@ -18,4 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
             addRestaurantToList(event.data.name);
         }
     });
+
+    // Initial update to create an empty wheel with a default segment
+    sendSelectedRestaurants();
 });
+    
