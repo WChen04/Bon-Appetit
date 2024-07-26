@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const imgContainer = document.createElement('div');
             imgContainer.className = 'img-container';
             const img = document.createElement('img');
-            img.src = 'path/to/placeholder-image.jpg'; // Replace with actual image path
+            img.src = '/imgs/food_stock_image.jpg'; // Replace with actual image path
             img.alt = 'Restaurant Image';
             imgContainer.appendChild(img);
 
