@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function sendSelectedRestaurants() {
         const restaurantNames = Array.from(selectedRestaurantsContainer.children).map(item => item.textContent);
+        console.log('Sending updateWheel message:', restaurantNames); // Debug log
         parent.postMessage({ type: 'updateWheel', restaurants: restaurantNames }, '*');
     }
 
@@ -27,4 +28,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial update to create an empty wheel with a default segment
     sendSelectedRestaurants();
 });
-    
