@@ -6,13 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
         restaurantItem.className = 'restaurant-item';
         restaurantItem.textContent = restaurantName;
         selectedRestaurantsContainer.appendChild(restaurantItem);
-        sendSelectedRestaurants();
-    }
-
-    function sendSelectedRestaurants() {
-        const restaurantNames = Array.from(selectedRestaurantsContainer.children).map(item => item.textContent);
-        console.log('Sending updateWheel message:', restaurantNames); // Debug log
-        parent.postMessage({ type: 'updateWheel', restaurants: restaurantNames }, '*');
     }
 
     window.addEventListener('message', (event) => {
@@ -24,7 +17,4 @@ document.addEventListener('DOMContentLoaded', () => {
             addRestaurantToList(event.data.name);
         }
     });
-
-    // Initial update to create an empty wheel with a default segment
-    sendSelectedRestaurants();
 });
