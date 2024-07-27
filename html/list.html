@@ -57,11 +57,13 @@
                 selectedRestaurantsContainer.removeChild(restaurantItem);
                 const searchFrame = parent.document.getElementById('searchFrame').contentWindow;
                 searchFrame.postMessage({ type: 'removeRestaurant', name: restaurantName }, '*');
+                sendSelectedRestaurants();
             });
-
+            
             restaurantItem.appendChild(nameSpan);
             restaurantItem.appendChild(minusButton);
             selectedRestaurantsContainer.appendChild(restaurantItem);
+            sendSelectedRestaurants();
         }
 
         function removeRestaurantFromList(restaurantName) {
@@ -73,6 +75,14 @@
                     break;
                 }
             }
+            sendSelectedRestaurants();
+        }
+
+        function sendSelectedRestaurants() {
+            const selectedRestaurantsContainer = document.getElementById('selectedRestaurants');
+            const restaurantNames = Array.from(selectedRestaurantsContainer.children).map(item => item.firstChild.textContent);
+            const wheelFrame = parent.document.getElementById('wheelFrame').contentWindow;
+            wheelFrame.postMessage({ type: 'updateWheel', restaurants: restaurantNames }, '*');
         }
     </script>
 </body>
