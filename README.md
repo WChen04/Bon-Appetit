@@ -13,16 +13,13 @@ Bon Appetit is your ultimate dining companion, making it simple to explore, disc
 ## Features
 
 - **Restaurant Finder:** Discover the best dining spots near you with personalized recommendations.
-- **Recipe Explorer:** Find delicious recipes to suit any occasion, dietary requirement, or cuisine preference.
 - **Meal Planner:** Plan your meals ahead of time with our intuitive meal planning tool.
 - **Reviews & Ratings:** Read and contribute reviews and ratings to help the community make informed dining decisions.
 - **User Profiles:** Create a personalized profile to save your favorite restaurants, recipes, and meal plans.
 - **Spinning Wheel of Options:** Pull restaurant information from the Yelp API and create a spinning wheel listing all saved options.
-- **Saved Lists:** Keep a list of your favorite or bookmarked restaurants.
+- **Saved List:** Save your favorite restaurant list.
 - **Filtering Options:** Easily filter restaurant options based on various criteria.
 - **Pre-existing Restaurant Rating List:** Access a curated list of restaurant ratings.
-- **Group-making Function:** Organize restaurants into groups for easy access and planning.
-- **Visited Before List:** Keep track of restaurants you've visited before.
 - **Add All Feature:** If the listed number of restaurants is less than a specific number (TBD), add all to your options.
 
 ## Getting Started
@@ -40,7 +37,7 @@ We are a passionate team of food enthusiasts dedicated to enhancing your dining 
 
 ## Contact Us
 
-Have questions or feedback? We'd love to hear from you! Reach out to us!.
+Have questions or feedback? We'd love to hear from you! Reach out to us at **bonappetit4440@gmail.com**!.
 
 ---
 
