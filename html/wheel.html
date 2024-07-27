@@ -14,6 +14,7 @@
         <canvas id="canvas" width="500" height="500"></canvas>
         <button id="spinButton" onclick="startSpin()">SPIN</button>
     </div>
+
     <script>
         let myWheel;
 
@@ -43,17 +44,17 @@
         }
 
         function startSpin() {
-            if (myWheel.numSegments > 1 || (myWheel.segments[1].text !== 'Add Restaurants')) {
+            if (myWheel.numSegments === 1 && myWheel.segments[1].text === 'Add Restaurants') {
+                parent.postMessage({ type: 'showAlert', title: 'Error', message: 'Please add at least one restaurant to the list before spinning.' }, '*');
+            } else {
                 myWheel.startAnimation();
                 document.getElementById('spinButton').disabled = true;
-            } else {
-                alert("Please add at least one restaurant to the list before spinning.");
             }
         }
 
         function alertPrize() {
             let winningSegment = myWheel.getIndicatedSegment();
-            window.alert('Restaurant: ' + winningSegment.text);
+            parent.postMessage({ type: 'showAlert', title: 'Congratulations!', message: 'Restaurant: ' + winningSegment.text }, '*');
             resetWheel();
         }
 
