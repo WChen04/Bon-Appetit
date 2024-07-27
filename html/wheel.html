@@ -18,8 +18,6 @@
         let myWheel;
 
         function createWheel(segments) {
-            console.log('Creating wheel with segments:', segments); // Debug log
-
             // Clear the canvas before creating a new wheel
             const canvas = document.getElementById('canvas');
             const ctx = canvas.getContext('2d');
@@ -42,8 +40,6 @@
                     'callbackFinished': alertPrize
                 }
             });
-
-            console.log('Number of segments after creation:', myWheel.numSegments); // Debug log
         }
 
         function startSpin() {
@@ -69,22 +65,15 @@
         }
 
         window.addEventListener('message', (event) => {
-            console.log('Message received:', event.data); // Debug log
-
-            // Check if the message is coming from the same origin
             if (event.origin !== window.location.origin) {
-                console.warn('Message received from unknown origin:', event.origin);
-                return; // Exit if the message is from an untrusted origin
+                return;
             }
 
-            // Handle the message based on its type
             if (event.data && event.data.type === 'updateWheel') {
-                console.log('Received updateWheel message:', event.data.restaurants); // Debug log
-                createWheel(event.data.restaurants); // Update the wheel with the new restaurant list
+                createWheel(event.data.restaurants);
             }
         });
 
-        // Initial wheel setup with default segment
         createWheel([]);
     </script>
 </body>
