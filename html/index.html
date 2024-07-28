@@ -35,7 +35,7 @@
                 <iframe src="profile.html"></iframe>
             </div>
         </div>
-        <iframe id="list" src="list.html"></iframe>
+        <iframe id="listFrame" src="list.html"></iframe>
     </div>
 
     <div class="alert-overlay" id="customAlert" style="display: none;">
@@ -84,6 +84,7 @@
             const header = document.querySelector("header"); // Assuming you have a <header> element
             const toggleBtn = document.getElementById("modeToggle");
 
+            let mode;
             if (
                 body.style.backgroundColor === "rgb(51, 51, 51)" ||
                 body.style.backgroundColor === "#333"
@@ -95,6 +96,7 @@
                 header.style.backgroundColor = "#fbf9f5";
                 header.style.color = "#000";
                 toggleBtn.textContent = "Dark Mode";
+                mode = 'light';
             } else {
                 // Switch to Dark Mode
                 body.style.backgroundColor = "#333";
@@ -102,8 +104,19 @@
                 header.style.backgroundColor = "#333";
                 header.style.color = "#fbf9f5";
                 toggleBtn.textContent = "Light Mode";
+                mode = 'dark';
             }
+
+            // Send message to iframes to change their background color
+            changeIframeBackgrounds(mode);
         });
+
+        function changeIframeBackgrounds(mode) {
+            const iframes = document.querySelectorAll("iframe");
+            iframes.forEach(iframe => {
+                iframe.contentWindow.postMessage({ type: 'changeMode', mode: mode }, '*');
+            });
+        }
 
         // Handle alert messages from iframes
         window.addEventListener('message', (event) => {

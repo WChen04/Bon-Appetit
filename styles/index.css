@@ -172,7 +172,7 @@ header {
   flex-direction: row;
   align-items: center;
 }
-#list {
+#listFrame {
   width: 30%;
   margin: 2em;
   animation: slideIn 0.5s ease forwards;
