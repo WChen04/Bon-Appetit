@@ -3,15 +3,14 @@ body {
     background-color: #fbf9f5;
     margin: 0;
     padding: 0;
-    color: #000; /* Default text color */
 }
 
+/* Dark Mode Styles */
 body.dark-mode {
     background-color: #333;
-    color: #fbf9f5; /* Light text color for dark mode */
+    color: #fbf9f5;
 }
 
-/* Header styling */
 header {
     background-color: #fbf9f5;
     text-align: center;
@@ -22,7 +21,7 @@ header {
     padding: 10px 20px;
 }
 
-header.dark-mode {
+body.dark-mode header {
     background-color: #333;
     color: #fbf9f5;
 }
@@ -36,8 +35,9 @@ header.dark-mode {
     padding: 10px 0;
 }
 
-.sticky-container.dark-mode {
+body.dark-mode .sticky-container {
     background-color: #333;
+    color: #fbf9f5;
 }
 
 /* Search container styling */
@@ -52,15 +52,15 @@ header.dark-mode {
     padding: 10px;
     font-size: 16px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    background-color: #fff;
     color: #000;
+    border: 1px solid #ccc;
 }
 
 body.dark-mode #searchBar {
-    border: 1px solid #555;
-    background-color: #444;
+    background-color: #555;
     color: #fbf9f5;
+    border: 1px solid #888;
 }
 
 /* Filters styling */
@@ -86,13 +86,12 @@ body.dark-mode #searchBar {
     background-color: #f9f9f9;
     width: 150px;
     text-align: center;
-    color: #000;
 }
 
 body.dark-mode .dropbtn {
-    border: 1px solid #555;
-    background-color: #444;
+    background-color: #555;
     color: #fbf9f5;
+    border: 1px solid #888;
 }
 
 .dropdown-content {
@@ -103,13 +102,11 @@ body.dark-mode .dropbtn {
     padding: 12px 16px;
     z-index: 1;
     width: 120px;
-    color: #000;
 }
 
 body.dark-mode .dropdown-content {
-    background-color: #444;
+    background-color: #555;
     color: #fbf9f5;
-    box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.2);
 }
 
 .dropdown-content label {
@@ -129,14 +126,32 @@ body.dark-mode .dropdown-content {
     border: 1px solid #ccc;
     color: rgb(255, 0, 0);
     background-color: #f9f9f9;
-    width: 100px;
+    width: 120px;
+    text-align: center;
+}
+
+.add-All {
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    color: rgb(3, 173, 74);
+    background-color: #f9f9f9;
+    width: 120px;
     text-align: center;
 }
 
 body.dark-mode .clear-filters {
-    border: 1px solid #555;
-    background-color: #444;
-    color: rgb(255, 0, 0);
+    background-color: #555;
+    color: #ff4c4c;
+    border: 1px solid #888;
+}
+
+body.dark-mode .add-All {
+    background-color: #555;
+    color: rgb(61, 232, 132);
+    border: 1px solid #888;
 }
 
 .restaurant-list {
@@ -159,13 +174,11 @@ body.dark-mode .clear-filters {
     transition: background-color 0.3s;
     position: relative;
     flex-direction: column;
-    color: #000;
 }
 
 body.dark-mode .restaurant-item {
-    background-color: #444;
-    border: 1px solid #555;
-    color: #fbf9f5;
+    background-color: #555;
+    border: 1px solid #888;
 }
 
 .restaurant-item:hover {
@@ -173,7 +186,7 @@ body.dark-mode .restaurant-item {
 }
 
 body.dark-mode .restaurant-item:hover {
-    background-color: #555;
+    background-color: #666;
 }
 
 .restaurant-item .restaurant-name {
@@ -220,6 +233,10 @@ body.dark-mode .restaurant-item:hover {
     background: #f1f1f1;
 }
 
+body.dark-mode ::-webkit-scrollbar-track {
+    background: #555;
+}
+
 ::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 10px;
@@ -227,4 +244,12 @@ body.dark-mode .restaurant-item:hover {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+    background: #ccc;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
 }
