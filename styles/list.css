@@ -1,5 +1,12 @@
-h1 {
+.header {
   color: red;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.clearAll {
+  margin-bottom: 10px;
 }
 
 body {
@@ -14,7 +21,7 @@ body {
   background-color: white;
   color: black;
   border: 1px solid black;
-  padding: 2px 5px;
+  padding: 2px 6px;
   cursor: pointer;
   border-radius: 3px;
   font-weight: bold;
