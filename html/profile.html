@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Profile</title>
     <link rel="stylesheet" href="../styles/profile.css" />
-  </head>
-  <body>
+</head>
+<body>
     <img src="../imgs/default.png" alt="Profile Image" class="profile-image" />
     <h1 class="profile-name">Placeholder</h1>
     <ul class="profile-options">
@@ -14,21 +14,29 @@
       <li>Password: ********</li>
       <li><a href="#">Delete Account</a></li>
       <li><a href="#">Change Password</a></li>
-      <li><span class="toggle-mode">Switch to Dark Mode</span></li>
     </ul>
 
     <script>
-      const toggleMode = document.querySelector(".toggle-mode");
-      let isDarkMode = false;
+        window.addEventListener('message', (event) => {
+            if (event.origin !== window.location.origin) {
+                return;
+            }
 
-      toggleMode.addEventListener("click", function () {
-        document.body.style.backgroundColor = isDarkMode ? "#fbf9f5" : "#333";
-        document.body.style.color = isDarkMode ? "#000" : "#fff";
-        toggleMode.textContent = isDarkMode
-          ? "Switch to Dark Mode"
-          : "Switch to Light Mode";
-        isDarkMode = !isDarkMode;
-      });
+            if (event.data && event.data.type === 'changeMode') {
+                changeBackgroundMode(event.data.mode);
+            }
+        });
+
+        function changeBackgroundMode(mode) {
+            const body = document.body;
+            if (mode === 'dark') {
+                body.style.backgroundColor = "#333";
+                body.style.color = "#fbf9f5";
+            } else {
+                body.style.backgroundColor = "#fbf9f5";
+                body.style.color = "#000";
+            }
+        }
     </script>
-  </body>
+</body>
 </html>
