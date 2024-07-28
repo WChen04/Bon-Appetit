@@ -17,6 +17,7 @@
 
     <script>
         let myWheel;
+        let isAnimating = false;
 
         function createWheel(segments) {
             // Clear the canvas before creating a new wheel
@@ -26,7 +27,11 @@
 
             if (segments.length === 0) {
                 segments = ['Add Restaurants']; // Default segment when no restaurants are added
+                startEmptyWheelAnimation();
+            } else {
+                stopEmptyWheelAnimation();
             }
+
             myWheel = new Winwheel({
                 'canvasId': 'canvas',
                 'numSegments': segments.length,
@@ -74,6 +79,27 @@
                 createWheel(event.data.restaurants);
             }
         });
+
+        function startEmptyWheelAnimation() {
+            if (!isAnimating) {
+                isAnimating = true;
+                gsap.to("#canvas", {
+                    rotation: 360,
+                    transformOrigin: "50% 50%",
+                    repeat: -1,
+                    ease: "none",
+                    duration: 10
+                });
+            }
+        }
+
+        function stopEmptyWheelAnimation() {
+            if (isAnimating) {
+                isAnimating = false;
+                gsap.killTweensOf("#canvas");
+                gsap.set("#canvas", { rotation: 0 });
+            }
+        }
 
         createWheel([]);
     </script>
