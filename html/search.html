@@ -61,5 +61,25 @@
     </div>
     <div class="restaurant-list" id="restaurantList"></div>
     <script src="../js/search.js"></script>
+    <script>
+        window.addEventListener('message', (event) => {
+            if (event.origin !== window.location.origin) {
+                return;
+            }
+
+            if (event.data && event.data.type === 'changeMode') {
+                changeBackgroundMode(event.data.mode);
+            }
+        });
+
+        function changeBackgroundMode(mode) {
+            const body = document.body;
+            if (mode === 'dark') {
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+            }
+        }
+    </script>
 </body>
 </html>

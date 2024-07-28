@@ -3,6 +3,12 @@ body {
     background-color: #fbf9f5;
     margin: 0;
     padding: 0;
+    color: #000; /* Default text color */
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fbf9f5; /* Light text color for dark mode */
 }
 
 /* Header styling */
@@ -16,6 +22,11 @@ header {
     padding: 10px 20px;
 }
 
+header.dark-mode {
+    background-color: #333;
+    color: #fbf9f5;
+}
+
 /* Sticky container styling */
 .sticky-container {
     position: sticky;
@@ -23,6 +34,10 @@ header {
     background-color: #fbf9f5;
     z-index: 1;
     padding: 10px 0;
+}
+
+.sticky-container.dark-mode {
+    background-color: #333;
 }
 
 /* Search container styling */
@@ -37,6 +52,15 @@ header {
     padding: 10px;
     font-size: 16px;
     margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+body.dark-mode #searchBar {
+    border: 1px solid #555;
+    background-color: #444;
+    color: #fbf9f5;
 }
 
 /* Filters styling */
@@ -62,6 +86,13 @@ header {
     background-color: #f9f9f9;
     width: 150px;
     text-align: center;
+    color: #000;
+}
+
+body.dark-mode .dropbtn {
+    border: 1px solid #555;
+    background-color: #444;
+    color: #fbf9f5;
 }
 
 .dropdown-content {
@@ -72,6 +103,13 @@ header {
     padding: 12px 16px;
     z-index: 1;
     width: 120px;
+    color: #000;
+}
+
+body.dark-mode .dropdown-content {
+    background-color: #444;
+    color: #fbf9f5;
+    box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.2);
 }
 
 .dropdown-content label {
@@ -95,6 +133,12 @@ header {
     text-align: center;
 }
 
+body.dark-mode .clear-filters {
+    border: 1px solid #555;
+    background-color: #444;
+    color: rgb(255, 0, 0);
+}
+
 .restaurant-list {
     display: flex;
     flex-direction: column;
@@ -115,10 +159,21 @@ header {
     transition: background-color 0.3s;
     position: relative;
     flex-direction: column;
+    color: #000;
+}
+
+body.dark-mode .restaurant-item {
+    background-color: #444;
+    border: 1px solid #555;
+    color: #fbf9f5;
 }
 
 .restaurant-item:hover {
     background-color: #e0e0e0;
+}
+
+body.dark-mode .restaurant-item:hover {
+    background-color: #555;
 }
 
 .restaurant-item .restaurant-name {

@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             checkbox.name = 'add-to-list';
             checkbox.id = `checkbox-${restaurant.name.replace(/\s+/g, '-')}`;
             checkbox.addEventListener('change', () => {
-                const listFrame = parent.document.getElementById('list').contentWindow;
+                const listFrame = parent.document.getElementById('listFrame').contentWindow;
                 if (checkbox.checked) {
                     listFrame.postMessage({ type: 'addRestaurant', name: restaurant.name }, '*');
                 } else {
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         filteredRestaurants.forEach(restaurant => {
-            const listFrame = parent.document.getElementById('list').contentWindow;
+            const listFrame = parent.document.getElementById('listFrame').contentWindow;
             listFrame.postMessage({ type: 'addRestaurant', name: restaurant.name }, '*');
         });
     }
