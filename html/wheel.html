@@ -27,6 +27,7 @@
 
             let strokeStyleColor = segments.length === 0 ? '#68aede' : '#FFFFFF'; // Change color based on segments
             let orientation = segments.length === 0 ? 'curved' : 'horizontal'; // Change text orientation based on segments
+            let angle = segments.length === 0 ? 150 : 0; // Change rotation angle based on segments
 
             if (segments.length === 0) {
                 segments = [{ text: 'Add Restaurants To The List', textFontSize: 20, fillStyle: '#68aede' }]; // Default segment when no restaurants are added
@@ -49,6 +50,7 @@
                 'segments': segments,
                 'strokeStyle': strokeStyleColor,
                 'textOrientation': orientation,
+                'rotationAngle': angle,
                 'animation': {
                     'type': 'spinToStop',
                     'duration': 5,
