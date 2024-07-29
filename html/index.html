@@ -1,143 +1,142 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../styles/index.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="BA">
-            <img id="logo" src="../imgs/BA_Logo.png" alt="#" />
-            <h1>Bon Appetit</h1>
-        </div>
-        <div class="tabs">
-            <a id="aboutus" href="../html/developer.html"><h1>About Us</h1></a>
-            <button id="modeToggle">Dark Mode</button>
-            <img id="profile" src="../imgs/default.png" alt="#" />
-        </div>
+      <div class="BA">
+        <img id="logo" src="../imgs/BA_Logo.png" alt="#" />
+        <h1>Bon Appetit</h1>
+      </div>
+      <div class="tabs">
+        <a id="aboutus" href="../html/developer.html"><h1>About Us</h1></a>
+        <button id="modeToggle">Dark Mode</button>
+      </div>
     </header>
     <div style="text-align: center" class="dots">
-        <span class="dot" onclick="currentSlide(1)">Wheel</span>
-        <span class="dot" onclick="currentSlide(2)">Search</span>
-        <span class="dot" onclick="currentSlide(3)">Profile</span>
+      <span class="dot" onclick="currentSlide(1)">Wheel</span>
+      <span class="dot" onclick="currentSlide(2)">Search</span>
     </div>
     <div class="body-container">
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <iframe id="wheelFrame" src="wheel.html"></iframe>
-            </div>
-
-            <div class="mySlides fade">
-                <iframe id="searchFrame" src="search.html"></iframe>
-            </div>
-
-            <div class="mySlides fade">
-                <iframe src="profile.html"></iframe>
-            </div>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <iframe id="wheelFrame" src="wheel.html"></iframe>
         </div>
-        <iframe id="listFrame" src="list.html"></iframe>
+
+        <div class="mySlides fade">
+          <iframe id="searchFrame" src="search.html"></iframe>
+        </div>
+      </div>
+      <iframe id="listFrame" src="list.html"></iframe>
     </div>
 
-    <div class="alert-overlay" id="customAlert" style="display: none;">
-        <div class="alert-box">
-            <h1 id="alertTitle">Congratulations!</h1>
-            <p id="alertMessage">Restaurant: </p>
-            <button onclick="closeAlert()">OK</button>
-        </div>
+    <div class="alert-overlay" id="customAlert" style="display: none">
+      <div class="alert-box">
+        <h1 id="alertTitle">Congratulations!</h1>
+        <p id="alertMessage">Restaurant:</p>
+        <button onclick="closeAlert()">OK</button>
+      </div>
     </div>
 
     <br />
     <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+      let slideIndex = 1;
+      showSlides(slideIndex);
 
-        function plusSlides(n) {
-            showSlides((slideIndex += n));
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
         }
-
-        function currentSlide(n) {
-            showSlides((slideIndex = n));
+        if (n < 1) {
+          slideIndex = slides.length;
         }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1;
-            }
-            if (n < 1) {
-                slideIndex = slides.length;
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
         }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
 
-        document.getElementById("modeToggle").addEventListener("click", function () {
-            const body = document.body;
-            const header = document.querySelector("header"); // Assuming you have a <header> element
-            const toggleBtn = document.getElementById("modeToggle");
+      document
+        .getElementById("modeToggle")
+        .addEventListener("click", function () {
+          const body = document.body;
+          const header = document.querySelector("header"); // Assuming you have a <header> element
+          const toggleBtn = document.getElementById("modeToggle");
 
-            let mode;
-            if (
-                body.style.backgroundColor === "rgb(51, 51, 51)" ||
-                body.style.backgroundColor === "#333"
-            ) {
-                // Switch to Light Mode
-                body.style.backgroundColor = "#fbf9f5";
-                body.style.color = "#000";
+          let mode;
+          if (
+            body.style.backgroundColor === "rgb(51, 51, 51)" ||
+            body.style.backgroundColor === "#333"
+          ) {
+            // Switch to Light Mode
+            body.style.backgroundColor = "#fbf9f5";
+            body.style.color = "#000";
 
-                header.style.backgroundColor = "#fbf9f5";
-                header.style.color = "#000";
-                toggleBtn.textContent = "Dark Mode";
-                mode = 'light';
-            } else {
-                // Switch to Dark Mode
-                body.style.backgroundColor = "#333";
-                body.style.color = "#fbf9f5";
-                header.style.backgroundColor = "#333";
-                header.style.color = "#fbf9f5";
-                toggleBtn.textContent = "Light Mode";
-                mode = 'dark';
-            }
+            header.style.backgroundColor = "#fbf9f5";
+            header.style.color = "#000";
+            toggleBtn.textContent = "Dark Mode";
+            mode = "light";
+          } else {
+            // Switch to Dark Mode
+            body.style.backgroundColor = "#333";
+            body.style.color = "#fbf9f5";
+            header.style.backgroundColor = "#333";
+            header.style.color = "#fbf9f5";
+            toggleBtn.textContent = "Light Mode";
+            mode = "dark";
+          }
 
-            // Send message to iframes to change their background color
-            changeIframeBackgrounds(mode);
+          // Send message to iframes to change their background color
+          changeIframeBackgrounds(mode);
         });
 
-        function changeIframeBackgrounds(mode) {
-            const iframes = document.querySelectorAll("iframe");
-            iframes.forEach(iframe => {
-                iframe.contentWindow.postMessage({ type: 'changeMode', mode: mode }, '*');
-            });
-        }
-
-        // Handle alert messages from iframes
-        window.addEventListener('message', (event) => {
-            if (event.origin !== window.location.origin) {
-                return;
-            }
-
-            if (event.data && event.data.type === 'showAlert') {
-                showAlert(event.data.title, event.data.message);
-            }
+      function changeIframeBackgrounds(mode) {
+        const iframes = document.querySelectorAll("iframe");
+        iframes.forEach((iframe) => {
+          iframe.contentWindow.postMessage(
+            { type: "changeMode", mode: mode },
+            "*"
+          );
         });
+      }
 
-        function showAlert(title, message) {
-            document.getElementById('alertTitle').textContent = title;
-            document.getElementById('alertMessage').textContent = message;
-            document.getElementById('customAlert').style.display = 'flex';
+      // Handle alert messages from iframes
+      window.addEventListener("message", (event) => {
+        if (event.origin !== window.location.origin) {
+          return;
         }
 
-        function closeAlert() {
-            document.getElementById('customAlert').style.display = 'none';
+        if (event.data && event.data.type === "showAlert") {
+          showAlert(event.data.title, event.data.message);
         }
+      });
+
+      function showAlert(title, message) {
+        document.getElementById("alertTitle").textContent = title;
+        document.getElementById("alertMessage").textContent = message;
+        document.getElementById("customAlert").style.display = "flex";
+      }
+
+      function closeAlert() {
+        document.getElementById("customAlert").style.display = "none";
+      }
     </script>
-</body>
+  </body>
 </html>
