@@ -5,16 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/list.css">
     <title>Restaurant List</title>
-    <style>
-        .minus-button {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
     <div class="header">Selected Restaurants</div>
@@ -47,17 +37,7 @@
 
             const restaurantItem = document.createElement('div');
             restaurantItem.className = 'restaurant-item';
-            restaurantItem.style.display = 'flex';
-            restaurantItem.style.alignItems = 'center';
-            restaurantItem.style.justifyContent = 'space-between';
-            restaurantItem.style.padding = '10px';
-            restaurantItem.style.border = '1px solid #ccc';
-            restaurantItem.style.borderRadius = '5px';
-            restaurantItem.style.borderColor = 'black';
-            restaurantItem.style.marginBottom = '5px';
-            restaurantItem.style.cursor = 'pointer';
-            restaurantItem.style.backgroundColor = '#f9f9f9';
-
+            
             const nameSpan = document.createElement('span');
             nameSpan.textContent = restaurantName;
 
