@@ -86,6 +86,7 @@ img {
   justify-content: center;
   align-content: center;
   animation: slideInFromLeft 0.5s ease forwards;
+  width: 15em
 }
 
 .active,
