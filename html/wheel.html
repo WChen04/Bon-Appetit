@@ -29,19 +29,24 @@
             let orientation = segments.length === 0 ? 'curved' : 'horizontal'; // Change text orientation based on segments
 
             if (segments.length === 0) {
-                segments = ['Add Restaurants To The List']; // Default segment when no restaurants are added
+                segments = [{ text: 'Add Restaurants To The List', textFontSize: 20, fillStyle: '#68aede' }]; // Default segment when no restaurants are added
                 startEmptyWheelAnimation();
             } else {
+                segments = segments.map((restaurant, index) => {
+                    let textFontSize = restaurant.length > 15 ? 12 : 18;
+                    return {
+                        'fillStyle': (index % 2 === 0) ? '#68aede' : '#9cd6ea',
+                        'text': restaurant,
+                        'textFontSize': textFontSize
+                    }
+                });
                 stopEmptyWheelAnimation();
             }
 
             myWheel = new Winwheel({
                 'canvasId': 'canvas',
                 'numSegments': segments.length,
-                'segments': segments.map((restaurant, index) => ({
-                    'fillStyle': (index % 2 === 0) ? '#68aede' : '#9cd6ea',
-                    'text': restaurant
-                })),
+                'segments': segments,
                 'strokeStyle': strokeStyleColor,
                 'textOrientation': orientation,
                 'animation': {

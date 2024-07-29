@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Restaurant 11', distance: '20km', cuisine: 'Italian', rating: '1', price: '$$$', opening: 'Evening'},
         { name: 'Restaurant 12', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Afternoon'},
         { name: 'Restaurant 13', distance: '10km', cuisine: 'Italian', rating: '3', price: '$$$', opening: 'Afternoon'},
+        { name: 'Very Long Restaurant Nameeeee', distance: '10km', cuisine: 'Italian', rating: '3', price: '$$$', opening: 'Afternoon'},
         // Add more restaurants here
     ];
 
