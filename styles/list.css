@@ -1,3 +1,19 @@
+body {
+  margin: 0;
+  padding: 20px;
+}
+
+body.light-mode {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+body.dark-mode {
+  background-color: #555;
+  color: #fbf9f5;
+}
+
+/* Header Styling */
 .header {
   color: red;
   font-size: 30px;
@@ -5,18 +21,35 @@
   padding: 10px 0;
 }
 
+.body.dark-mode .header {
+  color: white;
+}
+
+/* Clear All Button Styling */
 .clearAll {
   margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: #8483d7;
+  color: white;
+  border: 2px solid #8483d7;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-body {
-  background: linear-gradient(
-    90deg,
-    hsla(16, 100%, 76%, 1) 0%,
-    hsla(49, 100%, 81%, 1) 100%
-  );
+.clearAll:hover {
+  background-color: #6464d7; /* Darken the button on hover */
 }
 
+.body.dark-mode .clearAll {
+  background-color: #6464d7;
+  border: 2px solid #6464d7;
+}
+
+.body.dark-mode .clearAll:hover {
+  background-color: #3a3ac2; /* Darken the button on hover */
+}
+
+/* Minus Button Styling */
 .minus-button {
   background-color: white;
   color: black;
@@ -29,6 +62,13 @@ body {
   line-height: 1;
 }
 
+.body.dark-mode .minus-button {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+/* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 3px; /* Width of the entire scrollbar */
 }

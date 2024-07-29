@@ -176,6 +176,7 @@ header {
   width: 30%;
   margin: 2em;
   animation: slideIn 0.5s ease forwards;
+  border-radius: 15px;
 }
 #modeToggle {
   /* position: fixed; */
