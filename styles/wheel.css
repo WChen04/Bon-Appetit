@@ -3,17 +3,17 @@
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: 30px solid #bee8f9; /* Flip the triangle */
+  border-top: 30px solid #bee8f9;
   position: absolute;
-  top: -10px; /* Adjust this value to position the triangle correctly */
-  left: 230px; /* Adjust this value to position the triangle correctly */
-  z-index: 10; /* Ensure the triangle is above the canvas */
+  top: -10px;
+  left: 255px;
+  z-index: 10;
 }
 
 .wheel-container {
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 550px;
   margin: auto;
 }
 
@@ -36,19 +36,25 @@ canvas {
   font-size: 16px;
   cursor: pointer;
   z-index: 10;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better appearance */
-  transition: background 0.3s ease; /* Smooth transition for background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
 }
 
 #spinButton:hover {
-  background: radial-gradient(circle, #68aede 0%, #bee8f9 100%); /* Hover state gradient */
+  background: radial-gradient(circle, #68aede 0%, #bee8f9 100%);
 }
 
 #spinButton:active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transform: translate(-50%, -50%) scale(0.98); /* Scale effect on click */
+  transform: translate(-50%, -50%) scale(0.98);
 }
 
 #spinButton:disabled {
   background-color: #afc6ff;
+}
+
+/* A scroll bar shows while the wheel is rotating,
+    so this just makes the scrollbar disappear     */
+::-webkit-scrollbar {
+  width: 0px;
 }
