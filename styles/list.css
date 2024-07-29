@@ -21,7 +21,7 @@ body.dark-mode {
   padding: 10px 0;
 }
 
-.body.dark-mode .header {
+body.dark-mode .header {
   color: white;
 }
 
@@ -40,32 +40,51 @@ body.dark-mode {
   background-color: #6464d7; /* Darken the button on hover */
 }
 
-.body.dark-mode .clearAll {
+body.dark-mode .clearAll {
   background-color: #6464d7;
   border: 2px solid #6464d7;
 }
 
-.body.dark-mode .clearAll:hover {
+body.dark-mode .clearAll:hover {
   background-color: #3a3ac2; /* Darken the button on hover */
 }
 
 /* Minus Button Styling */
 .minus-button {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-  padding: 2px 6px;
-  cursor: pointer;
-  border-radius: 3px;
+  background-color: rgb(201, 201, 201);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px 10px;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 1;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.body.dark-mode .minus-button {
-  background-color: black;
+body.dark-mode .minus-button {
+  background-color: rgb(100, 100, 100);
   color: white;
   border: 1px solid white;
+}
+
+/* Restaurant Item Styling */
+.restaurant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border-color: black;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  color: black;
+}
+
+body.dark-mode .restaurant-item {
+  background-color: #777;
+  color: white;
+  border-color: white;
 }
 
 /* Scrollbar Styling */
