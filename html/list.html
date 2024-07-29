@@ -18,28 +18,29 @@
             }
 
             if (event.data && event.data.type === 'addRestaurant') {
-                addRestaurantToList(event.data.name);
+                addRestaurantToList(event.data.restaurant);
             } else if (event.data && event.data.type === 'removeRestaurant') {
-                removeRestaurantFromList(event.data.name);
+                removeRestaurantFromList(event.data.restaurant);
             } else if (event.data && event.data.type === 'changeMode') {
                 changeMode(event.data.mode);
             }
         });
 
-        function addRestaurantToList(restaurantName) {
+        function addRestaurantToList(restaurant) {
             const selectedRestaurantsContainer = document.getElementById('selectedRestaurants');
             const items = selectedRestaurantsContainer.getElementsByClassName('restaurant-item');
             for (let i = items.length - 1; i >= 0; i--) {
-                if (items[i].firstChild.textContent === restaurantName) {
+                if (items[i].dataset.id === restaurant.id) {
                     return;
                 }
             }
 
             const restaurantItem = document.createElement('div');
             restaurantItem.className = 'restaurant-item';
-            
+            restaurantItem.dataset.id = restaurant.id;
+
             const nameSpan = document.createElement('span');
-            nameSpan.textContent = restaurantName;
+            nameSpan.textContent = restaurant.name;
 
             const minusButton = document.createElement('button');
             minusButton.className = 'minus-button';
@@ -47,7 +48,7 @@
             minusButton.addEventListener('click', () => {
                 selectedRestaurantsContainer.removeChild(restaurantItem);
                 const searchFrame = parent.document.getElementById('searchFrame').contentWindow;
-                searchFrame.postMessage({ type: 'removeRestaurant', name: restaurantName }, '*');
+                searchFrame.postMessage({ type: 'removeRestaurant', restaurant: restaurant }, '*');
                 sendSelectedRestaurants();
             });
             
@@ -57,11 +58,11 @@
             sendSelectedRestaurants();
         }
 
-        function removeRestaurantFromList(restaurantName) {
+        function removeRestaurantFromList(restaurant) {
             const selectedRestaurantsContainer = document.getElementById('selectedRestaurants');
             const items = selectedRestaurantsContainer.getElementsByClassName('restaurant-item');
             for (let i = items.length - 1; i >= 0; i--) {
-                if (items[i].firstChild.textContent === restaurantName) {
+                if (items[i].dataset.id === restaurant.id) {
                     selectedRestaurantsContainer.removeChild(items[i]);
                     break;
                 }

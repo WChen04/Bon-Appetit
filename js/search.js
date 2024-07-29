@@ -7,21 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // This will be replaced with a call to the backend to get the list of restaurants
     const restaurants = [
-        // Array of restaurants with the following properties: name, distance, cuisine, rating, price, opening
-        { name: 'Restaurant 1', distance: '1km', cuisine: 'Italian', rating: '5', price: '$$', opening: 'Morning'},
-        { name: 'Restaurant 2', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Evening'},
-        { name: 'Restaurant 3', distance: '10km', cuisine: 'Indian', rating: '2', price: '$$$', opening: 'Afternoon'},
-        { name: 'Restaurant 4', distance: '1km', cuisine: 'Italian', rating: '5', price: '$$$$', opening: 'Morning'},
-        { name: 'Restaurant 5', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Evening'},
-        { name: 'Restaurant 6', distance: '1km', cuisine: 'Chinese', rating: '3', price: '$$', opening: 'Afternoon'},
-        { name: 'Restaurant 7', distance: '5km', cuisine: 'Italian', rating: '5', price: '$$', opening: 'Evening'},
-        { name: 'Restaurant 8', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Afternoon'},
-        { name: 'Restaurant 9', distance: '10km', cuisine: 'Indian', rating: '5', price: '$$$$', opening: 'Afternoon'},
-        { name: 'Restaurant 10', distance: '10km', cuisine: 'Indian', rating: '5', price: '$$', opening: 'Morning'},
-        { name: 'Restaurant 11', distance: '20km', cuisine: 'Italian', rating: '1', price: '$$$', opening: 'Evening'},
-        { name: 'Restaurant 12', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Afternoon'},
-        { name: 'Restaurant 13', distance: '10km', cuisine: 'Italian', rating: '3', price: '$$$', opening: 'Afternoon'},
-        { name: 'Very Long Restaurant Nameeeee', distance: '10km', cuisine: 'Italian', rating: '3', price: '$$$', opening: 'Afternoon'},
+        // Array of restaurants with the following properties: id, name, distance, cuisine, rating, price, opening
+        { id: '1', name: 'Restaurant 1', distance: '1km', cuisine: 'Italian', rating: '5', price: '$$', opening: 'Morning'},
+        { id: '2', name: 'Restaurant 2', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Evening'},
+        { id: '3', name: 'Restaurant 3', distance: '10km', cuisine: 'Indian', rating: '2', price: '$$$', opening: 'Afternoon'},
+        { id: '4', name: 'Restaurant 4', distance: '1km', cuisine: 'Italian', rating: '5', price: '$$$$', opening: 'Morning'},
+        { id: '5', name: 'Restaurant 5', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Evening'},
+        { id: '6', name: 'Restaurant 6', distance: '1km', cuisine: 'Chinese', rating: '3', price: '$$', opening: 'Afternoon'},
+        { id: '7', name: 'Restaurant 7', distance: '5km', cuisine: 'Italian', rating: '5', price: '$$', opening: 'Evening'},
+        { id: '8', name: 'Restaurant 8', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Afternoon'},
+        { id: '9', name: 'Restaurant 9', distance: '10km', cuisine: 'Indian', rating: '5', price: '$$$$', opening: 'Afternoon'},
+        { id: '10', name: 'Restaurant 10', distance: '10km', cuisine: 'Indian', rating: '5', price: '$$', opening: 'Morning'},
+        { id: '11', name: 'Restaurant 11', distance: '20km', cuisine: 'Italian', rating: '1', price: '$$$', opening: 'Evening'},
+        { id: '12', name: 'Restaurant 12', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Afternoon'},
+        { id: '13', name: 'Restaurant 13', distance: '10km', cuisine: 'Italian', rating: '3', price: '$$$', opening: 'Afternoon'},
+        { id: '14', name: 'Very Long Restaurant Nameeeee', distance: '10km', cuisine: 'Italian', rating: '3', price: '$$$', opening: 'Afternoon'},
         // Add more restaurants here
     ];
 
@@ -68,13 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.name = 'add-to-list';
-            checkbox.id = `checkbox-${restaurant.name.replace(/\s+/g, '-')}`;
+            checkbox.id = `checkbox-${restaurant.id}`;
             checkbox.addEventListener('change', () => {
                 const listFrame = parent.document.getElementById('listFrame').contentWindow;
                 if (checkbox.checked) {
-                    listFrame.postMessage({ type: 'addRestaurant', name: restaurant.name }, '*');
+                    listFrame.postMessage({ type: 'addRestaurant', restaurant: restaurant }, '*');
                 } else {
-                    listFrame.postMessage({ type: 'removeRestaurant', name: restaurant.name }, '*');
+                    listFrame.postMessage({ type: 'removeRestaurant', restaurant: restaurant }, '*');
                 }
             });
 
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         filteredRestaurants.forEach(restaurant => {
             const listFrame = parent.document.getElementById('listFrame').contentWindow;
-            listFrame.postMessage({ type: 'addRestaurant', name: restaurant.name }, '*');
+            listFrame.postMessage({ type: 'addRestaurant', restaurant: restaurant }, '*');
         });
     }
 
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (event.data && event.data.type === 'removeRestaurant') {
-            const checkboxId = `checkbox-${event.data.name.replace(/\s+/g, '-')}`;
+            const checkboxId = `checkbox-${event.data.restaurant.id}`;
             const checkbox = document.getElementById(checkboxId);
             if (checkbox) {
                 checkbox.checked = false;
