@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (filteredRestaurants.length === 0) {
             const noResultsMessage = document.createElement('div');
             noResultsMessage.className = 'no-results';
-            noResultsMessage.textContent = 'No restaurants found. Please try again.';
+            noResultsMessage.textContent = 'There are no restaurants that match your search. Please try again.';
             restaurantList.appendChild(noResultsMessage);
             return;
         }
