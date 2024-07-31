@@ -37,6 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to display the list of restaurants
     function displayRestaurants(filteredRestaurants) {
         restaurantList.innerHTML = '';
+        if (filteredRestaurants.length === 0) {
+            const noResultsMessage = document.createElement('div');
+            noResultsMessage.className = 'no-results';
+            noResultsMessage.textContent = 'No restaurants found. Please try again.';
+            restaurantList.appendChild(noResultsMessage);
+            return;
+        }
+
         filteredRestaurants.forEach(restaurant => {
             const restaurantItem = document.createElement('div');
             restaurantItem.className = 'restaurant-item';

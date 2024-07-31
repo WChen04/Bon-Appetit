@@ -224,6 +224,13 @@ body.dark-mode .restaurant-item:hover {
     border-radius: 5px;
 }
 
+.no-results {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    margin-top: 100px;
+}
+
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
     width: 5px;
