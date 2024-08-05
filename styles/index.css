@@ -237,3 +237,12 @@ header {
   cursor: pointer;
   border-radius: 5px;
 }
+
+body.dark-mode .alert-box {
+  background: #333;
+  color: #fbf9f5;
+}
+body.dark-mode .alert-box button {
+  background-color: #555;
+  color: #fbf9f5;
+}
