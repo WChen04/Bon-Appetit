@@ -5,6 +5,18 @@
   right: 44%;
   -webkit-transform: rotate(-90deg);
   z-index: 10;
+  display: block;
+}
+
+.whiteArrow {
+  position: absolute;
+  width: 4em;
+  height: auto;
+  top: 0%;
+  right: 44%;
+  -webkit-transform: rotate(-90deg);
+  z-index: 10;
+  display: none;
 }
 
 .wheel-container {
