@@ -11,6 +11,7 @@
 <body>
     <div class="wheel-container">
         <img class="arrow" src="../imgs/arrow.png">
+        <img class="whiteArrow" src="../imgs/white_arrow.png">
         <canvas id="canvas" width="550" height="550"></canvas>
         <button id="spinButton" onclick="startSpin()">SPIN</button>
     </div>
@@ -89,6 +90,8 @@
 
             if (event.data && event.data.type === 'updateWheel') {
                 createWheel(event.data.restaurants);
+            } else if (event.data && event.data.type === 'changeMode') {
+                switchArrows(event.data.mode);
             }
         });
 
@@ -110,6 +113,19 @@
                 isAnimating = false;
                 gsap.killTweensOf("#canvas");
                 gsap.set("#canvas", { rotation: 0 });
+            }
+        }
+
+        function switchArrows(mode) {
+            const blackArrow = document.querySelector('.arrow');
+            const whiteArrow = document.querySelector('.whiteArrow');
+
+            if (mode === 'dark') {
+                blackArrow.style.display = 'none';
+                whiteArrow.style.display = 'block';
+            } else {
+                blackArrow.style.display = 'block';
+                whiteArrow.style.display = 'none';
             }
         }
 
