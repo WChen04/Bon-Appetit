@@ -8,6 +8,10 @@ iframe {
   height: 65vh;
   width: 100%;
 }
+#wheelFrame{
+  height: 76vh;
+  width: 100%;
+}
 body {
   font-family: Verdana, sans-serif;
   margin: 0;

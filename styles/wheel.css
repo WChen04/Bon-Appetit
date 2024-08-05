@@ -1,16 +1,14 @@
-.triangle-pointer {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 30px solid #bee8f9;
+.arrow {
   position: absolute;
-  top: -10px;
-  left: 255px;
+  width: 4em;
+  top: 0%;
+  right: 44%;
+  -webkit-transform: rotate(-90deg);
   z-index: 10;
 }
 
 .wheel-container {
+  padding-top: 30px;
   position: relative;
   width: 550px;
   height: 550px;
@@ -24,7 +22,7 @@ canvas {
 
 #spinButton {
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90px;
