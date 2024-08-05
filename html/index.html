@@ -82,8 +82,7 @@
 
           let mode;
           if (
-            body.style.backgroundColor === "rgb(51, 51, 51)" ||
-            body.style.backgroundColor === "#333"
+            body.classList.contains("dark-mode")
           ) {
             // Switch to Light Mode
             body.style.backgroundColor = "#fbf9f5";
@@ -91,6 +90,8 @@
 
             header.style.backgroundColor = "#fbf9f5";
             header.style.color = "#000";
+            body.classList.remove("dark-mode");
+            header.classList.remove("dark-mode");
             toggleBtn.textContent = "Dark Mode";
             mode = "light";
           } else {
@@ -99,6 +100,8 @@
             body.style.color = "#fbf9f5";
             header.style.backgroundColor = "#333";
             header.style.color = "#fbf9f5";
+            body.classList.add("dark-mode");
+            header.classList.add("dark-mode");
             toggleBtn.textContent = "Light Mode";
             mode = "dark";
           }
