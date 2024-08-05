@@ -1,26 +1,103 @@
-h1 {
-  color: red;
-}
 body {
-  background: hsla(16, 100%, 76%, 1);
+  margin: 0;
+  padding: 20px;
+}
 
-  background: linear-gradient(
-    90deg,
-    hsla(16, 100%, 76%, 1) 0%,
-    hsla(49, 100%, 81%, 1) 100%
-  );
+body.light-mode {
+  background-color: #e4e4e4;
+  color: #000;
+}
 
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(16, 100%, 76%, 1) 0%,
-    hsla(49, 100%, 81%, 1) 100%
-  );
+body.dark-mode {
+  background-color: #555;
+  color: #fbf9f5;
+}
 
-  background: -webkit-linear-gradient(
-    90deg,
-    hsla(16, 100%, 76%, 1) 0%,
-    hsla(49, 100%, 81%, 1) 100%
-  );
+/* Header Styling */
+.header {
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 0;
+}
 
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFA585", endColorstr="#FFEDA0", GradientType=1 );
+body.dark-mode .header {
+  color: white;
+}
+
+/* Clear All Button Styling */
+.clearAll {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: #8483d7;
+  color: white;
+  border: 2px solid #8483d7;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.clearAll:hover {
+  background-color: #6464d7; /* Darken the button on hover */
+}
+
+body.dark-mode .clearAll {
+  background-color: #6464d7;
+  border: 2px solid #6464d7;
+}
+
+body.dark-mode .clearAll:hover {
+  background-color: #3a3ac2; /* Darken the button on hover */
+}
+
+/* Minus Button Styling */
+.minus-button {
+  background-color: rgb(201, 201, 201);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+body.dark-mode .minus-button {
+  background-color: rgb(100, 100, 100);
+  color: white;
+  border: 1px solid white;
+}
+
+/* Restaurant Item Styling */
+.restaurant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border-color: black;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  color: black;
+}
+
+body.dark-mode .restaurant-item {
+  background-color: #777;
+  color: white;
+  border-color: white;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 3px; /* Width of the entire scrollbar */
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+}
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners of the scrollbar handle */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle on hover */
 }

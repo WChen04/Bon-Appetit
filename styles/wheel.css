@@ -1,28 +1,29 @@
-/* body {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 34, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-} */
-
-.triangle-pointer {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 30px solid rgb(233, 176, 255); /* Flip the triangle */
+.arrow {
   position: absolute;
-  top: -10px; /* Adjust this value to position the triangle correctly */
-  left: 230px; /* Adjust this value to position the triangle correctly */
-  z-index: 10; /* Ensure the triangle is above the canvas */
+  width: 4em;
+  top: 0%;
+  right: 44%;
+  -webkit-transform: rotate(-90deg);
+  z-index: 10;
+  display: block;
 }
+
+.whiteArrow {
+  position: absolute;
+  width: 4em;
+  height: auto;
+  top: 0%;
+  right: 44%;
+  -webkit-transform: rotate(-90deg);
+  z-index: 10;
+  display: none;
+}
+
 .wheel-container {
+  padding-top: 30px;
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 550px;
   margin: auto;
 }
 
@@ -33,19 +34,37 @@ canvas {
 
 #spinButton {
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  background-color: #f1bef9;
-  color: white;
+  background: radial-gradient(circle, #bee8f9 0%, #68aede 100%);
+  color: black;
   border: none;
   font-size: 16px;
   cursor: pointer;
   z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
 }
+
+#spinButton:hover {
+  background: radial-gradient(circle, #68aede 0%, #bee8f9 100%);
+}
+
+#spinButton:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%) scale(0.98);
+}
+
 #spinButton:disabled {
-  background-color: #bc65a9;
+  background-color: #afc6ff;
+}
+
+/* A scroll bar shows while the wheel is rotating,
+    so this just makes the scrollbar disappear     */
+::-webkit-scrollbar {
+  width: 0px;
 }
