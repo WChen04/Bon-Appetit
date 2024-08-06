@@ -168,6 +168,9 @@ header {
   text-decoration: none;
   color: black;
 }
+body.dark-mode #aboutus {
+  color: white;
+}
 .body-container {
   display: flex;
   flex-direction: row;
