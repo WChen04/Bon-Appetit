@@ -134,6 +134,46 @@
         </div>
       </div>
     </div>
+    <script>
+      document.getElementById("modeToggle").addEventListener("click", function () {
+          const body = document.body;
+          const header = document.querySelector("header"); // Assuming you have a <header> element
+          const toggleBtn = document.getElementById("modeToggle");
+          const aboutUs = document.getElementById("aboutus");
+          const companyName = document.getElementById("CompanyName");
+
+          let mode;
+          if (body.classList.contains("dark-mode")) {
+            // Switch to Light Mode
+            body.style.backgroundColor = "#fbf9f5";
+            body.style.color = "#000";
+
+            header.style.backgroundColor = "#fbf9f5";
+            header.style.color = "#000";
+            body.classList.remove("dark-mode");
+            header.classList.remove("dark-mode");
+            companyName.style.color = "black";
+            aboutUs.style.color = "black";
+            toggleBtn.textContent = "Dark Mode";
+            mode = "light";
+          } else {
+            // Switch to Dark Mode
+            body.style.backgroundColor = "#333";
+            body.style.color = "#fbf9f5";
+            header.style.backgroundColor = "#333";
+            header.style.color = "#fbf9f5";
+            companyName.style.color = "white";
+            aboutUs.style.color = "white";
+            body.classList.add("dark-mode");
+            header.classList.add("dark-mode");
+            toggleBtn.textContent = "Light Mode";
+            mode = "dark";
+          }
+
+          // Send message to iframes to change their background color
+          changeIframeBackgrounds(mode);
+      });
+    </script>
   </body>
   <footer>
     <img src="../imgs/BA_Logo.png" alt="" id="CookBook_logo" />
