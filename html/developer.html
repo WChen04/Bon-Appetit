@@ -132,6 +132,8 @@
             const toggleBtn = document.getElementById("modeToggle");
             const aboutUs = document.getElementById("aboutus");
             const companyName = document.getElementById("CompanyName");
+            const footer = document.getElementById("bottom");
+            const rows = document.querySelectorAll('.row section');
 
             let mode;
             if (body.classList.contains("dark-mode")) {
@@ -141,6 +143,10 @@
                 companyName.style.color = "black";
                 aboutUs.style.color = "black";
                 body.style.background = "linear-gradient(180deg, rgba(251, 249, 245, 1) 0%, rgba(231, 232, 155, 1) 66%, rgba(222, 169, 235, 1) 100%)";
+                footer.style.backgroundColor = "rgba(218, 184, 217, 1)";
+                body.style.color = "black";
+
+                rows.forEach(row => row.style.backgroundColor = "#fff");
                 
                 header.classList.remove("dark-mode");
                 body.classList.remove("dark-mode");
@@ -148,12 +154,15 @@
                 mode = "light";
             } else {
                 // Switch to Dark Mode
-                header.style.backgroundColor = "#333";
+                header.style.backgroundColor = "rgb(161, 161, 161)";
                 header.style.color = "#fbf9f5";
                 companyName.style.color = "white";
                 aboutUs.style.color = "white";
                 body.style.background = "linear-gradient(180deg, rgba(169, 169, 169, 1) 0%, rgba(5, 5, 5, 1) 100%)";
+                footer.style.backgroundColor = "rgba(5, 5, 5, 1)";
                 body.style.color = "#fbf9f5";
+                
+                rows.forEach(row => row.style.backgroundColor = "rgb(169, 169, 169)");
                 
                 body.classList.add("dark-mode");
                 header.classList.add("dark-mode");
@@ -173,7 +182,7 @@
         }
     </script>
 </body>
-<footer>
+<footer id="bottom">
     <img src="../imgs/BA_Logo.png" alt="" id="CookBook_logo" />
     <div class="team4">
         <h1 id="group_title">Bon Appetite</h1>
