@@ -20,16 +20,6 @@ body {
     rgba(222, 169, 235, 1) 100%
   );
 }
-::selection {
-  color: #fff;
-  background: rgb(251, 249, 245);
-  background: linear-gradient(
-    180deg,
-    rgba(251, 249, 245, 1) 0%,
-    rgba(231, 232, 155, 1) 66%,
-    rgba(222, 169, 235, 1) 100%
-  );
-}
 .wrapper {
   max-width: 1080px;
   margin: 10px auto;
@@ -342,7 +332,7 @@ button a {
 footer {
   margin-top: 5vh;
   padding: 1em;
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(218, 184, 217);
   color: white;
   display: flex;
   flex-direction: row;
