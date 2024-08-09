@@ -73,6 +73,7 @@
         function alertPrize() {
             let winningSegment = myWheel.getIndicatedSegment();
             parent.postMessage({ type: 'showAlert', title: 'Congratulations!', message: 'Restaurant: ' + winningSegment.text }, '*');
+            parent.postMessage({ type: 'launchConfetti' }, '*'); // Trigger confetti in the parent document
             resetWheel();
         }
 

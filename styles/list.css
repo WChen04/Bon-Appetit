@@ -32,7 +32,7 @@ body.dark-mode .header {
   background-color: #8483d7;
   color: white;
   border: 2px solid #8483d7;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
 }
 
@@ -73,7 +73,7 @@ body.dark-mode .minus-button {
   justify-content: space-between;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 12px;
   border-color: black;
   margin-bottom: 5px;
   cursor: pointer;

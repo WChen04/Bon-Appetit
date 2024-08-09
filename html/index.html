@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../styles/index.css" />
-  </head>
-  <body>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
     <header>
-      <div class="BA">
-        <img id="logo" src="../imgs/BA_Logo.png" alt="#" />
-        <h1>Bon Appetit</h1>
-      </div>
-      <div class="tabs">
-        <a id="aboutus" href="../html/developer.html"><h1>About Us</h1></a>
-        <button id="modeToggle">Dark Mode</button>
-      </div>
+        <div class="BA">
+            <img id="logo" src="../imgs/BA_Logo.png" alt="#" />
+            <h1>Bon Appetit</h1>
+        </div>
+        <div class="tabs">
+            <a id="aboutus" href="../html/developer.html"><h1>About Us</h1></a>
+            <button id="modeToggle">Dark Mode</button>
+        </div>
     </header>
     <div style="text-align: center" class="dots">
-      <span class="dot" onclick="currentSlide(1)">Wheel</span>
-      <span class="dot" onclick="currentSlide(2)">Search</span>
+        <span class="dot" onclick="currentSlide(1)">Wheel</span>
+        <span class="dot" onclick="currentSlide(2)">Search</span>
     </div>
     <div class="body-container">
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <iframe id="wheelFrame" src="wheel.html"></iframe>
-        </div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <iframe id="wheelFrame" src="wheel.html"></iframe>
+            </div>
 
-        <div class="mySlides fade">
-          <iframe id="searchFrame" src="search.html"></iframe>
+            <div class="mySlides fade">
+                <iframe id="searchFrame" src="search.html"></iframe>
+            </div>
         </div>
-      </div>
-      <iframe id="listFrame" src="list.html"></iframe>
+        <iframe id="listFrame" src="list.html"></iframe>
     </div>
 
     <div class="alert-overlay" id="customAlert" style="display: none">
@@ -46,11 +47,11 @@
       showSlides(slideIndex);
 
       function plusSlides(n) {
-        showSlides((slideIndex += n));
+        showSlides(slideIndex += n);
       }
 
       function currentSlide(n) {
-        showSlides((slideIndex = n));
+          showSlides(slideIndex = n);
       }
 
       function showSlides(n) {
@@ -73,17 +74,13 @@
         dots[slideIndex - 1].className += " active";
       }
 
-      document
-        .getElementById("modeToggle")
-        .addEventListener("click", function () {
+      document.getElementById("modeToggle").addEventListener("click", function () {
           const body = document.body;
           const header = document.querySelector("header"); // Assuming you have a <header> element
           const toggleBtn = document.getElementById("modeToggle");
 
           let mode;
-          if (
-            body.classList.contains("dark-mode")
-          ) {
+          if (body.classList.contains("dark-mode")) {
             // Switch to Light Mode
             body.style.backgroundColor = "#fbf9f5";
             body.style.color = "#000";
@@ -108,7 +105,7 @@
 
           // Send message to iframes to change their background color
           changeIframeBackgrounds(mode);
-        });
+      });
 
       function changeIframeBackgrounds(mode) {
         const iframes = document.querySelectorAll("iframe");
@@ -128,6 +125,8 @@
 
         if (event.data && event.data.type === "showAlert") {
           showAlert(event.data.title, event.data.message);
+        } else if (event.data && event.data.type === "launchConfetti") {
+          launchConfetti();
         }
       });
 
@@ -139,6 +138,14 @@
 
       function closeAlert() {
         document.getElementById("customAlert").style.display = "none";
+      }
+
+      function launchConfetti() {
+        confetti({
+          particleCount: 1000,
+          spread: 700,
+          origin: { y: 0.4 }
+        });
       }
     </script>
   </body>

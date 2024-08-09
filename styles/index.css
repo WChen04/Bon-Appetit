@@ -84,7 +84,7 @@ img {
 }
 .dots {
   background-color: #d4d4ea;
-  border-radius: 1em;
+  border-radius: 5em;
   height: 2.5em;
   margin: 1em 40% 1em 35%;
   justify-content: center;
@@ -168,9 +168,8 @@ header {
   text-decoration: none;
   color: black;
 }
-#profile {
-  width: 5vh;
-  border-radius: 20em;
+body.dark-mode #aboutus {
+  color: white;
 }
 .body-container {
   display: flex;
@@ -189,6 +188,8 @@ header {
   right: 20px;
   padding: 10px 20px;
   cursor: pointer;
+  border: 1px solid black;
+  border-radius: 25px;
 }
 
 /* Animation */
