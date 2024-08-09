@@ -1,3 +1,5 @@
+//import * as db from 'server.js'
+
 document.addEventListener('DOMContentLoaded', () => {
     const searchBar = document.getElementById('searchBar');
     const restaurantList = document.getElementById('restaurantList');
@@ -5,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const clearFiltersButton = document.getElementById('clearFiltersButton');
     const addAllButtonRestaurants = document.getElementById('addAllButtonRestaurants');
 
-    // This will be replaced with a call to the backend to get the list of restaurants
     const restaurants = [
         // Array of restaurants with the following properties: id, name, distance, cuisine, rating, price, opening
         { id: '1', name: 'Restaurant 1', distance: '1km', cuisine: 'Italian', rating: '5', price: '$$', opening: 'Morning'},
