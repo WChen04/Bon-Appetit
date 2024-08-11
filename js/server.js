@@ -1,7 +1,6 @@
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
-//const db = require('./queries')
 
 const app = express();
 const port = 3000;
@@ -18,6 +17,7 @@ const pool = new Pool({
   port: 5432,
 })
 
+// Retrieves fields from PostgreSQL db
 const getRestaurants = (request, response) => {
 
   pool.query('SELECT id, name, rating, latitude, longitude, price FROM restaurants', (error, results) => {
@@ -53,7 +53,7 @@ app.get("/api/yelp", async (req, res) => {
   }
 });
 
-app.get('/', getRestaurants)
+app.get('/db', getRestaurants)
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
