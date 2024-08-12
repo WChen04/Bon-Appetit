@@ -1,0 +1,2009 @@
+{
+  "businesses": [
+    {
+      "id": "afcWTtQoeM1L3lkU7ky_uw",
+      "alias": "the-roosevelt-room-troy",
+      "name": "The Roosevelt Room",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/wfe53GfmGfg61uwoWhdiHg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/the-roosevelt-room-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 35,
+      "categories": [
+        {
+          "alias": "steak",
+          "title": "Steakhouses"
+        },
+        {
+          "alias": "cocktailbars",
+          "title": "Cocktail Bars"
+        },
+        {
+          "alias": "newamerican",
+          "title": "New American"
+        }
+      ],
+      "rating": 4.6,
+      "coordinates": {
+        "latitude": 42.690004,
+        "longitude": -73.687923
+      },
+      "transactions": [],
+      "location": {
+        "address1": "112 N Greenbush Rd",
+        "address2": "Ste F",
+        "address3": null,
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "112 N Greenbush Rd",
+          "Ste F",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182443721",
+      "display_phone": "(518) 244-3721",
+      "distance": 4500.622241900632,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "0000",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "0000",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2030",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://rooseveltroom.com/troy-the-roosevelt-room-food-menu",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "xFe3auIqUp5x0TfPtHGfOQ",
+      "alias": "nighthawks-troy-2",
+      "name": "Nighthawks",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/D-Mri7kN9G27ALgjtiDZQQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/nighthawks-troy-2?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 172,
+      "categories": [
+        {
+          "alias": "burgers",
+          "title": "Burgers"
+        },
+        {
+          "alias": "newamerican",
+          "title": "New American"
+        },
+        {
+          "alias": "cocktailbars",
+          "title": "Cocktail Bars"
+        }
+      ],
+      "rating": 4.2,
+      "coordinates": {
+        "latitude": 42.730852,
+        "longitude": -73.687955
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "461 Broadway",
+        "address2": "",
+        "address3": null,
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "461 Broadway",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182721000",
+      "display_phone": "(518) 272-1000",
+      "distance": 524.9965062013977,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2300",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2300",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2300",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2300",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2300",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2300",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2300",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://www.nighthawkstroy.com/food",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "h2R_ywsT7Zi-hF1KopkYCQ",
+      "alias": "sunhees-farm-and-kitchen-troy",
+      "name": "Sunhee's Farm and Kitchen",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/lYHLO5d8RlepEepgOtsKpA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/sunhees-farm-and-kitchen-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 273,
+      "categories": [
+        {
+          "alias": "korean",
+          "title": "Korean"
+        }
+      ],
+      "rating": 4.4,
+      "coordinates": {
+        "latitude": 42.72761,
+        "longitude": -73.68941
+      },
+      "transactions": [
+        "delivery",
+        "pickup"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "95-97 Ferry St",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "95-97 Ferry St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182723413",
+      "display_phone": "(518) 272-3413",
+      "distance": 703.1255803167338,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1500",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1630",
+              "end": "2100",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1500",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1630",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "http://www.sunhees.com/menu",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "_21B4W3qjnl8lcxDYJE3kw",
+      "alias": "lo-portos-troy",
+      "name": "Lo Porto's",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/xq-Hh9trY37AThXfCJAUQg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/lo-portos-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 155,
+      "categories": [
+        {
+          "alias": "italian",
+          "title": "Italian"
+        },
+        {
+          "alias": "seafood",
+          "title": "Seafood"
+        },
+        {
+          "alias": "sandwiches",
+          "title": "Sandwiches"
+        }
+      ],
+      "rating": 4.3,
+      "coordinates": {
+        "latitude": 42.73053,
+        "longitude": -73.68951
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "85 4th St",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "85 4th St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182738546",
+      "display_phone": "(518) 273-8546",
+      "distance": 639.8961551767273,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2100",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2100",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2100",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2100",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "d9msDOAkMqvr67qToplnCw",
+      "alias": "whiskey-pickle-troy",
+      "name": "Whiskey Pickle",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/DGQsSHyXoIdgDZLCMsxgvw/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/whiskey-pickle-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 14,
+      "categories": [
+        {
+          "alias": "cocktailbars",
+          "title": "Cocktail Bars"
+        },
+        {
+          "alias": "beerbar",
+          "title": "Beer Bar"
+        },
+        {
+          "alias": "sandwiches",
+          "title": "Sandwiches"
+        }
+      ],
+      "rating": 4.8,
+      "coordinates": {
+        "latitude": 42.73225389398019,
+        "longitude": -73.68843995372089
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "location": {
+        "address1": "409 Fulton St",
+        "address2": "",
+        "address3": null,
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "409 Fulton St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182127729",
+      "display_phone": "(518) 212-7729",
+      "distance": 601.2195770811405,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "0000",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "0000",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "0000",
+              "day": 3
+            },
+            {
+              "is_overnight": true,
+              "start": "1700",
+              "end": "0100",
+              "day": 4
+            },
+            {
+              "is_overnight": true,
+              "start": "1700",
+              "end": "0100",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://whiskeypickletroy.com/#/menu",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "tQVp9Uz0G_pNaF3y17XD8Q",
+      "alias": "naughters-troy",
+      "name": "Naughter's",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/9InFUgbK2_zHGAmVKf0QrA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/naughters-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 61,
+      "categories": [
+        {
+          "alias": "sandwiches",
+          "title": "Sandwiches"
+        },
+        {
+          "alias": "breakfast_brunch",
+          "title": "Breakfast & Brunch"
+        },
+        {
+          "alias": "tradamerican",
+          "title": "American"
+        }
+      ],
+      "rating": 4.7,
+      "coordinates": {
+        "latitude": 42.7312331,
+        "longitude": -73.68790340000001
+      },
+      "transactions": [],
+      "location": {
+        "address1": "1809 5th Ave",
+        "address2": "",
+        "address3": null,
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "1809 5th Ave",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15188189196",
+      "display_phone": "(518) 818-9196",
+      "distance": 527.3615593742836,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "0800",
+              "end": "1500",
+              "day": 2
+            },
+            {
+              "is_overnight": true,
+              "start": "1700",
+              "end": "0100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "0800",
+              "end": "1500",
+              "day": 3
+            },
+            {
+              "is_overnight": true,
+              "start": "1700",
+              "end": "0100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "0800",
+              "end": "1500",
+              "day": 4
+            },
+            {
+              "is_overnight": true,
+              "start": "1700",
+              "end": "0230",
+              "day": 4
+            },
+            {
+              "is_overnight": true,
+              "start": "0800",
+              "end": "0230",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "0800",
+              "end": "1500",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://www.naughters.com/s/order",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "qF7K0F70uShdHYlHwrMAZw",
+      "alias": "sea-smoke-waterfront-grill-green-island",
+      "name": "Sea Smoke Waterfront Grill",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/ekp-k7uEjqTiZBVIfKt0jQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/sea-smoke-waterfront-grill-green-island?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 107,
+      "categories": [
+        {
+          "alias": "seafood",
+          "title": "Seafood"
+        },
+        {
+          "alias": "mediterranean",
+          "title": "Mediterranean"
+        },
+        {
+          "alias": "wine_bars",
+          "title": "Wine Bars"
+        }
+      ],
+      "rating": 3.4,
+      "coordinates": {
+        "latitude": 42.73560838014646,
+        "longitude": -73.69126407299892
+      },
+      "transactions": [],
+      "location": {
+        "address1": "10 Starbuck Dr",
+        "address2": "Ste 108",
+        "address3": "",
+        "city": "Green Island",
+        "zip_code": "12183",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "10 Starbuck Dr",
+          "Ste 108",
+          "Green Island, NY 12183"
+        ]
+      },
+      "phone": "+15183264164",
+      "display_phone": "(518) 326-4164",
+      "distance": 986.7140985278885,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2100",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2100",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2200",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "oCPvHNQAv0kSBw8eFVIJRg",
+      "alias": "ali-baba-troy",
+      "name": "Ali Baba",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/jOK_y-SfzX3Gt0CW3398og/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/ali-baba-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 314,
+      "categories": [
+        {
+          "alias": "mediterranean",
+          "title": "Mediterranean"
+        },
+        {
+          "alias": "turkish",
+          "title": "Turkish"
+        },
+        {
+          "alias": "halal",
+          "title": "Halal"
+        }
+      ],
+      "rating": 4.5,
+      "coordinates": {
+        "latitude": 42.73598,
+        "longitude": -73.67593
+      },
+      "transactions": [
+        "delivery",
+        "pickup"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "2243 15th St",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "2243 15th St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182731170",
+      "display_phone": "(518) 273-1170",
+      "distance": 776.4275029630529,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2100",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2100",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2100",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://www.alibabatroy.com/menu",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "cgh5t4mRkpGIbEeEDeSVCQ",
+      "alias": "table-41-brewing-cohoes",
+      "name": "Table 41 Brewing",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/X3emhJm5tD-jNBLUMq55LQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/table-41-brewing-cohoes?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 23,
+      "categories": [
+        {
+          "alias": "breweries",
+          "title": "Breweries"
+        },
+        {
+          "alias": "tradamerican",
+          "title": "American"
+        }
+      ],
+      "rating": 4.7,
+      "coordinates": {
+        "latitude": 42.77155,
+        "longitude": -73.70096
+      },
+      "transactions": [
+        "delivery",
+        "pickup"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "188 Remsen St",
+        "address2": null,
+        "address3": "",
+        "city": "Cohoes",
+        "zip_code": "12047",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "188 Remsen St",
+          "Cohoes, NY 12047"
+        ]
+      },
+      "phone": "+15183261354",
+      "display_phone": "(518) 326-1354",
+      "distance": 4851.375863688037,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2000",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2100",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2100",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://www.table41brewing.com/menus",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "-YvsArWCTnz4iMP2gHlrRg",
+      "alias": "the-copper-crow-albany",
+      "name": "The Copper Crow",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/77281RhKLe0X_2SinttFTA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/the-copper-crow-albany?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 69,
+      "categories": [
+        {
+          "alias": "newamerican",
+          "title": "New American"
+        },
+        {
+          "alias": "cocktailbars",
+          "title": "Cocktail Bars"
+        }
+      ],
+      "rating": 4.1,
+      "coordinates": {
+        "latitude": 42.66128515184837,
+        "longitude": -73.7451341
+      },
+      "transactions": [
+        "delivery",
+        "pickup"
+      ],
+      "price": "$$$",
+      "location": {
+        "address1": "904 Broadway",
+        "address2": null,
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12207",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "904 Broadway",
+          "Albany, NY 12207"
+        ]
+      },
+      "phone": "+15188180170",
+      "display_phone": "(518) 818-0170",
+      "distance": 9268.264972979518,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "0000",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "0000",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "0000",
+              "day": 3
+            },
+            {
+              "is_overnight": true,
+              "start": "1600",
+              "end": "0100",
+              "day": 4
+            },
+            {
+              "is_overnight": true,
+              "start": "1200",
+              "end": "0100",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "0000",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "http://www.coppercrowalbany.com/food",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "LfRklQ3IsqXEnUjU5EtwRQ",
+      "alias": "the-ruck-troy-3",
+      "name": "The Ruck",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/LLz1qKm73_vs4LZtEOLl9w/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/the-ruck-troy-3?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 279,
+      "categories": [
+        {
+          "alias": "pubs",
+          "title": "Pubs"
+        },
+        {
+          "alias": "burgers",
+          "title": "Burgers"
+        },
+        {
+          "alias": "chicken_wings",
+          "title": "Chicken Wings"
+        }
+      ],
+      "rating": 3.8,
+      "coordinates": {
+        "latitude": 42.7283984248525,
+        "longitude": -73.6907344613213
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "104 3rd St",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "104 3rd St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182731872",
+      "display_phone": "(518) 273-1872",
+      "distance": 778.3117187527181,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "0000",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "0000",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "0000",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "0000",
+              "day": 3
+            },
+            {
+              "is_overnight": true,
+              "start": "1200",
+              "end": "0200",
+              "day": 4
+            },
+            {
+              "is_overnight": true,
+              "start": "1100",
+              "end": "0200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "0000",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://www.getrucked.com/menu",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "6PdMtDkLAg_kDYCEi6VBwA",
+      "alias": "defazios-pizzeria-troy",
+      "name": "DeFazio's Pizzeria",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/ml6_01qhXIY4Xmrm2n_gNQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/defazios-pizzeria-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 471,
+      "categories": [
+        {
+          "alias": "pizza",
+          "title": "Pizza"
+        },
+        {
+          "alias": "italian",
+          "title": "Italian"
+        },
+        {
+          "alias": "salad",
+          "title": "Salad"
+        }
+      ],
+      "rating": 4.4,
+      "coordinates": {
+        "latitude": 42.72321,
+        "longitude": -73.69051
+      },
+      "transactions": [
+        "delivery",
+        "pickup"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "266 4th St",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "266 4th St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182711111",
+      "display_phone": "(518) 271-1111",
+      "distance": 1078.6456955308527,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "35NbIMRhB1dK5PR3aKA03A",
+      "alias": "mex-cocina-la-catrina-troy",
+      "name": "Mex Cocina La Catrina",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/gSe3ZNG9zMWg5dTEnQ6H4g/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/mex-cocina-la-catrina-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 5,
+      "categories": [
+        {
+          "alias": "mexican",
+          "title": "Mexican"
+        }
+      ],
+      "rating": 5,
+      "coordinates": {
+        "latitude": 42.73136017315013,
+        "longitude": -73.6918702
+      },
+      "transactions": [],
+      "price": "$$",
+      "location": {
+        "address1": "7 Broadway",
+        "address2": null,
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "7 Broadway",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182036326",
+      "display_phone": "(518) 203-6326",
+      "distance": 849.3657424909995,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "0800",
+              "end": "1400",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "1900",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1400",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "1900",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1400",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "1900",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1400",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "0900",
+              "end": "1400",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "2300",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "0800",
+              "end": "2300",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "27sejNF7jLWhCLKj3vlUNg",
+      "alias": "k-plate-korean-street-food-troy",
+      "name": "K Plate Korean Street Food",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/2jQBSCl-rdc2Y81jmZKObA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/k-plate-korean-street-food-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 100,
+      "categories": [
+        {
+          "alias": "korean",
+          "title": "Korean"
+        },
+        {
+          "alias": "bbq",
+          "title": "Barbeque"
+        }
+      ],
+      "rating": 4.4,
+      "coordinates": {
+        "latitude": 42.73074670047458,
+        "longitude": -73.68882289999999
+      },
+      "transactions": [
+        "delivery",
+        "pickup"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "78 4th St",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "78 4th St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15187207514",
+      "display_phone": "(518) 720-7514",
+      "distance": 594.4153516202994,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2100",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2100",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2100",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1400",
+              "end": "0000",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "GlQM1NI2yjux9jS6OSlSMw",
+      "alias": "tipsy-moose-tap-and-tavern-latham-2",
+      "name": "Tipsy Moose Tap & Tavern",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/0MbXWb4YHS0hgyyj_vPrug/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/tipsy-moose-tap-and-tavern-latham-2?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 446,
+      "categories": [
+        {
+          "alias": "pizza",
+          "title": "Pizza"
+        },
+        {
+          "alias": "pubs",
+          "title": "Pubs"
+        },
+        {
+          "alias": "breakfast_brunch",
+          "title": "Breakfast & Brunch"
+        }
+      ],
+      "rating": 4.1,
+      "coordinates": {
+        "latitude": 42.74623939322439,
+        "longitude": -73.7591222767834
+      },
+      "transactions": [
+        "delivery",
+        "pickup"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "185 Old Loudon Rd",
+        "address2": null,
+        "address3": "",
+        "city": "Latham",
+        "zip_code": "12110",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "185 Old Loudon Rd",
+          "Latham, NY 12110"
+        ]
+      },
+      "phone": "+15186314444",
+      "display_phone": "(518) 631-4444",
+      "distance": 6576.522866921753,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": true,
+              "start": "1130",
+              "end": "0100",
+              "day": 0
+            },
+            {
+              "is_overnight": true,
+              "start": "1130",
+              "end": "0100",
+              "day": 1
+            },
+            {
+              "is_overnight": true,
+              "start": "1130",
+              "end": "0100",
+              "day": 2
+            },
+            {
+              "is_overnight": true,
+              "start": "1130",
+              "end": "0100",
+              "day": 3
+            },
+            {
+              "is_overnight": true,
+              "start": "1130",
+              "end": "0100",
+              "day": 4
+            },
+            {
+              "is_overnight": true,
+              "start": "1000",
+              "end": "0100",
+              "day": 5
+            },
+            {
+              "is_overnight": true,
+              "start": "1000",
+              "end": "0100",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "http://tipsymoosetavern.com/menu/",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "dLKlz2Kv5L3pGZ_LzTB7ww",
+      "alias": "the-hill-beer-and-wine-garden-troy",
+      "name": "The Hill Beer & Wine Garden",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/_qC4LKqOx9dMJZye_Eg6Jg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/the-hill-beer-and-wine-garden-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 80,
+      "categories": [
+        {
+          "alias": "beergardens",
+          "title": "Beer Gardens"
+        },
+        {
+          "alias": "wine_bars",
+          "title": "Wine Bars"
+        },
+        {
+          "alias": "breakfast_brunch",
+          "title": "Breakfast & Brunch"
+        }
+      ],
+      "rating": 4.5,
+      "coordinates": {
+        "latitude": 42.722799,
+        "longitude": -73.679388
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "379 Congress St",
+        "address2": "",
+        "address3": "Black Gates",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "379 Congress St",
+          "Black Gates",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15186624455",
+      "display_phone": "(518) 662-4455",
+      "distance": 854.3756997130802,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1600",
+              "end": "0000",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "0000",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://thehilltroy.com/menu",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "-h56i-FKY2ZNQxj8VJu9tA",
+      "alias": "la-capital-tacos-troy",
+      "name": "La Capital Tacos",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/tQVibjo8XSutEcA83HaA0Q/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/la-capital-tacos-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 98,
+      "categories": [
+        {
+          "alias": "tacos",
+          "title": "Tacos"
+        },
+        {
+          "alias": "latin",
+          "title": "Latin American"
+        }
+      ],
+      "rating": 4.7,
+      "coordinates": {
+        "latitude": 42.72743803077712,
+        "longitude": -73.68999776865834
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "location": {
+        "address1": "161 4th St",
+        "address2": "",
+        "address3": null,
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "161 4th St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182445132",
+      "display_phone": "(518) 244-5132",
+      "distance": 759.0746065890621,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2000",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "1900",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://www.lacapitaltacostroy.com/menu",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "U5fqT_mFQthr4K1YwmzQWA",
+      "alias": "finn-s-troy",
+      "name": "Finn’s",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/8WY1pX3EZztp-HKXco-ggg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/finn-s-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 10,
+      "categories": [
+        {
+          "alias": "desserts",
+          "title": "Desserts"
+        },
+        {
+          "alias": "bars",
+          "title": "Bars"
+        },
+        {
+          "alias": "sandwiches",
+          "title": "Sandwiches"
+        }
+      ],
+      "rating": 4.5,
+      "coordinates": {
+        "latitude": 42.72507367195464,
+        "longitude": -73.69526929585051
+      },
+      "transactions": [],
+      "location": {
+        "address1": "40 River St",
+        "address2": "",
+        "address3": null,
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "40 River St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "",
+      "display_phone": "",
+      "distance": 1261.6464347320261,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2300",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2300",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1400",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "6Ld6AS4Qa_kVessELWw_tw",
+      "alias": "dinosaur-bar-b-que-troy",
+      "name": "Dinosaur Bar-B-Que",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/kMwE9JrNUbbjeLf5XkV-Fw/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/dinosaur-bar-b-que-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 805,
+      "categories": [
+        {
+          "alias": "bbq",
+          "title": "Barbeque"
+        }
+      ],
+      "rating": 3.7,
+      "coordinates": {
+        "latitude": 42.73461,
+        "longitude": -73.68926
+      },
+      "transactions": [
+        "delivery",
+        "pickup"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "377 River St",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "377 River St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15183080400",
+      "display_phone": "(518) 308-0400",
+      "distance": 789.1720302777923,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2100",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2100",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2100",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://dinosaurbarbque.com/wp-content/uploads/2023/03/Troy_inhouse_Menu_10232023.pdf",
+        "open24_hours": null,
+        "waitlist_reservation": false
+      }
+    },
+    {
+      "id": "Opsz-SlKS-K0sP1z60XKKA",
+      "alias": "kuma-ani-troy",
+      "name": "Kuma Ani",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/bKb87VuBk2En-oZ9HLsOmw/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/kuma-ani-troy?adjust_creative=WW7chG0c6TOta6s35sIhrA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=WW7chG0c6TOta6s35sIhrA",
+      "review_count": 10,
+      "categories": [
+        {
+          "alias": "ramen",
+          "title": "Ramen"
+        }
+      ],
+      "rating": 4.5,
+      "coordinates": {
+        "latitude": 42.72836640384952,
+        "longitude": -73.6873485186296
+      },
+      "transactions": [
+        "delivery",
+        "pickup"
+      ],
+      "location": {
+        "address1": "1521 6th Ave",
+        "address2": null,
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "1521 6th Ave",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15183260310",
+      "display_phone": "(518) 326-0310",
+      "distance": 519.3355344912844,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1430",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2100",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1430",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2100",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1430",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1430",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1430",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2100",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1430",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2100",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://kumaani.com/1521-6th-ave%2C-troy",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    }
+  ],
+  "total": 1100,
+  "region": {
+    "center": {
+      "longitude": -73.68172,
+      "latitude": 42.73012
+    }
+  }
+}

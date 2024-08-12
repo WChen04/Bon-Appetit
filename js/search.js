@@ -1,29 +1,68 @@
-document.addEventListener('DOMContentLoaded', () => {
+
+document.addEventListener('DOMContentLoaded', async () => {
     const searchBar = document.getElementById('searchBar');
     const restaurantList = document.getElementById('restaurantList');
     const filters = document.querySelectorAll('.filters input[type="checkbox"]');
     const clearFiltersButton = document.getElementById('clearFiltersButton');
     const addAllButtonRestaurants = document.getElementById('addAllButtonRestaurants');
 
-    // This will be replaced with a call to the backend to get the list of restaurants
-    const restaurants = [
-        // Array of restaurants with the following properties: id, name, distance, cuisine, rating, price, opening
-        { id: '1', name: 'Restaurant 1', distance: '1km', cuisine: 'Italian', rating: '5', price: '$$', opening: 'Morning'},
-        { id: '2', name: 'Restaurant 2', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Evening'},
-        { id: '3', name: 'Restaurant 3', distance: '10km', cuisine: 'Indian', rating: '2', price: '$$$', opening: 'Afternoon'},
-        { id: '4', name: 'Restaurant 4', distance: '1km', cuisine: 'Italian', rating: '5', price: '$$$$', opening: 'Morning'},
-        { id: '5', name: 'Restaurant 5', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Evening'},
-        { id: '6', name: 'Restaurant 6', distance: '1km', cuisine: 'Chinese', rating: '3', price: '$$', opening: 'Afternoon'},
-        { id: '7', name: 'Restaurant 7', distance: '5km', cuisine: 'Italian', rating: '5', price: '$$', opening: 'Evening'},
-        { id: '8', name: 'Restaurant 8', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Afternoon'},
-        { id: '9', name: 'Restaurant 9', distance: '10km', cuisine: 'Indian', rating: '5', price: '$$$$', opening: 'Afternoon'},
-        { id: '10', name: 'Restaurant 10', distance: '10km', cuisine: 'Indian', rating: '5', price: '$$', opening: 'Morning'},
-        { id: '11', name: 'Restaurant 11', distance: '20km', cuisine: 'Italian', rating: '1', price: '$$$', opening: 'Evening'},
-        { id: '12', name: 'Restaurant 12', distance: '5km', cuisine: 'Chinese', rating: '4', price: '$', opening: 'Afternoon'},
-        { id: '13', name: 'Restaurant 13', distance: '10km', cuisine: 'Italian', rating: '3', price: '$$$', opening: 'Afternoon'},
-        { id: '14', name: 'Very Long Restaurant Nameeeee', distance: '10km', cuisine: 'Italian', rating: '3', price: '$$$', opening: 'Afternoon'},
-        // Add more restaurants here
-    ];
+    // Process restaurant data
+    function getRestaurants() {
+        //const db_file = "db_files/twenty_restaurants.json";
+        const db_file = "http://localhost:3000/db"
+        
+        fetch(db_file)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("HTTP error " + response.status);
+            }
+            return response.json();
+        })
+        .catch(function () {
+            this.dataError = true;
+        })
+    }
+
+    async function waitForRestaurants() {
+        try {
+          const restaurants_json = getRestaurants();
+          return restaurants_json;
+        } catch(error) {
+          return null;
+        }
+    }
+
+    let restaurants = await waitForRestaurants();
+
+    // If not within range of server
+    if (restaurants == null) {
+        restaurants = [
+            // Array of restaurants with the following properties: id, name, distance, cuisine, rating, price, opening
+            {"id":"1","name":"Nighthawks","distance":"515","cuisine":"Burgers","rating":4.2,"price":"$$","opening":"Afternoon"},
+            {"id":"2","name":"The Roosevelt Room","distance":"515","cuisine":"Steakhouses","rating":4.6,"price":null,"opening":"Afternoon"},
+            {"id":"3","name":"Lo Porto's","distance":"628","cuisine":"Italian","rating":4.3,"price":"$$","opening":"Afternoon"},
+            {"id":"4","name":"Sunhee's Farm and Kitchen","distance":"515","cuisine":"Burgers","rating":4.4,"price":"$$","opening":"Afternoon"},
+            {"id":"5","name":"Whiskey Pickle","distance":"601","cuisine":"Sandwiches","rating":4.8,"price":null,"opening":"Afternoon"},
+            {"id":"6","name":"Naughter's","distance":"527","cuisine":"Sandwiches","rating":4.7,"price":null,"opening":"Afternoon"},
+            {"id":"7","name":"Ali Baba","distance":"776","cuisine":"Mediterranean","rating":4.5,"price":"$$","opening":"Afternoon"},
+            {"id":"8","name":"Sea Smoke Waterfront Grill","distance":"986","cuisine":"Mediterranean","rating":3.4,"price":null,"opening":"Afternoon"},
+            {"id":"9","name":"The Ruck","distance":"778","cuisine":"Burgers","rating":3.8,"price":"$$","opening":"Afternoon"},
+            {"id":"10","name":"Mex Cocina La Catrina","distance":"849","cuisine":"Mexican","rating":5,"price":"$$","opening":"Afternoon"},
+            {"id":"11","name":"DeFazio's Pizzeria","distance":"1078","cuisine":"Pizza","rating":4.4,"price":"$$","opening":"Afternoon"},
+            {"id":"12","name":"K Plate Korean Street Food","distance":"594","cuisine":"Korean","rating":4.4,"price":"$","opening":"Afternoon"},
+            {"id":"13","name":"La Capital Tacos","distance":"759","cuisine":"Latin America","rating":4.7,"price":null,"opening":"Afternoon"},
+            {"id":"14","name":"Unagi Sushi","distance":"594","cuisine":"Korean","rating":null,"price":"$$","opening":"Afternoon"},
+            {"id":"15","name":"Dinosaur Bar-B-Que","distance":"789","cuisine":"BBQ","rating":3.7,"price":"$$","opening":"Afternoon"},
+            {"id":"16","name":"Kuma Ani","distance":"519","cuisine":"Ramen","rating":4.5,"price":null,"opening":"Afternoon"},
+            {"id":"17","name":"The Hill Beer & Wine Garden","distance":"854","cuisine":"Bars","rating":4.5,"price":"$$","opening":"Afternoon"},
+            {"id":"18","name":"Tatu Tacos & Tequila","distance":"1261","cuisine":"Mexican","rating":null,"price":null,"opening":"Afternoon"},
+            {"id":"19","name":"Finn’s","distance":"1261","cuisine":"Bars","rating":4.5,"price":null,"opening":"Afternoon"},
+            {"id":"20","name":"Taqueria Tren Maya","distance":"1261","cuisine":"Mexican","rating":null,"price":null,"opening":"Afternoon"}
+            // Add more restaurants here
+        ];
+    }
+
+    
 
     // Function to check if the restaurant is currently open
     function isOpen(openingTime) {
