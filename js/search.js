@@ -38,26 +38,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (restaurants == null) {
         restaurants = [
             // Array of restaurants with the following properties: id, name, distance, cuisine, rating, price, opening
-            {"id":"1","name":"Nighthawks","distance":"515","cuisine":"Burgers","rating":4.2,"price":"$$","opening":"Afternoon"},
-            {"id":"2","name":"The Roosevelt Room","distance":"515","cuisine":"Steakhouses","rating":4.6,"price":null,"opening":"Afternoon"},
-            {"id":"3","name":"Lo Porto's","distance":"628","cuisine":"Italian","rating":4.3,"price":"$$","opening":"Afternoon"},
-            {"id":"4","name":"Sunhee's Farm and Kitchen","distance":"515","cuisine":"Burgers","rating":4.4,"price":"$$","opening":"Afternoon"},
-            {"id":"5","name":"Whiskey Pickle","distance":"601","cuisine":"Sandwiches","rating":4.8,"price":null,"opening":"Afternoon"},
-            {"id":"6","name":"Naughter's","distance":"527","cuisine":"Sandwiches","rating":4.7,"price":null,"opening":"Afternoon"},
-            {"id":"7","name":"Ali Baba","distance":"776","cuisine":"Mediterranean","rating":4.5,"price":"$$","opening":"Afternoon"},
-            {"id":"8","name":"Sea Smoke Waterfront Grill","distance":"986","cuisine":"Mediterranean","rating":3.4,"price":null,"opening":"Afternoon"},
-            {"id":"9","name":"The Ruck","distance":"778","cuisine":"Burgers","rating":3.8,"price":"$$","opening":"Afternoon"},
-            {"id":"10","name":"Mex Cocina La Catrina","distance":"849","cuisine":"Mexican","rating":5,"price":"$$","opening":"Afternoon"},
-            {"id":"11","name":"DeFazio's Pizzeria","distance":"1078","cuisine":"Pizza","rating":4.4,"price":"$$","opening":"Afternoon"},
-            {"id":"12","name":"K Plate Korean Street Food","distance":"594","cuisine":"Korean","rating":4.4,"price":"$","opening":"Afternoon"},
-            {"id":"13","name":"La Capital Tacos","distance":"759","cuisine":"Latin America","rating":4.7,"price":null,"opening":"Afternoon"},
-            {"id":"14","name":"Unagi Sushi","distance":"594","cuisine":"Korean","rating":null,"price":"$$","opening":"Afternoon"},
-            {"id":"15","name":"Dinosaur Bar-B-Que","distance":"789","cuisine":"BBQ","rating":3.7,"price":"$$","opening":"Afternoon"},
-            {"id":"16","name":"Kuma Ani","distance":"519","cuisine":"Ramen","rating":4.5,"price":null,"opening":"Afternoon"},
-            {"id":"17","name":"The Hill Beer & Wine Garden","distance":"854","cuisine":"Bars","rating":4.5,"price":"$$","opening":"Afternoon"},
-            {"id":"18","name":"Tatu Tacos & Tequila","distance":"1261","cuisine":"Mexican","rating":null,"price":null,"opening":"Afternoon"},
-            {"id":"19","name":"Finn’s","distance":"1261","cuisine":"Bars","rating":4.5,"price":null,"opening":"Afternoon"},
-            {"id":"20","name":"Taqueria Tren Maya","distance":"1261","cuisine":"Mexican","rating":null,"price":null,"opening":"Afternoon"}
+            {id: "1", name: "Nighthawks", distance: "515", cuisine: "Burgers", rating: 4.2, price: "$$", opening: "Afternoon"},
+            {id:"2", name:"The Roosevelt Room", distance: "515", cuisine: "Steakhouses", rating: 4.6, price: null, opening: "Afternoon"},
+            {id: "3",name: "Lo Porto's", distance: "628", cuisine: "Italian", rating: 4.3, price: "$$", opening: "Afternoon"},
+            {id: "4",name: "Sunhee's Farm and Kitchen", distance: "515", cuisine: "Burgers", rating: 4.4, price: "$$", opening: "Afternoon"},
+            {id: "5",name: "Whiskey Pickle", distance: "601", cuisine: "Sandwiches", rating: 4.8, price: null, opening: "Afternoon"},
+            {id: "6",name: "Naughter's", distance: "527", cuisine: "Sandwiches", rating: 4.7, price: null, opening: "Afternoon"},
+            {id: "7",name: "Ali Baba", distance: "776", cuisine: "Mediterranean", rating: 4.5, price: "$$", opening: "Afternoon"},
+            {id: "8",name: "Sea Smoke Waterfront Grill", distance: "986", cuisine: "Mediterranean", rating: 3.4, price: null, opening: "Afternoon"},
+            {id: "9",name: "The Ruck", distance: "778", cuisine: "Burgers", rating: 3.8, price: "$$", opening: "Afternoon"},
+            {id: "10",name: "Mex Cocina La Catrina", distance: "849", cuisine: "Mexican", rating: 5, price: "$$", opening: "Afternoon"},
+            {id: "11",name: "DeFazio's Pizzeria", distance: "1078", cuisine: "Pizza", rating: 4.4, price: "$$", opening: "Afternoon"},
+            {id: "12",name: "K Plate Korean Street Food", distance: "594", cuisine: "Korean", rating: 4.4, price: "$", opening: "Afternoon"},
+            {id: "13",name: "La Capital Tacos", distance: "759", cuisine: "Latin America", rating: 4.7, price: null, opening: "Afternoon"},
+            {id: "14",name: "Unagi Sushi", distance: "594", cuisine: "Korean", rating: null, price: "$$", opening: "Afternoon"},
+            {id: "15",name: "Dinosaur Bar-B-Que", distance: "789", cuisine: "BBQ", rating: 3.7, price: "$$", opening: "Afternoon"},
+            {id: "16",name: "Kuma Ani", distance: "519", cuisine: "Ramen", rating: 4.5, price: null, opening: "Afternoon"},
+            {id: "17",name: "The Hill Beer & Wine Garden", distance: "854", cuisine: "Bars", rating: 4.5, price: "$$", opening: "Afternoon"},
+            {id: "18",name: "Tatu Tacos & Tequila", distance: "1261", cuisine: "Mexican", rating: null, price: null, opening: "Afternoon"},
+            {id: "19",name: "Finn’s", distance: "1261", cuisine: "Bars", rating: 4.5, price: null, opening: "Afternoon"},
+            {id: "20",name: "Taqueria Tren Maya", distance: "1261", cuisine: "Mexican", rating: null, price: null, opening: "Afternoon"}
             // Add more restaurants here
         ];
     }
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <p>Distance: ${restaurant.distance}</p>
                 <p>Cuisine: ${restaurant.cuisine}</p>
                 <p>Rating: ${restaurant.rating}</p>
-                <p>Price: ${restaurant.price}</p>
+                <p>Price:  ${restaurant.price}</p>
                 <p>Opening Time: ${restaurant.opening}</p>
             `;
 
