@@ -70,17 +70,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         return phoneNumber; // Return the original if it doesn't match the format
     }
 
-    // Function to check if the restaurant is currently open
-    function isOpen(openingTimes) {
+    // Function to convert time to AM/PM format
+    function convertToAmPm(timeStr) {
+        let hour = parseInt(timeStr.slice(0, 2));
+        const minutes = timeStr.slice(2);
+        const ampm = hour >= 12 ? 'PM' : 'AM';
+        hour = hour % 12 || 12; // Convert '0' hour to '12'
+        return `${hour}:${minutes} ${ampm}`;
+    }
+
+    // Function to get today's opening hours in AM/PM format
+    function getTodaysHours(openingTimes) {
         const currentDay = new Date().getDay();
-        const currentTime = new Date().getHours() * 100 + new Date().getMinutes();
-
-        const todayOpeningTimes = openingTimes.filter(time => time.day === currentDay);
-        if (todayOpeningTimes.length === 0) return false;
-
-        return todayOpeningTimes.some(time => 
-            currentTime >= parseInt(time.start) && currentTime <= parseInt(time.end)
-        );
+        const todaysHours = openingTimes.find(time => time.day === currentDay);
+        if (!todaysHours) return "Hours not available";
+        return `${convertToAmPm(todaysHours.start)} - ${convertToAmPm(todaysHours.end)}`;
     }
 
     // Function to display the list of restaurants
@@ -93,19 +97,19 @@ document.addEventListener('DOMContentLoaded', async () => {
             restaurantList.appendChild(noResultsMessage);
             return;
         }
-    
+
         filteredRestaurants.forEach(restaurant => {
             const restaurantItem = document.createElement('div');
             restaurantItem.className = 'restaurant-item';
-    
+
             const restaurantName = document.createElement('div');
             restaurantName.textContent = restaurant.name;
             restaurantName.className = 'restaurant-name';
-    
+
             // Create a flex container for info and image
             const detailsContainer = document.createElement('div');
             detailsContainer.className = 'details-container'; // Add this class for styling
-    
+
             const info = document.createElement('div');
             info.className = 'info';
             info.innerHTML = `
@@ -114,20 +118,21 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <p>Rating: ${restaurant.rating}</p>
                 <p>${restaurant.price ? `Price: ${restaurant.price}` : ''}</p>
                 <p>Phone: ${formatPhoneNumber(restaurant.phone)}</p>
+                <p>Today's Hours: ${restaurant.business_hours && restaurant.business_hours.length > 0 ? getTodaysHours(restaurant.business_hours[0].open) : 'Hours not available'}</p>
                 <a href="${restaurant.url}" target="_blank">Yelp Page</a>
             `;
-    
+
             const imgContainer = document.createElement('div');
             imgContainer.className = 'img-container';
             const img = document.createElement('img');
             img.src = restaurant.image_url || '/imgs/food_stock_image.jpg';
             img.alt = 'Restaurant Image';
             imgContainer.appendChild(img);
-    
+
             // Add info and imgContainer to the detailsContainer
             detailsContainer.appendChild(info);
             detailsContainer.appendChild(imgContainer);
-    
+
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.name = 'add-to-list';
@@ -140,16 +145,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                     listFrame.postMessage({ type: 'removeRestaurant', restaurant: restaurant }, '*');
                 }
             });
-    
+
             const checkboxContainer = document.createElement('div');
             checkboxContainer.className = 'checkbox-container';
             checkboxContainer.appendChild(checkbox);
-    
+
             restaurantItem.appendChild(restaurantName);
             restaurantItem.appendChild(detailsContainer); // Add the detailsContainer here
             restaurantItem.appendChild(checkboxContainer);
             restaurantList.appendChild(restaurantItem);
-    
+
             restaurantItem.addEventListener('click', (event) => {
                 if (event.target !== checkbox) {
                     checkbox.checked = !checkbox.checked;
@@ -158,7 +163,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         });
     }
-    
 
     function filterRestaurants() {
         const searchText = searchBar.value.toLowerCase();
