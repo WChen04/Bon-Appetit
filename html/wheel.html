@@ -1,136 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/wheel.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="../js/Winwheel.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Bon Appetit Wheel</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wheel-container">
-        <img class="arrow" src="../imgs/arrow.png">
-        <img class="whiteArrow" src="../imgs/white_arrow.png">
-        <canvas id="canvas" width="550" height="550"></canvas>
-        <button id="spinButton" onclick="startSpin()">SPIN</button>
+      <img class="arrow" src="../imgs/arrow.png" />
+      <img class="whiteArrow" src="../imgs/white_arrow.png" />
+      <canvas id="canvas" width="550" height="550"></canvas>
+      <button id="spinButton" onclick="startSpin()">SPIN</button>
     </div>
 
     <script>
-        let myWheel;
-        let isAnimating = false;
+      let myWheel;
+      let isAnimating = false;
 
-        function createWheel(segments) {
-            // Clear the canvas before creating a new wheel
-            const canvas = document.getElementById('canvas');
-            const ctx = canvas.getContext('2d');
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+      function createWheel(segments) {
+        // Clear the canvas before creating a new wheel
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            let strokeStyleColor = segments.length === 0 ? '#68aede' : '#FFFFFF'; // Change color based on segments
-            let orientation = segments.length === 0 ? 'curved' : 'horizontal'; // Change text orientation based on segments
-            let angle = segments.length === 0 ? 150 : 0; // Change rotation angle based on segments
+        let strokeStyleColor = segments.length === 0 ? "#68aede" : "#FFFFFF"; // Change color based on segments
+        let orientation = segments.length === 0 ? "curved" : "horizontal"; // Change text orientation based on segments
+        let angle = segments.length === 0 ? 150 : 0; // Change rotation angle based on segments
 
-            if (segments.length === 0) {
-                segments = [{ text: 'Add Restaurants To The List', textFontSize: 20, fillStyle: '#68aede' }]; // Default segment when no restaurants are added
-                startEmptyWheelAnimation();
-            } else {
-                segments = segments.map((restaurant, index) => {
-                    let textFontSize = restaurant.length > 15 ? 12 : 18;
-                    return {
-                        'fillStyle': (index % 2 === 0) ? '#68aede' : '#9cd6ea',
-                        'text': restaurant,
-                        'textFontSize': textFontSize
-                    }
-                });
-                stopEmptyWheelAnimation();
-            }
-
-            myWheel = new Winwheel({
-                'canvasId': 'canvas',
-                'numSegments': segments.length,
-                'segments': segments,
-                'strokeStyle': strokeStyleColor,
-                'textOrientation': orientation,
-                'rotationAngle': angle,
-                'animation': {
-                    'type': 'spinToStop',
-                    'duration': 5,
-                    'spins': 8,
-                    'callbackFinished': alertPrize
-                }
-            });
+        if (segments.length === 0) {
+          segments = [
+            {
+              text: "Add Restaurants To The List",
+              textFontSize: 24,
+              fillStyle: "#68aede",
+              textFontFamily: "Lobster",
+            },
+          ]; // Default segment when no restaurants are added
+          startEmptyWheelAnimation();
+        } else {
+          segments = segments.map((restaurant, index) => {
+            let textFontSize = restaurant.length > 15 ? 12 : 18;
+            return {
+              fillStyle: index % 2 === 0 ? "#68aede" : "#9cd6ea",
+              text: restaurant,
+              textFontSize: textFontSize,
+            };
+          });
+          stopEmptyWheelAnimation();
         }
 
-        function startSpin() {
-            if (myWheel.numSegments === 1 && myWheel.segments[1].text === 'Add Restaurants To The List') {
-                parent.postMessage({ type: 'showAlert', title: 'Error', message: 'Please add at least one restaurant to the list before spinning.' }, '*');
-            } else {
-                myWheel.startAnimation();
-                document.getElementById('spinButton').disabled = true;
-            }
-        }
-
-        function alertPrize() {
-            let winningSegment = myWheel.getIndicatedSegment();
-            parent.postMessage({ type: 'showAlert', title: 'Congratulations!', message: 'Restaurant: ' + winningSegment.text }, '*');
-            parent.postMessage({ type: 'launchConfetti' }, '*'); // Trigger confetti in the parent document
-            resetWheel();
-        }
-
-        function resetWheel() {
-            myWheel.stopAnimation(false);
-            myWheel.rotationAngle = 0;
-            myWheel.draw();
-            document.getElementById('spinButton').disabled = false;
-        }
-
-        window.addEventListener('message', (event) => {
-            if (event.origin !== window.location.origin) {
-                return;
-            }
-
-            if (event.data && event.data.type === 'updateWheel') {
-                createWheel(event.data.restaurants);
-            } else if (event.data && event.data.type === 'changeMode') {
-                switchArrows(event.data.mode);
-            }
+        myWheel = new Winwheel({
+          canvasId: "canvas",
+          numSegments: segments.length,
+          segments: segments,
+          strokeStyle: strokeStyleColor,
+          textOrientation: orientation,
+          rotationAngle: angle,
+          animation: {
+            type: "spinToStop",
+            duration: 5,
+            spins: 8,
+            callbackFinished: alertPrize,
+          },
         });
+      }
 
-        function startEmptyWheelAnimation() {
-            if (!isAnimating) {
-                isAnimating = true;
-                gsap.to("#canvas", {
-                    rotation: 360,
-                    transformOrigin: "50% 50%",
-                    repeat: -1,
-                    ease: "none",
-                    duration: 10
-                });
-            }
+      function startSpin() {
+        if (
+          myWheel.numSegments === 1 &&
+          myWheel.segments[1].text === "Add Restaurants To The List"
+        ) {
+          parent.postMessage(
+            {
+              type: "showAlert",
+              title: "Error",
+              message:
+                "Please add at least one restaurant to the list before spinning.",
+            },
+            "*"
+          );
+        } else {
+          myWheel.startAnimation();
+          document.getElementById("spinButton").disabled = true;
+        }
+      }
+
+      function alertPrize() {
+        let winningSegment = myWheel.getIndicatedSegment();
+        parent.postMessage(
+          {
+            type: "showAlert",
+            title: "Congratulations!",
+            message: "Restaurant: " + winningSegment.text,
+          },
+          "*"
+        );
+        parent.postMessage({ type: "launchConfetti" }, "*"); // Trigger confetti in the parent document
+        resetWheel();
+      }
+
+      function resetWheel() {
+        myWheel.stopAnimation(false);
+        myWheel.rotationAngle = 0;
+        myWheel.draw();
+        document.getElementById("spinButton").disabled = false;
+      }
+
+      window.addEventListener("message", (event) => {
+        if (event.origin !== window.location.origin) {
+          return;
         }
 
-        function stopEmptyWheelAnimation() {
-            if (isAnimating) {
-                isAnimating = false;
-                gsap.killTweensOf("#canvas");
-                gsap.set("#canvas", { rotation: 0 });
-            }
+        if (event.data && event.data.type === "updateWheel") {
+          createWheel(event.data.restaurants);
+        } else if (event.data && event.data.type === "changeMode") {
+          switchArrows(event.data.mode);
         }
+      });
 
-        function switchArrows(mode) {
-            const blackArrow = document.querySelector('.arrow');
-            const whiteArrow = document.querySelector('.whiteArrow');
-
-            if (mode === 'dark') {
-                blackArrow.style.display = 'none';
-                whiteArrow.style.display = 'block';
-            } else {
-                blackArrow.style.display = 'block';
-                whiteArrow.style.display = 'none';
-            }
+      function startEmptyWheelAnimation() {
+        if (!isAnimating) {
+          isAnimating = true;
+          gsap.to("#canvas", {
+            rotation: 360,
+            transformOrigin: "50% 50%",
+            repeat: -1,
+            ease: "none",
+            duration: 10,
+          });
         }
+      }
 
-        createWheel([]);
+      function stopEmptyWheelAnimation() {
+        if (isAnimating) {
+          isAnimating = false;
+          gsap.killTweensOf("#canvas");
+          gsap.set("#canvas", { rotation: 0 });
+        }
+      }
+
+      function switchArrows(mode) {
+        const blackArrow = document.querySelector(".arrow");
+        const whiteArrow = document.querySelector(".whiteArrow");
+
+        if (mode === "dark") {
+          blackArrow.style.display = "none";
+          whiteArrow.style.display = "block";
+        } else {
+          blackArrow.style.display = "block";
+          whiteArrow.style.display = "none";
+        }
+      }
+
+      createWheel([]);
     </script>
-</body>
+  </body>
 </html>

@@ -2,7 +2,8 @@
   --main-color: #5e5df0;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -50,6 +51,9 @@ body {
   width: calc(50% - 40px);
   padding: 20px;
   position: relative;
+  font-family: "Lobster Two", "sans-serif";
+  font-weight: 400;
+  font-style: italic;
 }
 .wrapper .row section::before {
   position: absolute;
@@ -115,7 +119,7 @@ body {
   color: #fff;
   padding: 7px 15px;
   border-radius: 5px;
-  /* font-size: 17px; */
+  font-family: "Lobster", sans-serif;
   font-weight: 400;
   transition: all 0.3s ease;
 }
@@ -151,6 +155,7 @@ body {
 }
 img {
   max-width: 40%;
+  max-height: 40%;
 }
 header {
   background-color: #fbf9f5;
@@ -159,10 +164,9 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
-    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
-    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
-    "Noto Sans", sans-serif;
+  font-family: "Lobster", sans-serif;
+  font-size: larger;
+  color: #45818e;
 }
 @keyframes slideInFromLeft {
   from {
@@ -180,6 +184,8 @@ header {
   align-items: center;
   justify-content: space-between;
   animation: slideInFromLeft 0.5s ease forwards;
+  margin: 1rem;
+  color: #45818e;
 }
 #logo {
   width: 10vh;
@@ -196,7 +202,7 @@ header {
 }
 #aboutus {
   text-decoration: none;
-  color: black;
+  color: #45818e;
 }
 #profile {
   width: 5vh;
@@ -245,10 +251,6 @@ header {
 }
 li {
   list-style-type: none;
-  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
-    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
-    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
-    "Noto Sans", sans-serif;
   font-weight: 400;
 }
 .info {
@@ -257,6 +259,9 @@ li {
   justify-content: space-between;
   width: 15em;
   align-items: center;
+  font-family: "Lobster Two", "sans-serif";
+  font-weight: 400;
+  font-style: italic;
 }
 button {
   background: var(--main-color);
@@ -264,10 +269,7 @@ button {
   box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
-  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
-    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
-    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
-    "Noto Sans", sans-serif;
+  font-family: "Lobster", sans-serif;
   font-weight: 500;
   line-height: 17px;
   opacity: 1;
@@ -281,6 +283,7 @@ button {
   border: 0;
 }
 button a {
+  font-family: "Lobster", sans-serif;
   text-decoration: none;
   color: white;
 }
@@ -299,7 +302,7 @@ button a {
 }
 #CompanyName {
   text-decoration: none;
-  color: black;
+  color: #45818e;
 }
 .timeline {
   font-family: "Poppins", sans-serif;
@@ -318,11 +321,12 @@ button a {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
 }
 .developer_information {
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  padding: 1rem;
 }
 .meet_dev {
   display: flex;
@@ -331,6 +335,7 @@ button a {
   color: black;
   text-align: center;
   font-size: 2.5em;
+  font-family: "Lobster", sans-serif;
 }
 footer {
   margin-top: 5vh;
@@ -341,6 +346,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-family: "Lobster", sans-serif;
 }
 .team4 {
   display: flex;
@@ -365,4 +371,5 @@ footer img {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  font-family: "Lobster", sans-serif;
 }

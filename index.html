@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./styles/index.css" />
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <div class="BA">
-            <img id="logo" src="./imgs/BA_Logo.png" alt="#" />
-            <h1>Bon Appetit</h1>
-        </div>
-        <div class="tabs">
-            <a id="aboutus" href="./html/developer.html"><h1>About Us</h1></a>
-            <button id="modeToggle">Dark Mode</button>
-        </div>
+      <div class="BA">
+        <img id="logo" src="./imgs/BA_Logo.png" alt="#" />
+        <h1>Bon Appetit</h1>
+      </div>
+      <div class="tabs">
+        <a id="aboutus" href="./html/developer.html"><h1>About Us</h1></a>
+        <button id="modeToggle">Dark Mode</button>
+      </div>
     </header>
     <div style="text-align: center" class="dots">
-        <span class="dot" onclick="currentSlide(1)">Wheel</span>
-        <span class="dot" onclick="currentSlide(2)">Search</span>
+      <span class="dot" onclick="currentSlide(1)">Wheel</span>
+      <span class="dot" onclick="currentSlide(2)">Search</span>
     </div>
     <div class="body-container">
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <iframe id="wheelFrame" src="./html/wheel.html"></iframe>
-            </div>
-
-            <div class="mySlides fade">
-                <iframe id="searchFrame" src="./html/search.html"></iframe>
-            </div>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <iframe id="wheelFrame" src="./html/wheel.html"></iframe>
         </div>
-        <iframe id="listFrame" src="./html/list.html"></iframe>
+
+        <div class="mySlides fade">
+          <iframe id="searchFrame" src="./html/search.html"></iframe>
+        </div>
+      </div>
+      <iframe id="listFrame" src="./html/list.html"></iframe>
     </div>
 
     <div class="alert-overlay" id="customAlert" style="display: none">
@@ -47,11 +57,11 @@
       showSlides(slideIndex);
 
       function plusSlides(n) {
-        showSlides(slideIndex += n);
+        showSlides((slideIndex += n));
       }
 
       function currentSlide(n) {
-          showSlides(slideIndex = n);
+        showSlides((slideIndex = n));
       }
 
       function showSlides(n) {
@@ -74,7 +84,9 @@
         dots[slideIndex - 1].className += " active";
       }
 
-      document.getElementById("modeToggle").addEventListener("click", function () {
+      document
+        .getElementById("modeToggle")
+        .addEventListener("click", function () {
           const body = document.body;
           const header = document.querySelector("header"); // Assuming you have a <header> element
           const toggleBtn = document.getElementById("modeToggle");
@@ -105,7 +117,7 @@
 
           // Send message to iframes to change their background color
           changeIframeBackgrounds(mode);
-      });
+        });
 
       function changeIframeBackgrounds(mode) {
         const iframes = document.querySelectorAll("iframe");
@@ -144,7 +156,7 @@
         confetti({
           particleCount: 1000,
           spread: 700,
-          origin: { y: 0.4 }
+          origin: { y: 0.4 },
         });
       }
     </script>
