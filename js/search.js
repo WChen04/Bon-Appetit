@@ -79,6 +79,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         return `${hour}:${minutes} ${ampm}`;
     }
 
+    // Function to check if the restaurant is open now
+    function isOpenNow(openingTimes) {
+        const currentDay = new Date().getDay();
+        const currentTime = new Date().getHours() * 100 + new Date().getMinutes();
+        const todaysHours = openingTimes.find(time => time.day === currentDay);
+
+        if (!todaysHours) return false;
+
+        return currentTime >= parseInt(todaysHours.start) && currentTime <= parseInt(todaysHours.end);
+    }
+
     // Function to get today's opening hours in AM/PM format
     function getTodaysHours(openingTimes) {
         const currentDay = new Date().getDay();
@@ -112,14 +123,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             const info = document.createElement('div');
             info.className = 'info';
+            const isOpen = restaurant.business_hours && restaurant.business_hours.length > 0 ? isOpenNow(restaurant.business_hours[0].open) : false;
+            const openStatus = isOpen ? '<span style="color: green;">Open</span>' : '<span style="color: red;">Closed</span>';
             info.innerHTML = `
-                <p>Distance: ${metersToMiles(restaurant.distance).toFixed(2)} miles</p>
-                <p>Cuisine: ${restaurant.categories.map(c => c.title).join(', ')}</p>
-                <p>Rating: ${restaurant.rating}</p>
-                <p>${restaurant.price ? `Price: ${restaurant.price}` : ''}</p>
-                <p>Phone: ${formatPhoneNumber(restaurant.phone)}</p>
+                <p>${openStatus}  |  ${formatPhoneNumber(restaurant.phone)}</p>
+                <p>${restaurant.rating}★ ${restaurant.price ? ` • ${restaurant.price}` : ''}</p>
+                <p>${restaurant.categories.map(c => c.title).join(', ')}</p>
                 <p>Today's Hours: ${restaurant.business_hours && restaurant.business_hours.length > 0 ? getTodaysHours(restaurant.business_hours[0].open) : 'Hours not available'}</p>
-                <a href="${restaurant.url}" target="_blank">Yelp Page</a>
+                <a href="${restaurant.url}" target="_blank">Open on Yelp</a>
             `;
 
             const imgContainer = document.createElement('div');

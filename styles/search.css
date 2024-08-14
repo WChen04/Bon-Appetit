@@ -225,6 +225,7 @@ body.dark-mode .restaurant-item:hover {
 
 /* Add this to your CSS file */
 .details-container {
+    color: rgb(87, 79, 79);
     display: flex;
     justify-content: space-between;
     align-items: flex-start; /* Align items at the start */
