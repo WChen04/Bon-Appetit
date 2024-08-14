@@ -35,8 +35,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     // If no restaurants are fetched, use fallback data
     if (!restaurants || restaurants.length === 0) {
         restaurants = [
-            { id: "1", name: "Fallback Restaurant", distance: "515", cuisine: "Fallback Cuisine", rating: 4.0, price: "$$", opening: "Afternoon" }
+            { id: "1", name: "Fallback Restaurant", distance: "515", cuisine: "Fallback Cuisine", rating: 4.0, price: "$$", opening: "Afternoon", phone: "N/A" }
         ];
+    }
+
+    // Function to format phone numbers
+    function formatPhoneNumber(phoneNumber) {
+        if (!phoneNumber) return "N/A";
+        
+        // Remove +1 if it exists
+        phoneNumber = phoneNumber.replace(/^\+1/, '');
+
+        // Format the number as (123) 456-7890
+        const match = phoneNumber.match(/^(\d{3})(\d{3})(\d{4})$/);
+        if (match) {
+            return `(${match[1]}) ${match[2]}-${match[3]}`;
+        }
+
+        return phoneNumber; // Return the original if it doesn't match the format
     }
 
     // Function to check if the restaurant is currently open
@@ -71,6 +87,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             restaurantName.textContent = restaurant.name;
             restaurantName.className = 'restaurant-name';
 
+            // Create a flex container for info and image
+            const detailsContainer = document.createElement('div');
+            detailsContainer.className = 'details-container'; // Add this class for styling
+
             const info = document.createElement('div');
             info.className = 'info';
             info.innerHTML = `
@@ -78,6 +98,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <p>Cuisine: ${restaurant.categories.map(c => c.title).join(', ')}</p>
                 <p>Rating: ${restaurant.rating}</p>
                 <p>Price: ${restaurant.price}</p>
+                <p>Phone: ${formatPhoneNumber(restaurant.phone)}</p>
                 <a href="${restaurant.url}" target="_blank">Yelp Page</a>
             `;
 
@@ -87,6 +108,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             img.src = restaurant.image_url || '/imgs/food_stock_image.jpg';
             img.alt = 'Restaurant Image';
             imgContainer.appendChild(img);
+
+            // Add info and imgContainer to the detailsContainer
+            detailsContainer.appendChild(info);
+            detailsContainer.appendChild(imgContainer);
 
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
@@ -106,8 +131,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             checkboxContainer.appendChild(checkbox);
 
             restaurantItem.appendChild(restaurantName);
-            restaurantItem.appendChild(info);
-            restaurantItem.appendChild(imgContainer);
+            restaurantItem.appendChild(detailsContainer); // Add the detailsContainer here
             restaurantItem.appendChild(checkboxContainer);
             restaurantList.appendChild(restaurantItem);
 
@@ -129,35 +153,39 @@ document.addEventListener('DOMContentLoaded', async () => {
             acc[filter.name].push(filter.value.toLowerCase());
             return acc;
         }, {});
-    
+        
         const filteredRestaurants = restaurants.filter(restaurant => {
             const matchesSearch = restaurant.name.toLowerCase().includes(searchText) ||
                 restaurant.categories.some(category => category.title.toLowerCase().includes(searchText)) ||
                 (searchText === 'open now' && isOpen(restaurant.hours)) ||
                 (searchText === 'near me' && restaurant.distance === '1km');
-    
+        
             const matchesFilters = Object.keys(activeFilters).every(filter => {
                 if (filter === 'cuisine') {
-                    // Handle cuisine filtering to include broader categories
                     return restaurant.categories.some(category => {
                         const categoryTitle = category.title.toLowerCase();
                         return activeFilters[filter].some(value => {
                             if (value === 'bars') {
-                                // Match any category that includes "bars" or "bar"
+                                // Match any category that includes "bars" or "bar" but exclude "barbeque" and "sushi"
                                 return (categoryTitle.includes('bars') || categoryTitle.includes('bar')) && 
-                                !categoryTitle.includes('barbeque') && !categoryTitle.includes('sushiz');
+                                       !categoryTitle.includes('barbeque') && !categoryTitle.includes('sushi');
+                            } else if (value === 'american') {
+                                // Ensure "American" doesn't match "Latin American"
+                                return categoryTitle === 'american';
+                            } else if (value === 'latin american') {
+                                return categoryTitle === 'latin american';
                             }
-                            return categoryTitle.includes(value);
+                            return categoryTitle === value;
                         });
                     });
                 } else {
                     return activeFilters[filter].includes(restaurant[filter].toLowerCase());
                 }
             });
-    
+        
             return matchesSearch && matchesFilters;
         });
-    
+        
         displayRestaurants(filteredRestaurants);
     }    
 
@@ -217,3 +245,4 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     displayRestaurants(restaurants);
 });
+

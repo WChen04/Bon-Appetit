@@ -223,6 +223,14 @@ body.dark-mode .restaurant-item:hover {
   margin-right: 20px;
 }
 
+/* Add this to your CSS file */
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the start */
+    gap: 20px; /* Adjust space between image and details */
+}
+
 /* Image container styling */
 .img-container {
   flex-shrink: 0;
@@ -231,12 +239,13 @@ body.dark-mode .restaurant-item:hover {
 }
 
 .img-container img {
-  /* ----- for now ----- */
-  display: none;
-  /* ------------------- */
-  max-width: 100px;
-  max-height: 100px;
-  border-radius: 5px;
+    max-height: 200px;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.info {
+    flex-grow: 1; /* Allow the info section to take up the remaining space */
 }
 
 .no-results {
