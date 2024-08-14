@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const clearFiltersButton = document.getElementById('clearFiltersButton');
     const addAllButtonRestaurants = document.getElementById('addAllButtonRestaurants');
 
+    // Conversion factor from meters to miles
+    const metersToMiles = meters => meters * 0.000621371;
+
     // Process restaurant data from multiple JSON files
     async function getRestaurants() {
         const files = [
@@ -27,7 +30,19 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
 
-        return restaurants;
+        // Filter out duplicate restaurants by name and phone number
+        const uniqueRestaurants = restaurants.reduce((acc, restaurant) => {
+            const existingRestaurant = acc.find(r => 
+                r.name.toLowerCase() === restaurant.name.toLowerCase() && 
+                r.phone === restaurant.phone
+            );
+            if (!existingRestaurant) {
+                acc.push(restaurant);
+            }
+            return acc;
+        }, []);
+
+        return uniqueRestaurants;
     }
 
     let restaurants = await getRestaurants();
@@ -94,7 +109,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const info = document.createElement('div');
             info.className = 'info';
             info.innerHTML = `
-                <p>Distance: ${restaurant.distance}</p>
+                <p>Distance: ${metersToMiles(restaurant.distance).toFixed(2)} miles</p>
                 <p>Cuisine: ${restaurant.categories.map(c => c.title).join(', ')}</p>
                 <p>Rating: ${restaurant.rating}</p>
                 <p>Price: ${restaurant.price}</p>
@@ -155,12 +170,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         }, {});
         
         const filteredRestaurants = restaurants.filter(restaurant => {
+            const restaurantDistance = metersToMiles(restaurant.distance);
+
             const matchesSearch = restaurant.name.toLowerCase().includes(searchText) ||
                 restaurant.categories.some(category => category.title.toLowerCase().includes(searchText)) ||
                 (searchText === 'open now' && isOpen(restaurant.hours)) ||
-                (searchText === 'near me' && restaurant.distance === '1km');
-        
+                (searchText === 'near me' && restaurantDistance <= 1);
+
             const matchesFilters = Object.keys(activeFilters).every(filter => {
+                if (filter === 'distance') {
+                    return activeFilters[filter].some(value => {
+                        if (value === "< 1") return restaurantDistance < 1;
+                        if (value === "1-5") return restaurantDistance >= 1 && restaurantDistance <= 5;
+                        if (value === "5-10") return restaurantDistance > 5 && restaurantDistance <= 10;
+                        if (value === "> 10") return restaurantDistance > 10;
+                    });
+                }
                 if (filter === 'cuisine') {
                     return restaurant.categories.some(category => {
                         const categoryTitle = category.title.toLowerCase();
@@ -245,4 +270,3 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     displayRestaurants(restaurants);
 });
-
