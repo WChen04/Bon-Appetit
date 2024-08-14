@@ -171,12 +171,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         const filteredRestaurants = restaurants.filter(restaurant => {
             const restaurantDistance = metersToMiles(restaurant.distance);
-
+    
             const matchesSearch = restaurant.name.toLowerCase().includes(searchText) ||
                 restaurant.categories.some(category => category.title.toLowerCase().includes(searchText)) ||
                 (searchText === 'open now' && isOpen(restaurant.hours)) ||
                 (searchText === 'near me' && restaurantDistance <= 1);
-
+    
             const matchesFilters = Object.keys(activeFilters).every(filter => {
                 if (filter === 'distance') {
                     return activeFilters[filter].some(value => {
@@ -191,11 +191,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                         const categoryTitle = category.title.toLowerCase();
                         return activeFilters[filter].some(value => {
                             if (value === 'bars') {
-                                // Match any category that includes "bars" or "bar" but exclude "barbeque" and "sushi"
                                 return (categoryTitle.includes('bars') || categoryTitle.includes('bar')) && 
                                        !categoryTitle.includes('barbeque') && !categoryTitle.includes('sushi');
                             } else if (value === 'american') {
-                                // Ensure "American" doesn't match "Latin American"
                                 return categoryTitle === 'american';
                             } else if (value === 'latin american') {
                                 return categoryTitle === 'latin american';
@@ -203,9 +201,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                             return categoryTitle === value;
                         });
                     });
-                } else {
-                    return activeFilters[filter].includes(restaurant[filter].toLowerCase());
                 }
+                if (filter === 'rating') {
+                    return activeFilters[filter].some(value => {
+                        const rating = restaurant.rating;
+                        if (value === "< 1") return rating < 1;
+                        if (value === "1-2") return rating >= 1 && rating < 2;
+                        if (value === "2-3") return rating >= 2 && rating < 3;
+                        if (value === "3-4") return rating >= 3 && rating < 4;
+                        if (value === "4-5") return rating >= 4 && rating <= 5;
+                    });
+                }
+                return activeFilters[filter].includes(restaurant[filter].toLowerCase());
             });
         
             return matchesSearch && matchesFilters;
