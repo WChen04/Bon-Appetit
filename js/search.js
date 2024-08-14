@@ -87,7 +87,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (!todaysHours) return false;
 
-        return currentTime >= parseInt(todaysHours.start) && currentTime <= parseInt(todaysHours.end);
+        const openingTime = parseInt(todaysHours.start);
+        const closingTime = parseInt(todaysHours.end);
+
+        // Check if the current time is within the opening hours
+        return currentTime >= openingTime && currentTime <= closingTime;
     }
 
     // Function to get today's opening hours in AM/PM format
@@ -190,7 +194,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
             const matchesSearch = restaurant.name.toLowerCase().includes(searchText) ||
                 restaurant.categories.some(category => category.title.toLowerCase().includes(searchText)) ||
-                (searchText === 'open now' && isOpen(restaurant.hours)) ||
+                (searchText === 'open now' && restaurant.business_hours && restaurant.business_hours.length > 0 && isOpenNow(restaurant.business_hours[0].open)) ||
                 (searchText === 'near me' && restaurantDistance <= 1);
     
             const matchesFilters = Object.keys(activeFilters).every(filter => {
@@ -259,7 +263,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const filteredRestaurants = restaurants.filter(restaurant => {
             const matchesSearch = restaurant.name.toLowerCase().includes(searchText) ||
                 restaurant.categories.some(category => category.title.toLowerCase().includes(searchText)) ||
-                (searchText === 'open now' && isOpen(restaurant.hours)) || 
+                (searchText === 'open now' && restaurant.business_hours && restaurant.business_hours.length > 0 && isOpenNow(restaurant.business_hours[0].open)) || 
                 (searchText === 'near me' && restaurant.distance === '1km');
 
             const matchesFilters = Object.keys(activeFilters).every(filter => 
