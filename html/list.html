@@ -1,105 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/list.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/list.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Restaurant List</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">Selected Restaurants</div>
     <button class="clearAll" onclick="clearAllRestaurants()">Clear All</button>
     <div id="selectedRestaurants"></div>
     <script src="script.js"></script>
     <script>
-        window.addEventListener('message', (event) => {
-            if (event.origin !== window.location.origin) {
-                return;
-            }
+      window.addEventListener("message", (event) => {
+        if (event.origin !== window.location.origin) {
+          return;
+        }
 
-            if (event.data && event.data.type === 'addRestaurant') {
-                addRestaurantToList(event.data.restaurant);
-            } else if (event.data && event.data.type === 'removeRestaurant') {
-                removeRestaurantFromList(event.data.restaurant);
-            } else if (event.data && event.data.type === 'changeMode') {
-                changeMode(event.data.mode);
-            }
+        if (event.data && event.data.type === "addRestaurant") {
+          addRestaurantToList(event.data.restaurant);
+        } else if (event.data && event.data.type === "removeRestaurant") {
+          removeRestaurantFromList(event.data.restaurant);
+        } else if (event.data && event.data.type === "changeMode") {
+          changeMode(event.data.mode);
+        }
+      });
+
+      function addRestaurantToList(restaurant) {
+        const selectedRestaurantsContainer = document.getElementById(
+          "selectedRestaurants"
+        );
+        const items =
+          selectedRestaurantsContainer.getElementsByClassName(
+            "restaurant-item"
+          );
+        for (let i = items.length - 1; i >= 0; i--) {
+          if (items[i].dataset.id === restaurant.id) {
+            return;
+          }
+        }
+
+        const restaurantItem = document.createElement("div");
+        restaurantItem.className = "restaurant-item";
+        restaurantItem.dataset.id = restaurant.id;
+
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = restaurant.name;
+
+        const minusButton = document.createElement("button");
+        minusButton.className = "minus-button";
+        minusButton.textContent = "-";
+        minusButton.addEventListener("click", () => {
+          selectedRestaurantsContainer.removeChild(restaurantItem);
+          const searchFrame =
+            parent.document.getElementById("searchFrame").contentWindow;
+          searchFrame.postMessage(
+            { type: "removeRestaurant", restaurant: restaurant },
+            "*"
+          );
+          sendSelectedRestaurants();
         });
 
-        function addRestaurantToList(restaurant) {
-            const selectedRestaurantsContainer = document.getElementById('selectedRestaurants');
-            const items = selectedRestaurantsContainer.getElementsByClassName('restaurant-item');
-            for (let i = items.length - 1; i >= 0; i--) {
-                if (items[i].dataset.id === restaurant.id) {
-                    return;
-                }
-            }
+        restaurantItem.appendChild(nameSpan);
+        restaurantItem.appendChild(minusButton);
+        selectedRestaurantsContainer.appendChild(restaurantItem);
+        sendSelectedRestaurants();
+      }
 
-            const restaurantItem = document.createElement('div');
-            restaurantItem.className = 'restaurant-item';
-            restaurantItem.dataset.id = restaurant.id;
-
-            const nameSpan = document.createElement('span');
-            nameSpan.textContent = restaurant.name;
-
-            const minusButton = document.createElement('button');
-            minusButton.className = 'minus-button';
-            minusButton.textContent = '-';
-            minusButton.addEventListener('click', () => {
-                selectedRestaurantsContainer.removeChild(restaurantItem);
-                const searchFrame = parent.document.getElementById('searchFrame').contentWindow;
-                searchFrame.postMessage({ type: 'removeRestaurant', restaurant: restaurant }, '*');
-                sendSelectedRestaurants();
-            });
-            
-            restaurantItem.appendChild(nameSpan);
-            restaurantItem.appendChild(minusButton);
-            selectedRestaurantsContainer.appendChild(restaurantItem);
-            sendSelectedRestaurants();
+      function removeRestaurantFromList(restaurant) {
+        const selectedRestaurantsContainer = document.getElementById(
+          "selectedRestaurants"
+        );
+        const items =
+          selectedRestaurantsContainer.getElementsByClassName(
+            "restaurant-item"
+          );
+        for (let i = items.length - 1; i >= 0; i--) {
+          if (items[i].dataset.id === restaurant.id) {
+            selectedRestaurantsContainer.removeChild(items[i]);
+            break;
+          }
         }
+        sendSelectedRestaurants();
+      }
 
-        function removeRestaurantFromList(restaurant) {
-            const selectedRestaurantsContainer = document.getElementById('selectedRestaurants');
-            const items = selectedRestaurantsContainer.getElementsByClassName('restaurant-item');
-            for (let i = items.length - 1; i >= 0; i--) {
-                if (items[i].dataset.id === restaurant.id) {
-                    selectedRestaurantsContainer.removeChild(items[i]);
-                    break;
-                }
-            }
-            sendSelectedRestaurants();
+      function sendSelectedRestaurants() {
+        const selectedRestaurantsContainer = document.getElementById(
+          "selectedRestaurants"
+        );
+        const restaurantNames = Array.from(
+          selectedRestaurantsContainer.children
+        ).map((item) => item.firstChild.textContent);
+        const wheelFrame =
+          parent.document.getElementById("wheelFrame").contentWindow;
+        wheelFrame.postMessage(
+          { type: "updateWheel", restaurants: restaurantNames },
+          "*"
+        );
+      }
+
+      function clearAllRestaurants() {
+        const selectedRestaurantsContainer = document.getElementById(
+          "selectedRestaurants"
+        );
+        const items =
+          selectedRestaurantsContainer.getElementsByClassName(
+            "restaurant-item"
+          );
+        for (let i = items.length - 1; i >= 0; i--) {
+          selectedRestaurantsContainer.removeChild(items[i]);
         }
+        sendSelectedRestaurants(); // Ensure wheel is updated after clearing all
+      }
 
-        function sendSelectedRestaurants() {
-            const selectedRestaurantsContainer = document.getElementById('selectedRestaurants');
-            const restaurantNames = Array.from(selectedRestaurantsContainer.children).map(item => item.firstChild.textContent);
-            const wheelFrame = parent.document.getElementById('wheelFrame').contentWindow;
-            wheelFrame.postMessage({ type: 'updateWheel', restaurants: restaurantNames }, '*');
+      function changeMode(mode) {
+        const body = document.body;
+        if (mode === "dark") {
+          body.classList.add("dark-mode");
+          body.classList.remove("light-mode");
+        } else {
+          body.classList.add("light-mode");
+          body.classList.remove("dark-mode");
         }
+      }
 
-        function clearAllRestaurants() {
-            const selectedRestaurantsContainer = document.getElementById('selectedRestaurants');
-            const items = selectedRestaurantsContainer.getElementsByClassName('restaurant-item');
-            for (let i = items.length - 1; i >= 0; i--) {
-                selectedRestaurantsContainer.removeChild(items[i]);
-            }
-            sendSelectedRestaurants(); // Ensure wheel is updated after clearing all
-        }
-
-        function changeMode(mode) {
-            const body = document.body;
-            if (mode === 'dark') {
-                body.classList.add('dark-mode');
-                body.classList.remove('light-mode');
-            } else {
-                body.classList.add('light-mode');
-                body.classList.remove('dark-mode');
-            }
-        }
-
-        // Initialize mode based on parent's mode
-        const parentMode = parent.document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-        changeMode(parentMode);
+      // Initialize mode based on parent's mode
+      const parentMode = parent.document.body.classList.contains("dark-mode")
+        ? "dark"
+        : "light";
+      changeMode(parentMode);
     </script>
-</body>
+  </body>
 </html>

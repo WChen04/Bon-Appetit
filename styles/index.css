@@ -2,13 +2,13 @@
   box-sizing: border-box;
   padding: 0;
 }
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 iframe {
   border: none;
   height: 65vh;
   width: 100%;
 }
-#wheelFrame{
+#wheelFrame {
   height: 76vh;
   width: 100%;
 }
@@ -90,7 +90,10 @@ img {
   justify-content: center;
   align-content: center;
   animation: slideInFromLeft 0.5s ease forwards;
-  width: 15em
+  width: 15em;
+  font-family: "Lobster Two", "sans-serif";
+  font-weight: 400;
+  font-style: italic;
 }
 
 .active,
@@ -128,6 +131,9 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  font-family: "Lobster", sans-serif;
+  font-size: larger;
+  color: #45818e;
 }
 @keyframes slideInFromLeft {
   from {
@@ -145,11 +151,6 @@ header {
   align-items: center;
   justify-content: space-between;
   animation: slideInFromLeft 0.5s ease forwards;
-  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
-    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
-    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
-    "Noto Sans", sans-serif;
-  font-weight: 400;
 }
 #logo {
   width: 10vh;
@@ -166,7 +167,7 @@ header {
 }
 #aboutus {
   text-decoration: none;
-  color: black;
+  color: #45818e;
 }
 body.dark-mode #aboutus {
   color: white;
@@ -188,7 +189,6 @@ body.dark-mode #aboutus {
   right: 20px;
   padding: 10px 20px;
   cursor: pointer;
-  border: 1px solid black;
   border-radius: 25px;
 }
 
@@ -250,4 +250,27 @@ body.dark-mode .alert-box {
 body.dark-mode .alert-box button {
   background-color: #555;
   color: #fbf9f5;
+}
+button {
+  background: #5e5df0;
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Lobster", sans-serif;
+
+  line-height: 17px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+button a {
+  text-decoration: none;
+  color: white;
 }

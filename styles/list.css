@@ -15,10 +15,13 @@ body.dark-mode {
 
 /* Header Styling */
 .header {
-  color: black;
+  color: #45818e;
   font-size: 30px;
-  font-weight: bold;
+  /* font-weight: bold; */
   padding: 10px 0;
+  font-family: "Lobster Two", "sans-serif";
+  font-weight: 700;
+  font-style: normal;
 }
 
 body.dark-mode .header {
@@ -34,6 +37,7 @@ body.dark-mode .header {
   border: 2px solid #8483d7;
   border-radius: 15px;
   cursor: pointer;
+  font-family: "Lobster", sans-serif;
 }
 
 .clearAll:hover {
@@ -51,7 +55,7 @@ body.dark-mode .clearAll:hover {
 
 /* Minus Button Styling */
 .minus-button {
-  background-color: rgb(201, 201, 201);
+  background-color: rgb(212, 62, 62);
   color: rgb(0, 0, 0);
   border: none;
   padding: 5px 10px;
@@ -79,6 +83,9 @@ body.dark-mode .minus-button {
   cursor: pointer;
   background-color: #f9f9f9;
   color: black;
+  font-family: "Lobster Two", "sans-serif";
+  font-weight: 400;
+  font-style: italic;
 }
 
 body.dark-mode .restaurant-item {

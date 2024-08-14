@@ -1,265 +1,277 @@
 body {
-    font-family: Verdana, sans-serif;
-    background-color: #fbf9f5;
-    margin: 0;
-    padding: 0;
+  font-family: Verdana, sans-serif;
+  background-color: #fbf9f5;
+  margin: 0;
+  padding: 0;
 }
 
 /* Dark Mode Styles */
 body.dark-mode {
-    background-color: #333;
-    color: #fbf9f5;
+  background-color: #333;
+  color: #fbf9f5;
 }
 
 header {
-    background-color: #fbf9f5;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+  background-color: #fbf9f5;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
 body.dark-mode header {
-    background-color: #333;
-    color: #fbf9f5;
+  background-color: #333;
+  color: #fbf9f5;
 }
 
 /* Sticky container styling */
 .sticky-container {
-    position: sticky;
-    top: 0;
-    background-color: #fbf9f5;
-    z-index: 1;
-    padding: 10px 0;
+  position: sticky;
+  top: 0;
+  background-color: #fbf9f5;
+  z-index: 1;
+  padding: 10px 0;
 }
 
 body.dark-mode .sticky-container {
-    background-color: #333;
-    color: #fbf9f5;
+  background-color: #333;
+  color: #fbf9f5;
 }
 
 /* Search container styling */
 .search-container {
-    text-align: center;
-    margin: 0 20px 20px 20px;
+  text-align: center;
+  margin: 0 20px 20px 20px;
 }
 
 /* Search bar styling */
 #searchBar {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #ccc;
-    border-radius: 25px;
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-family: "Lobster Two", "sans-serif";
+  font-weight: 400;
+  font-style: italic;
 }
 
 body.dark-mode #searchBar {
-    background-color: #555;
-    color: #fbf9f5;
-    border: 1px solid #888;
+  background-color: #555;
+  color: #fbf9f5;
+  border: 1px solid #888;
 }
 
 /* Filters styling */
 .filters {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2%;
-    margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2%;
+  margin-bottom: 20px;
+  font-family: "Lobster Two", "sans-serif";
+  font-weight: 400;
+  font-style: italic;
 }
 
 /* Dropdown Menu Styles */
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropbtn {
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    width: 150px;
-    text-align: center;
-    border-radius: 25px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  width: 150px;
+  text-align: center;
+  border-radius: 25px;
+  font-family: "Lobster Two", "sans-serif";
+  font-weight: 400;
+  font-style: italic;
 }
 
 body.dark-mode .dropbtn {
-    background-color: #555;
-    color: #fbf9f5;
-    border: 1px solid #888;
+  background-color: #555;
+  color: #fbf9f5;
+  border: 1px solid #888;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    border-radius: 25px;
-    width: 150px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  border-radius: 25px;
+  width: 150px;
 }
 
 body.dark-mode .dropdown-content {
-    background-color: #555;
-    color: #fbf9f5;
+  background-color: #555;
+  color: #fbf9f5;
 }
 
 .dropdown-content label {
-    display: block;
+  display: block;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 /* Clear filters button styling */
 .clear-filters {
-    display: inline-block;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    color: rgb(255, 0, 0);
-    background-color: #f9f9f9;
-    width: 120px;
-    text-align: center;
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  color: rgb(255, 0, 0);
+  background-color: #f9f9f9;
+  width: 120px;
+  text-align: center;
 }
 
 .add-All {
-    display: inline-block;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    color: rgb(3, 173, 74);
-    background-color: #f9f9f9;
-    width: 120px;
-    text-align: center;
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  color: rgb(3, 173, 74);
+  background-color: #f9f9f9;
+  width: 120px;
+  text-align: center;
 }
 
 body.dark-mode .clear-filters {
-    background-color: #555;
-    color: #ff4c4c;
-    border: 1px solid #888;
+  background-color: #555;
+  color: #ff4c4c;
+  border: 1px solid #888;
 }
 
 body.dark-mode .add-All {
-    background-color: #555;
-    color: rgb(61, 232, 132);
-    border: 1px solid #888;
+  background-color: #555;
+  color: rgb(61, 232, 132);
+  border: 1px solid #888;
 }
 
 .restaurant-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Restaurant item styling */
 .restaurant-item {
-    width: 80%;
-    padding: 15px;
-    margin: 10px 0;
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    position: relative;
-    flex-direction: column;
+  width: 80%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  flex-direction: column;
+  font-family: "Lobster Two", "sans-serif";
+  font-weight: 400;
+  font-style: italic;
 }
 
 body.dark-mode .restaurant-item {
-    background-color: #555;
-    border: 1px solid #888;
+  background-color: #555;
+  border: 1px solid #888;
 }
 
 .restaurant-item:hover {
-    background-color: #e0e0e0;
+  background-color: #e0e0e0;
 }
 
 body.dark-mode .restaurant-item:hover {
-    background-color: #666;
+  background-color: #666;
 }
 
 .restaurant-item .restaurant-name {
-    font-size: 18px;
-    font-weight: bold;
-    width: 100%;
-    text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
 }
 
 /* Hides the checkbox, but allows adding to list to function properly */
 .restaurant-item .checkbox-container {
-    display: none;
+  display: none;
 }
 
 /* Info styling */
 .restaurant-item .info {
-    flex-grow: 1;
-    text-align: left;
-    margin-right: 20px;
+  flex-grow: 1;
+  text-align: left;
+  margin-right: 20px;
 }
 
 /* Image container styling */
 .img-container {
-    flex-shrink: 0;
-    display: flex;
-    justify-content: flex-end;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .img-container img {
-    /* ----- for now ----- */
-    display: none;
-    /* ------------------- */
-    max-width: 100px;
-    max-height: 100px;
-    border-radius: 5px;
+  /* ----- for now ----- */
+  display: none;
+  /* ------------------- */
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 5px;
 }
 
 .no-results {
-    text-align: center;
-    color: red;
-    font-size: 20px;
-    margin-top: 100px;
+  text-align: center;
+  color: red;
+  font-size: 20px;
+  margin-top: 100px;
 }
 
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 body.dark-mode ::-webkit-scrollbar-track {
-    background: #555;
+  background: #555;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
+  background: #888;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
 
 body.dark-mode ::-webkit-scrollbar-thumb {
-    background: #ccc;
+  background: #ccc;
 }
 
 body.dark-mode ::-webkit-scrollbar-thumb:hover {
-    background: #bbb;
+  background: #bbb;
 }
