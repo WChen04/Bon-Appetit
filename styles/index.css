@@ -226,6 +226,7 @@ body.dark-mode #aboutus {
 }
 .alert-box {
   background: white;
+  width: 20%;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
