@@ -191,6 +191,25 @@ body.dark-mode .add-All {
   font-style: italic;
 }
 
+.restaurant-item .info a {
+  color: #66c2ff;
+}
+
+body.dark-mode .restaurant-item .info,
+body.dark-mode .restaurant-item .info p,
+body.dark-mode .restaurant-item .restaurant-name {
+    color: #fbf9f5;
+}
+
+body.dark-mode .restaurant-item .info p {
+    color: #cccccc;
+}
+
+body.dark-mode .restaurant-item .restaurant-name {
+    color: #ffffff;
+}
+
+
 body.dark-mode .restaurant-item {
   background-color: #555;
   border: 1px solid #888;
