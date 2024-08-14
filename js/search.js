@@ -93,41 +93,41 @@ document.addEventListener('DOMContentLoaded', async () => {
             restaurantList.appendChild(noResultsMessage);
             return;
         }
-
+    
         filteredRestaurants.forEach(restaurant => {
             const restaurantItem = document.createElement('div');
             restaurantItem.className = 'restaurant-item';
-
+    
             const restaurantName = document.createElement('div');
             restaurantName.textContent = restaurant.name;
             restaurantName.className = 'restaurant-name';
-
+    
             // Create a flex container for info and image
             const detailsContainer = document.createElement('div');
             detailsContainer.className = 'details-container'; // Add this class for styling
-
+    
             const info = document.createElement('div');
             info.className = 'info';
             info.innerHTML = `
                 <p>Distance: ${metersToMiles(restaurant.distance).toFixed(2)} miles</p>
                 <p>Cuisine: ${restaurant.categories.map(c => c.title).join(', ')}</p>
                 <p>Rating: ${restaurant.rating}</p>
-                <p>Price: ${restaurant.price}</p>
+                <p>${restaurant.price ? `Price: ${restaurant.price}` : ''}</p>
                 <p>Phone: ${formatPhoneNumber(restaurant.phone)}</p>
                 <a href="${restaurant.url}" target="_blank">Yelp Page</a>
             `;
-
+    
             const imgContainer = document.createElement('div');
             imgContainer.className = 'img-container';
             const img = document.createElement('img');
             img.src = restaurant.image_url || '/imgs/food_stock_image.jpg';
             img.alt = 'Restaurant Image';
             imgContainer.appendChild(img);
-
+    
             // Add info and imgContainer to the detailsContainer
             detailsContainer.appendChild(info);
             detailsContainer.appendChild(imgContainer);
-
+    
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.name = 'add-to-list';
@@ -140,16 +140,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                     listFrame.postMessage({ type: 'removeRestaurant', restaurant: restaurant }, '*');
                 }
             });
-
+    
             const checkboxContainer = document.createElement('div');
             checkboxContainer.className = 'checkbox-container';
             checkboxContainer.appendChild(checkbox);
-
+    
             restaurantItem.appendChild(restaurantName);
             restaurantItem.appendChild(detailsContainer); // Add the detailsContainer here
             restaurantItem.appendChild(checkboxContainer);
             restaurantList.appendChild(restaurantItem);
-
+    
             restaurantItem.addEventListener('click', (event) => {
                 if (event.target !== checkbox) {
                     checkbox.checked = !checkbox.checked;
@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         });
     }
+    
 
     function filterRestaurants() {
         const searchText = searchBar.value.toLowerCase();
@@ -212,12 +213,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                         if (value === "4-5") return rating >= 4 && rating <= 5;
                     });
                 }
-                return activeFilters[filter].includes(restaurant[filter].toLowerCase());
+                if (filter === 'price') {
+                    return activeFilters[filter].includes(restaurant.price?.toLowerCase());
+                }
+                return activeFilters[filter].includes(restaurant[filter]?.toLowerCase());
             });
-        
+    
             return matchesSearch && matchesFilters;
         });
-        
+    
         displayRestaurants(filteredRestaurants);
     }    
 
