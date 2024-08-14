@@ -126,25 +126,40 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!acc[filter.name]) {
                 acc[filter.name] = [];
             }
-            acc[filter.name].push(filter.value);
+            acc[filter.name].push(filter.value.toLowerCase());
             return acc;
         }, {});
-
+    
         const filteredRestaurants = restaurants.filter(restaurant => {
             const matchesSearch = restaurant.name.toLowerCase().includes(searchText) ||
                 restaurant.categories.some(category => category.title.toLowerCase().includes(searchText)) ||
-                (searchText === 'open now' && isOpen(restaurant.hours)) || // Adjust to match your structure
+                (searchText === 'open now' && isOpen(restaurant.hours)) ||
                 (searchText === 'near me' && restaurant.distance === '1km');
-
-            const matchesFilters = Object.keys(activeFilters).every(filter => 
-                activeFilters[filter].some(value => restaurant.categories.map(c => c.title).includes(value))
-            );
-
+    
+            const matchesFilters = Object.keys(activeFilters).every(filter => {
+                if (filter === 'cuisine') {
+                    // Handle cuisine filtering to include broader categories
+                    return restaurant.categories.some(category => {
+                        const categoryTitle = category.title.toLowerCase();
+                        return activeFilters[filter].some(value => {
+                            if (value === 'bars') {
+                                // Match any category that includes "bars" or "bar"
+                                return (categoryTitle.includes('bars') || categoryTitle.includes('bar')) && 
+                                !categoryTitle.includes('barbeque') && !categoryTitle.includes('sushiz');
+                            }
+                            return categoryTitle.includes(value);
+                        });
+                    });
+                } else {
+                    return activeFilters[filter].includes(restaurant[filter].toLowerCase());
+                }
+            });
+    
             return matchesSearch && matchesFilters;
         });
-
+    
         displayRestaurants(filteredRestaurants);
-    }
+    }    
 
     function clearFilters() {
         filters.forEach(filter => filter.checked = false);
