@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const info = document.createElement('div');
             info.className = 'info';
             const isOpen = restaurant.business_hours && restaurant.business_hours.length > 0 ? isOpenNow(restaurant.business_hours[0].open) : false;
-            const openStatus = isOpen ? '<span style="color: green;">Open</span>' : '<span style="color: red;">Closed</span>';
+            const openStatus = isOpen ? '<span style="color:  rgb(61, 232, 132);;">Open</span>' : '<span style="color: red;">Closed</span>';
             info.innerHTML = `
                 <p>${openStatus}  |  ${formatPhoneNumber(restaurant.phone)}</p>
                 <p>${restaurant.rating}★ ${restaurant.price ? ` • ${restaurant.price}` : ''}</p>
