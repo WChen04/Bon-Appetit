@@ -52,7 +52,13 @@
           startEmptyWheelAnimation();
         } else {
           segments = segments.map((restaurant, index) => {
-            let textFontSize = restaurant.length > 15 ? 12 : 18;
+            let textFontSize;
+            if (segments.length > 40) {
+              textFontSize = 10;
+            }
+            else {
+              textFontSize = restaurant.length > 15 ? 12 : 18;
+            }
             return {
               fillStyle: index % 2 === 0 ? "#68aede" : "#9cd6ea",
               text: restaurant,
