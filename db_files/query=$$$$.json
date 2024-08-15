@@ -1,0 +1,304 @@
+{
+  "businesses": [
+    {
+      "id": "wDxQwe4_VstGA_gzyyrY9g",
+      "alias": "angelos-677-prime-albany",
+      "name": "677 Prime",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/9ALfmr2SR4eUaNSXzmg-tg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/angelos-677-prime-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 308,
+      "categories": [
+        {
+          "alias": "steak",
+          "title": "Steakhouses"
+        },
+        {
+          "alias": "seafood",
+          "title": "Seafood"
+        },
+        {
+          "alias": "venues",
+          "title": "Venues & Event Spaces"
+        }
+      ],
+      "rating": 4.1,
+      "coordinates": {
+        "latitude": 42.653399,
+        "longitude": -73.748455
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$$$$",
+      "location": {
+        "address1": "677 Broadway",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12207",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "677 Broadway",
+          "Albany, NY 12207"
+        ]
+      },
+      "phone": "+15184277463",
+      "display_phone": "(518) 427-7463",
+      "distance": 10148.817206734331,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1700",
+              "end": "2200",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "http://677prime.com/menus/dinner-menu",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "NWyN6vvsZqaTojwAwmSO8Q",
+      "alias": "clinton-street-pub-schenectady",
+      "name": "Clinton Street Pub",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/KK4cZ9QrweBxPAYJJcBHFA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/clinton-street-pub-schenectady?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 7,
+      "categories": [
+        {
+          "alias": "pubs",
+          "title": "Pubs"
+        },
+        {
+          "alias": "newamerican",
+          "title": "New American"
+        },
+        {
+          "alias": "gaybars",
+          "title": "Gay Bars"
+        }
+      ],
+      "rating": 3.3,
+      "coordinates": {
+        "latitude": 42.812875,
+        "longitude": -73.93988
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$$$$",
+      "location": {
+        "address1": "159 Clinton St",
+        "address2": null,
+        "address3": null,
+        "city": "Schenectady",
+        "zip_code": "12305",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "159 Clinton St",
+          "Schenectady, NY 12305"
+        ]
+      },
+      "phone": "+15183778555",
+      "display_phone": "(518) 377-8555",
+      "distance": 22995.819209299418,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": true,
+              "start": "1100",
+              "end": "0200",
+              "day": 0
+            },
+            {
+              "is_overnight": true,
+              "start": "1100",
+              "end": "0200",
+              "day": 1
+            },
+            {
+              "is_overnight": true,
+              "start": "1100",
+              "end": "0200",
+              "day": 2
+            },
+            {
+              "is_overnight": true,
+              "start": "1100",
+              "end": "0200",
+              "day": 3
+            },
+            {
+              "is_overnight": true,
+              "start": "1100",
+              "end": "0200",
+              "day": 4
+            },
+            {
+              "is_overnight": true,
+              "start": "1100",
+              "end": "0200",
+              "day": 5
+            },
+            {
+              "is_overnight": true,
+              "start": "1100",
+              "end": "0200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "UHE7-iF4kIH1ASAHERJDUQ",
+      "alias": "great-wall-schenectady",
+      "name": "Great Wall",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/uCqmX3jkKTvHp2fyoQkKcQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/great-wall-schenectady?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 17,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.6,
+      "coordinates": {
+        "latitude": 42.78412,
+        "longitude": -73.91824
+      },
+      "transactions": [
+        "delivery",
+        "pickup"
+      ],
+      "price": "$$$$",
+      "location": {
+        "address1": "2330 Watt St",
+        "address2": "",
+        "address3": "",
+        "city": "Schenectady",
+        "zip_code": "12304",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "2330 Watt St",
+          "Schenectady, NY 12304"
+        ]
+      },
+      "phone": "+15183770853",
+      "display_phone": "(518) 377-0853",
+      "distance": 20237.510135312586,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    }
+  ],
+  "total": 3,
+  "region": {
+    "center": {
+      "longitude": -73.68172,
+      "latitude": 42.73012
+    }
+  }
+}
