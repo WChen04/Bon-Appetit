@@ -112,42 +112,50 @@ document.addEventListener('DOMContentLoaded', async () => {
             restaurantList.appendChild(noResultsMessage);
             return;
         }
-
+    
         filteredRestaurants.forEach(restaurant => {
             const restaurantItem = document.createElement('div');
             restaurantItem.className = 'restaurant-item';
-
+    
             const restaurantName = document.createElement('div');
             restaurantName.textContent = restaurant.name;
             restaurantName.className = 'restaurant-name';
-
+    
             // Create a flex container for info and image
             const detailsContainer = document.createElement('div');
             detailsContainer.className = 'details-container'; // Add this class for styling
-
+    
             const info = document.createElement('div');
             info.className = 'info';
             const isOpen = restaurant.business_hours && restaurant.business_hours.length > 0 ? isOpenNow(restaurant.business_hours[0].open) : false;
             const openStatus = isOpen ? '<span style="color:  rgb(61, 232, 132);;">Open</span>' : '<span style="color: red;">Closed</span>';
+            
+            // Join the address lines into a single string, separated by commas
+            const address = restaurant.location.display_address.join(', ');
+    
+            // Calculate the distance in miles
+            const distance = metersToMiles(restaurant.distance).toFixed(2) + ' miles';
+    
             info.innerHTML = `
                 <p>${openStatus}  |  ${formatPhoneNumber(restaurant.phone)}</p>
                 <p>${restaurant.rating}★ ${restaurant.price ? ` • ${restaurant.price}` : ''}</p>
                 <p>${restaurant.categories.map(c => c.title).join(', ')}</p>
+                <p>${address} | ${distance}</p> <!-- Display the address and distance here -->
                 <p>Today's Hours: ${restaurant.business_hours && restaurant.business_hours.length > 0 ? getTodaysHours(restaurant.business_hours[0].open) : 'Hours not available'}</p>
                 <a href="${restaurant.url}" target="_blank">Open on Yelp</a>
             `;
-
+    
             const imgContainer = document.createElement('div');
             imgContainer.className = 'img-container';
             const img = document.createElement('img');
             img.src = restaurant.image_url || '/imgs/food_stock_image.jpg';
             img.alt = 'Restaurant Image';
             imgContainer.appendChild(img);
-
+    
             // Add info and imgContainer to the detailsContainer
             detailsContainer.appendChild(info);
             detailsContainer.appendChild(imgContainer);
-
+    
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.name = 'add-to-list';
@@ -160,16 +168,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                     listFrame.postMessage({ type: 'removeRestaurant', restaurant: restaurant }, '*');
                 }
             });
-
+    
             const checkboxContainer = document.createElement('div');
             checkboxContainer.className = 'checkbox-container';
             checkboxContainer.appendChild(checkbox);
-
+    
             restaurantItem.appendChild(restaurantName);
             restaurantItem.appendChild(detailsContainer); // Add the detailsContainer here
             restaurantItem.appendChild(checkboxContainer);
             restaurantList.appendChild(restaurantItem);
-
+    
             restaurantItem.addEventListener('click', (event) => {
                 if (event.target !== checkbox) {
                     checkbox.checked = !checkbox.checked;
@@ -177,7 +185,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             });
         });
-    }
+    }    
 
     function filterRestaurants() {
         const searchText = searchBar.value.toLowerCase();
