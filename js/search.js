@@ -117,6 +117,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
     
+        // Sort restaurants alphabetically by name (A-Z)
+        filteredRestaurants.sort((a, b) => a.name.localeCompare(b.name));
+    
         filteredRestaurants.forEach(restaurant => {
             const restaurantItem = document.createElement('div');
             restaurantItem.className = 'restaurant-item';
@@ -142,7 +145,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
             info.innerHTML = `
                 <p>${openStatus}  |  ${formatPhoneNumber(restaurant.phone)}</p>
-                <p>${restaurant.rating}★ ${restaurant.price ? ` • ${restaurant.price}` : ''}</p>
+                <p>${restaurant.rating}★ (${restaurant.review_count} reviews) ${restaurant.price ? ` • ${restaurant.price}` : ''}</p>
                 <p>${restaurant.categories.map(c => c.title).join(', ')}</p>
                 <p>${address} | ${distance}</p> <!-- Display the address and distance here -->
                 <p>Today's Hours: ${restaurant.business_hours && restaurant.business_hours.length > 0 ? getTodaysHours(restaurant.business_hours[0].open) : 'Hours not available'}</p>
