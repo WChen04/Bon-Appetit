@@ -1,0 +1,4279 @@
+{
+  "businesses": [
+    {
+      "id": "zTNGsXqllrmB3pHjEOgBUw",
+      "alias": "lucky-corner-troy",
+      "name": "Lucky Corner",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/qYS_QkDeQI6QA39xVpIyyQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/lucky-corner-troy?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 91,
+      "categories": [
+        {
+          "alias": "taiwanese",
+          "title": "Taiwanese"
+        },
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        },
+        {
+          "alias": "bubbletea",
+          "title": "Bubble Tea"
+        }
+      ],
+      "rating": 4.3,
+      "coordinates": {
+        "latitude": 42.726032,
+        "longitude": -73.691162
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "162 3rd St",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "162 3rd St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15183265746",
+      "display_phone": "(518) 326-5746",
+      "distance": 915.3324790982404,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2130",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "GUoVncYpFzfxt2HJZFBqDw",
+      "alias": "the-plum-blossom-troy",
+      "name": "The Plum Blossom",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/PjGnGKcbhodtd8pXhlQugQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/the-plum-blossom-troy?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 234,
+      "categories": [
+        {
+          "alias": "seafood",
+          "title": "Seafood"
+        },
+        {
+          "alias": "cantonese",
+          "title": "Cantonese"
+        }
+      ],
+      "rating": 3.6,
+      "coordinates": {
+        "latitude": 42.74316,
+        "longitude": -73.64849
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "685 Hoosick Rd",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "685 Hoosick Rd",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182720036",
+      "display_phone": "(518) 272-0036",
+      "distance": 3047.6159964579615,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2030",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "NOE0qe5HmEb6hsdgaOBTZA",
+      "alias": "a-bite-of-xian-troy",
+      "name": "A Bite Of Xian",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/nqLCl4AKtsNmqmrKfxOAWQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/a-bite-of-xian-troy?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 25,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        },
+        {
+          "alias": "noodles",
+          "title": "Noodles"
+        },
+        {
+          "alias": "soup",
+          "title": "Soup"
+        }
+      ],
+      "rating": 3.7,
+      "coordinates": {
+        "latitude": 42.7237788382893,
+        "longitude": -73.68019780777158
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "location": {
+        "address1": "1 14th St",
+        "address2": "",
+        "address3": null,
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "1 14th St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182721236",
+      "display_phone": "(518) 272-1236",
+      "distance": 734.3375206321077,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2130",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2130",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2130",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2130",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2130",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2130",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "fbUKFqVZkm7QcrS-D_oRLw",
+      "alias": "taiwan-noodle-albany",
+      "name": "Taiwan Noodle",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/9OMZhehvHDW79zm7nT2d7g/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/taiwan-noodle-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 438,
+      "categories": [
+        {
+          "alias": "taiwanese",
+          "title": "Taiwanese"
+        },
+        {
+          "alias": "dimsum",
+          "title": "Dim Sum"
+        },
+        {
+          "alias": "noodles",
+          "title": "Noodles"
+        }
+      ],
+      "rating": 4.3,
+      "coordinates": {
+        "latitude": 42.66241,
+        "longitude": -73.77029
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "218 Central Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12206",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "218 Central Ave",
+          "Albany, NY 12206"
+        ]
+      },
+      "phone": "+15184361328",
+      "display_phone": "(518) 436-1328",
+      "distance": 10459.02524130052,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2115",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2115",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2115",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2115",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2115",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2115",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "http://taiwannoodle.net/PDF/dineInMenu.pdf",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "y92RGBftXfm94kRCVJ_ZLg",
+      "alias": "red-and-blue-troy-4",
+      "name": "Red and Blue",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/w5UNRPCCtlTICpUBHfR3vw/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/red-and-blue-troy-4?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 124,
+      "categories": [
+        {
+          "alias": "asianfusion",
+          "title": "Asian Fusion"
+        },
+        {
+          "alias": "sushi",
+          "title": "Sushi Bars"
+        },
+        {
+          "alias": "szechuan",
+          "title": "Szechuan"
+        }
+      ],
+      "rating": 3.4,
+      "coordinates": {
+        "latitude": 42.736894,
+        "longitude": -73.675174
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "2312 15th St",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "2312 15th St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182728188",
+      "display_phone": "(518) 272-8188",
+      "distance": 900.4938601801639,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "U3RwirEkQUWSc6ir0Y5PeQ",
+      "alias": "ala-shanghai-chinese-cuisine-latham",
+      "name": "Ala Shanghai Chinese Cuisine",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/lT8rW7tjIDjbVc5UisUgFQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/ala-shanghai-chinese-cuisine-latham?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 598,
+      "categories": [
+        {
+          "alias": "shanghainese",
+          "title": "Shanghainese"
+        },
+        {
+          "alias": "dimsum",
+          "title": "Dim Sum"
+        }
+      ],
+      "rating": 3.9,
+      "coordinates": {
+        "latitude": 42.7463698,
+        "longitude": -73.7587186
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "468 Troy Schenectady Rd",
+        "address2": "",
+        "address3": "",
+        "city": "Latham",
+        "zip_code": "12110",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "468 Troy Schenectady Rd",
+          "Latham, NY 12110"
+        ]
+      },
+      "phone": "+15187838188",
+      "display_phone": "(518) 783-8188",
+      "distance": 6547.973517294091,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2200",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://alashanghai.net/308-2/",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "qiIv0B5ZQFjc9_WOK5X2Hg",
+      "alias": "rain-modern-chinese-albany",
+      "name": "Rain Modern Chinese",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/runH0D2kLQipND1J50wTNg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/rain-modern-chinese-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 351,
+      "categories": [
+        {
+          "alias": "dimsum",
+          "title": "Dim Sum"
+        },
+        {
+          "alias": "cantonese",
+          "title": "Cantonese"
+        },
+        {
+          "alias": "tapasmallplates",
+          "title": "Tapas/Small Plates"
+        }
+      ],
+      "rating": 3.9,
+      "coordinates": {
+        "latitude": 42.6538971,
+        "longitude": -73.7662457
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "259 Lark St",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12210",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "259 Lark St",
+          "Albany, NY 12210"
+        ]
+      },
+      "phone": "+15187294827",
+      "display_phone": "(518) 729-4827",
+      "distance": 10957.2757865892,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://www.rainalbany.com/menu",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "K-4x4IGYOGkZDDX0C1l6FQ",
+      "alias": "picnic-garden-troy",
+      "name": "Picnic Garden",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/H4MfktYqH-zp4t2_HpCdIw/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/picnic-garden-troy?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 15,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        },
+        {
+          "alias": "thai",
+          "title": "Thai"
+        }
+      ],
+      "rating": 2.9,
+      "coordinates": {
+        "latitude": 42.7273748693826,
+        "longitude": -73.6875108564928
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "1521 6th Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "1521 6th Ave",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15183262146",
+      "display_phone": "(518) 326-2146",
+      "distance": 583.5928908686284,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2130",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "http://www.picnicgardentroy.com/menu.aspx",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "muJnDitugFx6y64QVgllig",
+      "alias": "okinawa-wynantskill",
+      "name": "Okinawa",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ZQAVMiOXNt3Gni574P9eVQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/okinawa-wynantskill?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 67,
+      "categories": [
+        {
+          "alias": "japanese",
+          "title": "Japanese"
+        },
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        },
+        {
+          "alias": "sushi",
+          "title": "Sushi Bars"
+        }
+      ],
+      "rating": 3.4,
+      "coordinates": {
+        "latitude": 42.69803,
+        "longitude": -73.64707
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "61 Main Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Wynantskill",
+        "zip_code": "12198",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "61 Main Ave",
+          "Wynantskill, NY 12198"
+        ]
+      },
+      "phone": "+15182837716",
+      "display_phone": "(518) 283-7716",
+      "distance": 4567.071608905423,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "0000",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "kPRhhVfGK_rIQFG6iAWBdA",
+      "alias": "lee-lin-chinese-restaurant-troy",
+      "name": "Lee Lin Chinese Restaurant",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Sg5OsIv2tHmk5G8w9h7JPQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/lee-lin-chinese-restaurant-troy?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 80,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.3,
+      "coordinates": {
+        "latitude": 42.705869153222,
+        "longitude": -73.6594423394256
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "539 Pawling Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "539 Pawling Ave",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182748816",
+      "display_phone": "(518) 274-8816",
+      "distance": 3264.016820810538,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2230",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://www.leelintroyny.com/menu",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "acfmsV4kxzNoyOvkUixaGw",
+      "alias": "northeast-chinese-restaurant-ii-albany",
+      "name": "Northeast Chinese Restaurant II",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Nnq4H9zuVOubXtRQQ4NFKg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/northeast-chinese-restaurant-ii-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 120,
+      "categories": [
+        {
+          "alias": "szechuan",
+          "title": "Szechuan"
+        }
+      ],
+      "rating": 3.9,
+      "coordinates": {
+        "latitude": 42.6796904080278,
+        "longitude": -73.7913662440415
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "900 Central Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12206",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "900 Central Ave",
+          "Albany, NY 12206"
+        ]
+      },
+      "phone": "+15184590688",
+      "display_phone": "(518) 459-0688",
+      "distance": 10589.950545653825,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "WzMfj_aR-N3cLDes0tLW1Q",
+      "alias": "number-2-a-dragon-troy",
+      "name": "Number 2 A Dragon",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/d53f3PTQ9CAgoFK3_2QHJw/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/number-2-a-dragon-troy?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 34,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3.1,
+      "coordinates": {
+        "latitude": 42.739921,
+        "longitude": -73.656569
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "564 Hoosick St",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "564 Hoosick St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182718870",
+      "display_phone": "(518) 271-8870",
+      "distance": 2305.8549491579797,
+      "business_hours": [],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "QaL_SGrri45lErDBQBLmGg",
+      "alias": "ocean-palace-albany-2",
+      "name": "Ocean Palace",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/i8dkXsGJcB__8StIhtL1Ag/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/ocean-palace-albany-2?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 98,
+      "categories": [
+        {
+          "alias": "dimsum",
+          "title": "Dim Sum"
+        },
+        {
+          "alias": "cantonese",
+          "title": "Cantonese"
+        },
+        {
+          "alias": "seafood",
+          "title": "Seafood"
+        }
+      ],
+      "rating": 4.3,
+      "coordinates": {
+        "latitude": 42.658943178433,
+        "longitude": -73.765912566844
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "68 Central Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12206",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "68 Central Ave",
+          "Albany, NY 12206"
+        ]
+      },
+      "phone": "+15184342888",
+      "display_phone": "(518) 434-2888",
+      "distance": 10510.11794826339,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "qXm_jVXwIMjHru8lG8mDDg",
+      "alias": "pearl-of-the-orient-loudonville-2",
+      "name": "Pearl of the Orient",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Ixswyvhm6fXIG-XL8NBRRA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/pearl-of-the-orient-loudonville-2?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 37,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 4.1,
+      "coordinates": {
+        "latitude": 42.707436,
+        "longitude": -73.77708
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "471 Albany Shaker Rd",
+        "address2": "",
+        "address3": "",
+        "city": "Loudonville",
+        "zip_code": "12211",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "471 Albany Shaker Rd",
+          "Loudonville, NY 12211"
+        ]
+      },
+      "phone": "+15184590903",
+      "display_phone": "(518) 459-0903",
+      "distance": 8205.506839158983,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2100",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://pearloftheorientny.com/menu/",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "i3JuBctp6ABemznHRCUubQ",
+      "alias": "hao-wei-troy",
+      "name": "Hao Wei",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/3HBrm9zN4K_ihMxNYpTtsQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/hao-wei-troy?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 22,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.6,
+      "coordinates": {
+        "latitude": 42.7279081,
+        "longitude": -73.68953773205668
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "148 4th St",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "148 4th St",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182741516",
+      "display_phone": "(518) 274-1516",
+      "distance": 702.2929250191136,
+      "business_hours": [],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "_sUFonJ7J_-a6hq3xRYwDA",
+      "alias": "green-shell-troy",
+      "name": "Green Shell",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/CaVhbq-jZZki3101ZBKVKg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/green-shell-troy?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 38,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.9,
+      "coordinates": {
+        "latitude": 42.738008,
+        "longitude": -73.677057
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "120 Hoosick St",
+        "address2": "Ste 11",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "120 Hoosick St",
+          "Ste 11",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182721300",
+      "display_phone": "(518) 272-1300",
+      "distance": 932.9672417578302,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2330",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2330",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2230",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "BcKOzAbGJWaa5nFTfAjnuw",
+      "alias": "new-panda-chinese-take-out-latham",
+      "name": "New Panda Chinese Take Out",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/qadGJVIMcKX9Y0B9N0JMkg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/new-panda-chinese-take-out-latham?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 27,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3.9,
+      "coordinates": {
+        "latitude": 42.757274,
+        "longitude": -73.758456
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "898 New Loudon Rd",
+        "address2": "Ste 3",
+        "address3": "",
+        "city": "Latham",
+        "zip_code": "12110",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "898 New Loudon Rd",
+          "Ste 3",
+          "Latham, NY 12110"
+        ]
+      },
+      "phone": "+15187860700",
+      "display_phone": "(518) 786-0700",
+      "distance": 6957.115237921475,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2130",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2130",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2130",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2130",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2130",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2130",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://order.newpandalathamny.com/order/main",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "t1XPSn5O1edDJwhJFYeEIQ",
+      "alias": "spring-garden-troy",
+      "name": "Spring Garden",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/JxkTmQHSGbglD9_KnWcv4Q/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/spring-garden-troy?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 24,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3.5,
+      "coordinates": {
+        "latitude": 42.77107,
+        "longitude": -73.67863
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "472 2nd Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12182",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "472 2nd Ave",
+          "Troy, NY 12182"
+        ]
+      },
+      "phone": "+15182331907",
+      "display_phone": "(518) 233-1907",
+      "distance": 4543.570479308723,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "mAfYm-rmnuT8GfA86iLALw",
+      "alias": "china-wok-troy-2",
+      "name": "China Wok",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/FctFgGNCn833oBdkyO1OwA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/china-wok-troy-2?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 11,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.6,
+      "coordinates": {
+        "latitude": 42.696339,
+        "longitude": -73.69032
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "75 Vandenburgh Ave",
+        "address2": "Ste 3",
+        "address3": "",
+        "city": "Troy",
+        "zip_code": "12180",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "75 Vandenburgh Ave",
+          "Ste 3",
+          "Troy, NY 12180"
+        ]
+      },
+      "phone": "+15182722477",
+      "display_phone": "(518) 272-2477",
+      "distance": 3843.6188349734557,
+      "business_hours": [],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://chinawoktroy11.com/menu/",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "A04G7ef7kFFT1_CYHz0lSw",
+      "alias": "lee-sun-chinese-restaurant-west-sand-lake",
+      "name": "Lee Sun Chinese Restaurant",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/S0SWcKLv9-iCIiooNlBMBQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/lee-sun-chinese-restaurant-west-sand-lake?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 26,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3.2,
+      "coordinates": {
+        "latitude": 42.646327,
+        "longitude": -73.607077
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "43 Mall Way",
+        "address2": "",
+        "address3": "",
+        "city": "West Sand Lake",
+        "zip_code": "12196",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "43 Mall Way",
+          "West Sand Lake, NY 12196"
+        ]
+      },
+      "phone": "+15186748126",
+      "display_phone": "(518) 674-8126",
+      "distance": 11148.021779913282,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2100",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "2ubKfUIPF_mWcF5k8KLs-Q",
+      "alias": "golden-house-watervliet",
+      "name": "Golden House",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/sIDaRtWZB7vL1DlQ5UBtvQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/golden-house-watervliet?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 27,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3.5,
+      "coordinates": {
+        "latitude": 42.7367936074734,
+        "longitude": -73.7232834845781
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "143 Troy Schenectady Rd",
+        "address2": "",
+        "address3": "",
+        "city": "Watervliet",
+        "zip_code": "12189",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "143 Troy Schenectady Rd",
+          "Watervliet, NY 12189"
+        ]
+      },
+      "phone": "+15182719034",
+      "display_phone": "(518) 271-9034",
+      "distance": 3577.4310507474306,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "oTPvKUnxHGNVehfM7eGN0g",
+      "alias": "capital-buffet-albany",
+      "name": "Capital Buffet",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/DTvlw2r3GmdrAJ6OgtkxoA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/capital-buffet-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 160,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        },
+        {
+          "alias": "buffets",
+          "title": "Buffets"
+        }
+      ],
+      "rating": 2.9,
+      "coordinates": {
+        "latitude": 42.71766,
+        "longitude": -73.804002
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "145 Wolf Rd",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12205",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "145 Wolf Rd",
+          "Albany, NY 12205"
+        ]
+      },
+      "phone": "+15184898888",
+      "display_phone": "(518) 489-8888",
+      "distance": 10098.454959928462,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://capitalbuffetalbanyny.com/menu/",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "fwiAyK8oV4U-nsDc-jf7ug",
+      "alias": "new-beijing-troy",
+      "name": "New Beijing",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/7ViDv-WJ6FRrj9BKHP_ZhA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/new-beijing-troy?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 19,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3.4,
+      "coordinates": {
+        "latitude": 42.78486,
+        "longitude": -73.6732
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "849 2nd Ave",
+        "address2": null,
+        "address3": null,
+        "city": "Troy",
+        "zip_code": "12182",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "849 2nd Ave",
+          "Troy, NY 12182"
+        ]
+      },
+      "phone": "+15182330333",
+      "display_phone": "(518) 233-0333",
+      "distance": 6102.186666702056,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "WU26m_GsgbDe9ol-ywVsUA",
+      "alias": "china-dragon-chinese-take-out-restaurant-watervliet",
+      "name": "China Dragon Chinese Take Out Restaurant",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/q1GkcpGj2eqRfG5UDWwMsw/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/china-dragon-chinese-take-out-restaurant-watervliet?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 28,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.6,
+      "coordinates": {
+        "latitude": 42.7329711914062,
+        "longitude": -73.701301574707
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "201 23rd St",
+        "address2": "",
+        "address3": "",
+        "city": "Watervliet",
+        "zip_code": "12189",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "201 23rd St",
+          "Watervliet, NY 12189"
+        ]
+      },
+      "phone": "+15182711569",
+      "display_phone": "(518) 271-1569",
+      "distance": 1639.8497129665395,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "0srKXHzLhgH-XWvVwMxiAA",
+      "alias": "lucky-house-cohoes-2",
+      "name": "Lucky House",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/tKIiVDxAdYMMrAi-D4BITA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/lucky-house-cohoes-2?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 17,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.8,
+      "coordinates": {
+        "latitude": 42.774204,
+        "longitude": -73.701477
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "location": {
+        "address1": "96 Remsen St",
+        "address2": "",
+        "address3": "",
+        "city": "Cohoes",
+        "zip_code": "12047",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "96 Remsen St",
+          "Cohoes, NY 12047"
+        ]
+      },
+      "phone": "+15182376507",
+      "display_phone": "(518) 237-6507",
+      "distance": 5145.658137149836,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2330",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2330",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2300",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://luckyhousecohoes.com/menu/",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "eEwp7JoaN_HfgK_SFVilYA",
+      "alias": "shining-rainbow-restaurant-albany",
+      "name": "Shining Rainbow Restaurant",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/opSd3P494XJcs2x3NzOeJQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/shining-rainbow-restaurant-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 152,
+      "categories": [
+        {
+          "alias": "dimsum",
+          "title": "Dim Sum"
+        },
+        {
+          "alias": "szechuan",
+          "title": "Szechuan"
+        },
+        {
+          "alias": "seafood",
+          "title": "Seafood"
+        }
+      ],
+      "rating": 3.3,
+      "coordinates": {
+        "latitude": 42.662322,
+        "longitude": -73.769483
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "209 Central Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12206",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "209 Central Ave",
+          "Albany, NY 12206"
+        ]
+      },
+      "phone": "+15183963881",
+      "display_phone": "(518) 396-3881",
+      "distance": 10428.12126040681,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2330",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2330",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "http://www.shiningrainbowny.com/menu",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "nZC0ooChichlR8sUdy4DMQ",
+      "alias": "js-kitchen-chinese-latham",
+      "name": "J's Kitchen Chinese",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/MM3CQBLY_kIrGNbCSe_J7g/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/js-kitchen-chinese-latham?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 51,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3.9,
+      "coordinates": {
+        "latitude": 42.74108,
+        "longitude": -73.7620949
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "726 New Loudon Rd",
+        "address2": "",
+        "address3": "",
+        "city": "Latham",
+        "zip_code": "12110",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "726 New Loudon Rd",
+          "Latham, NY 12110"
+        ]
+      },
+      "phone": "+15187835181",
+      "display_phone": "(518) 783-5181",
+      "distance": 6717.145806391749,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2130",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "aLE4Lg5uOGnewTTweXJNBw",
+      "alias": "zenbu-rensselaer",
+      "name": "Zenbu",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/KUXspRygOyyIWR_hiyw34Q/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/zenbu-rensselaer?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 45,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3,
+      "coordinates": {
+        "latitude": 42.661258,
+        "longitude": -73.6914602
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "449 N Greenbush Rd US 4",
+        "address2": "449 Plaza",
+        "address3": "",
+        "city": "Rensselaer",
+        "zip_code": "12144",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "449 N Greenbush Rd US 4",
+          "449 Plaza",
+          "Rensselaer, NY 12144"
+        ]
+      },
+      "phone": "+15182863663",
+      "display_phone": "(518) 286-3663",
+      "distance": 7719.891143901585,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://www.zenbu.us/menu.php",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "wuDYjWrs06trjLEyURu7xg",
+      "alias": "amazing-wok-chinese-restaurant-albany",
+      "name": "Amazing Wok Chinese Restaurant",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/1NLh_jZ2uz1c0yyoaYDcgA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/amazing-wok-chinese-restaurant-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 40,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3.5,
+      "coordinates": {
+        "latitude": 42.65384,
+        "longitude": -73.76661
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "267 Lark St",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12210",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "267 Lark St",
+          "Albany, NY 12210"
+        ]
+      },
+      "phone": "+15184343946",
+      "display_phone": "(518) 434-3946",
+      "distance": 10981.201278646651,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1430",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1530",
+              "end": "2100",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1430",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1530",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1430",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1530",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1430",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1530",
+              "end": "2130",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "1430",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1530",
+              "end": "2130",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "1430",
+              "day": 6
+            },
+            {
+              "is_overnight": false,
+              "start": "1530",
+              "end": "2100",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "dsjq5heFblrlxA0M5OPg0g",
+      "alias": "yips-garden-troy",
+      "name": "Yip's Garden",
+      "image_url": "",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/yips-garden-troy?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 2,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3,
+      "coordinates": {
+        "latitude": 42.78558,
+        "longitude": -73.66803
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "location": {
+        "address1": "886 5th Ave",
+        "address2": "",
+        "address3": null,
+        "city": "Troy",
+        "zip_code": "12182",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "886 5th Ave",
+          "Troy, NY 12182"
+        ]
+      },
+      "phone": "+15188741002",
+      "display_phone": "(518) 874-1002",
+      "distance": 6244.733915099832,
+      "business_hours": [],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "GTok1WYS2OblhWyY_Cujdw",
+      "alias": "capitol-house-albany",
+      "name": "Capitol House",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/LWiBcSS1suIoXLOt4HfZsA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/capitol-house-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 32,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.5,
+      "coordinates": {
+        "latitude": 42.6506843566895,
+        "longitude": -73.7516784667969
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "35 N Pearl St",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12207",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "35 N Pearl St",
+          "Albany, NY 12207"
+        ]
+      },
+      "phone": "+15184345422",
+      "display_phone": "(518) 434-5422",
+      "distance": 10543.55780783919,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2100",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2100",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2100",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2100",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2100",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://www.capitolhousealbany.com/menu",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "suCCv_USZP7YuOZpg-aKSw",
+      "alias": "chop-stick-restaurant-albany",
+      "name": "Chop Stick Restaurant",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/tAMy9_A3F5PGpKSUE57emg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/chop-stick-restaurant-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 4,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3.8,
+      "coordinates": {
+        "latitude": 42.6678,
+        "longitude": -73.77532
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "location": {
+        "address1": "419 Central Ave",
+        "address2": null,
+        "address3": null,
+        "city": "Albany",
+        "zip_code": "12206",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "419 Central Ave",
+          "Albany, NY 12206"
+        ]
+      },
+      "phone": "+15184621133",
+      "display_phone": "(518) 462-1133",
+      "distance": 10355.052550209775,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2130",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2130",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2130",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1130",
+              "end": "2100",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "wwJu9VLrM9r6R6KNBzoNLQ",
+      "alias": "golden-wok-restaurant-latham",
+      "name": "Golden Wok Restaurant",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/NMLlXGUh3PlvtbTJWopvqA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/golden-wok-restaurant-latham?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 37,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 1.8,
+      "coordinates": {
+        "latitude": 42.757186,
+        "longitude": -73.761228
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "579 Troy Schenectady Rd",
+        "address2": "",
+        "address3": "",
+        "city": "Latham",
+        "zip_code": "12110",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "579 Troy Schenectady Rd",
+          "Latham, NY 12110"
+        ]
+      },
+      "phone": "+15187820067",
+      "display_phone": "(518) 782-0067",
+      "distance": 7157.946556366617,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "lciO4GYuQUrvNNAI-5PiMw",
+      "alias": "china-1-cohoes",
+      "name": "China 1",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/sBqimCFnJylch6qPbZIDSg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/china-1-cohoes?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 11,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.4,
+      "coordinates": {
+        "latitude": 42.7735787630081,
+        "longitude": -73.6976797878742
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "103 Saratoga St",
+        "address2": "",
+        "address3": "",
+        "city": "Cohoes",
+        "zip_code": "12047",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "103 Saratoga St",
+          "Cohoes, NY 12047"
+        ]
+      },
+      "phone": "+15182359988",
+      "display_phone": "(518) 235-9988",
+      "distance": 4957.90664426565,
+      "business_hours": [],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "Y_q0JGUkMicq0-tw1cjSkw",
+      "alias": "amazing-wok-latham",
+      "name": "Amazing Wok",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/DBx9bmrg2kaSIHH9AG2s6g/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/amazing-wok-latham?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 0,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 0,
+      "coordinates": {
+        "latitude": 42.7406783,
+        "longitude": -73.7621611
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "location": {
+        "address1": "726 Loudon Rd",
+        "address2": "",
+        "address3": null,
+        "city": "Latham",
+        "zip_code": "12110",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "726 Loudon Rd",
+          "Latham, NY 12110"
+        ]
+      },
+      "phone": "+15187835181",
+      "display_phone": "(518) 783-5181",
+      "distance": 6717.145806391749,
+      "business_hours": [],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "3kYLS7D1LeoakqOl0tNSZg",
+      "alias": "lams-kitchen-albany-2",
+      "name": "Lam's Kitchen",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ZgJxo-yiEQmJB9YJ7z68ig/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/lams-kitchen-albany-2?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 30,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3,
+      "coordinates": {
+        "latitude": 42.648657,
+        "longitude": -73.753824
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "51 S Pearl St",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12207",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "51 S Pearl St",
+          "Albany, NY 12207"
+        ]
+      },
+      "phone": "+15184275096",
+      "display_phone": "(518) 427-5096",
+      "distance": 10829.88384483171,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2100",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2100",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "http://thelamskitchen.com/menu.html",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "VseD4--JEA5UG3eL3WLEDQ",
+      "alias": "p-f-changs-albany",
+      "name": "P.F. Chang's",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/1D4crGoxFP8b424zeR2OOg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/p-f-changs-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 222,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        },
+        {
+          "alias": "asianfusion",
+          "title": "Asian Fusion"
+        }
+      ],
+      "rating": 3,
+      "coordinates": {
+        "latitude": 42.71067306187184,
+        "longitude": -73.81687751487262
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "131 Colonie Ctr",
+        "address2": "Spc 305",
+        "address3": "Space 305",
+        "city": "Albany",
+        "zip_code": "12205",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "131 Colonie Ctr",
+          "Spc 305",
+          "Space 305",
+          "Albany, NY 12205"
+        ]
+      },
+      "phone": "+15184540040",
+      "display_phone": "(518) 454-0040",
+      "distance": 11265.985911731475,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2300",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://order.pfchangs.com/store/9815",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "z881T91rSoMzeg83vuYgkw",
+      "alias": "new-panda-latham",
+      "name": "New Panda",
+      "image_url": "",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/new-panda-latham?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 3,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.7,
+      "coordinates": {
+        "latitude": 42.73619,
+        "longitude": -73.73087
+      },
+      "transactions": [],
+      "location": {
+        "address1": "184 Troy Schenectady Rd",
+        "address2": null,
+        "address3": null,
+        "city": "Latham",
+        "zip_code": "12110",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "184 Troy Schenectady Rd",
+          "Latham, NY 12110"
+        ]
+      },
+      "phone": "+15187863079",
+      "display_phone": "(518) 786-3079",
+      "distance": 4084.8773803970175,
+      "business_hours": [],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "-4XmiOsjZaZToJRjzajUNg",
+      "alias": "ny-sakura-albany",
+      "name": "NY Sakura",
+      "image_url": "",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/ny-sakura-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 4,
+      "categories": [
+        {
+          "alias": "japanese",
+          "title": "Japanese"
+        },
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.8,
+      "coordinates": {
+        "latitude": 42.6685936,
+        "longitude": -73.7562029
+      },
+      "transactions": [],
+      "location": {
+        "address1": "376 Northern Blvd",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12210",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "376 Northern Blvd",
+          "Albany, NY 12210"
+        ]
+      },
+      "phone": "+15184631958",
+      "display_phone": "(518) 463-1958",
+      "distance": 8243.968689978337,
+      "business_hours": [],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "XnSBM2f6z8g2gCMgQt4scA",
+      "alias": "fortune-cookie-clifton-park",
+      "name": "Fortune Cookie",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/XztVnS1Q4__k2zJDX2tQlg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/fortune-cookie-clifton-park?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 30,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.8,
+      "coordinates": {
+        "latitude": 42.817933,
+        "longitude": -73.773976
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "1536 Cres Rd",
+        "address2": "Ste 4",
+        "address3": "",
+        "city": "Clifton Park",
+        "zip_code": "12065",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "1536 Cres Rd",
+          "Ste 4",
+          "Clifton Park, NY 12065"
+        ]
+      },
+      "phone": "+15183715552",
+      "display_phone": "(518) 371-5552",
+      "distance": 12322.008841612935,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2130",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "mWmKICqd-y5ByByg2dcrOw",
+      "alias": "ichiban-and-chang-s-garden-albany-2",
+      "name": "Ichiban and Chang’s Garden",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/B1qxeuUVCQ9-F4iIMW5ygg/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/ichiban-and-chang-s-garden-albany-2?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 126,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        },
+        {
+          "alias": "japanese",
+          "title": "Japanese"
+        },
+        {
+          "alias": "bbq",
+          "title": "Barbeque"
+        }
+      ],
+      "rating": 2.1,
+      "coordinates": {
+        "latitude": 42.6620344,
+        "longitude": -73.77677349999999
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "215 Western Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12203",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "215 Western Ave",
+          "Albany, NY 12203"
+        ]
+      },
+      "phone": "+15184320358",
+      "display_phone": "(518) 432-0358",
+      "distance": 10869.47439209737,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": true,
+              "start": "1100",
+              "end": "0200",
+              "day": 0
+            },
+            {
+              "is_overnight": true,
+              "start": "1100",
+              "end": "0200",
+              "day": 1
+            },
+            {
+              "is_overnight": true,
+              "start": "1100",
+              "end": "0200",
+              "day": 2
+            },
+            {
+              "is_overnight": true,
+              "start": "1100",
+              "end": "0200",
+              "day": 3
+            },
+            {
+              "is_overnight": true,
+              "start": "1100",
+              "end": "0300",
+              "day": 4
+            },
+            {
+              "is_overnight": true,
+              "start": "1130",
+              "end": "0300",
+              "day": 5
+            },
+            {
+              "is_overnight": true,
+              "start": "1130",
+              "end": "0200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "http://www.ichibancentral.com/menu",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "eJcv_Lz4wF30rOaqjlOlUA",
+      "alias": "empire-wok-delmar",
+      "name": "Empire Wok",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/7jLwq_LWxpFtkYpt_I019w/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/empire-wok-delmar?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 34,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        },
+        {
+          "alias": "seafood",
+          "title": "Seafood"
+        },
+        {
+          "alias": "chickenshop",
+          "title": "Chicken Shop"
+        }
+      ],
+      "rating": 3.4,
+      "coordinates": {
+        "latitude": 42.62999,
+        "longitude": -73.81098
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "159 Delaware Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Delmar",
+        "zip_code": "12054",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "159 Delaware Ave",
+          "Delmar, NY 12054"
+        ]
+      },
+      "phone": "+15184789299",
+      "display_phone": "(518) 478-9299",
+      "distance": 15419.929177578699,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2230",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "htEd6QxPnitm5Oy3c8wMeg",
+      "alias": "xing-long-albany",
+      "name": "Xing Long",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Vn2ey1wOpr-jqrKvyiWpiA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/xing-long-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 21,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3.2,
+      "coordinates": {
+        "latitude": 42.66516,
+        "longitude": -73.79057
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$$",
+      "location": {
+        "address1": "1066 Madison Ave",
+        "address2": null,
+        "address3": null,
+        "city": "Albany",
+        "zip_code": "12208",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "1066 Madison Ave",
+          "Albany, NY 12208"
+        ]
+      },
+      "phone": "+15184388881",
+      "display_phone": "(518) 438-8881",
+      "distance": 11469.282231291094,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2130",
+              "day": 5
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": "https://xinglongtogo.com/menu/",
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "F83RRF48oJGCfGY0iM_ssQ",
+      "alias": "mings-garden-rensselaer",
+      "name": "Ming's Garden",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/pYf9m9UfeyFuL--rV0NJng/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/mings-garden-rensselaer?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 27,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 1.9,
+      "coordinates": {
+        "latitude": 42.63432,
+        "longitude": -73.74657
+      },
+      "transactions": [],
+      "price": "$",
+      "location": {
+        "address1": "150 Columbia St",
+        "address2": "",
+        "address3": "",
+        "city": "Rensselaer",
+        "zip_code": "12144",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "150 Columbia St",
+          "Rensselaer, NY 12144"
+        ]
+      },
+      "phone": "+15184368440",
+      "display_phone": "(518) 436-8440",
+      "distance": 11927.299378586009,
+      "business_hours": [],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "JEasDkMTTYvhOq8FCpD_ow",
+      "alias": "east-wok-chinese-restaurant-albany",
+      "name": "East Wok Chinese Restaurant",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/E1WA4yQAzaXiFvdW2Otikw/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/east-wok-chinese-restaurant-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 31,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.5,
+      "coordinates": {
+        "latitude": 42.717404,
+        "longitude": -73.813138
+      },
+      "transactions": [
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "98 Wolf Rd",
+        "address2": "Ste 15",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12205",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "98 Wolf Rd",
+          "Ste 15",
+          "Albany, NY 12205"
+        ]
+      },
+      "phone": "+15184826782",
+      "display_phone": "(518) 482-6782",
+      "distance": 10841.72939789175,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2130",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2130",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2130",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2130",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "-UE59LgKH21TC4_MN0wO6g",
+      "alias": "rice-hut-west-sand-lake",
+      "name": "Rice Hut",
+      "image_url": "",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/rice-hut-west-sand-lake?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 0,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 0,
+      "coordinates": {
+        "latitude": 42.64602,
+        "longitude": -73.605567
+      },
+      "transactions": [],
+      "location": {
+        "address1": "43 Mall Way",
+        "address2": "",
+        "address3": null,
+        "city": "West Sand Lake",
+        "zip_code": "12196",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "43 Mall Way",
+          "West Sand Lake, NY 12196"
+        ]
+      },
+      "phone": "",
+      "display_phone": "",
+      "distance": 11180.0614208878,
+      "business_hours": [],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "SJxM87qiBwE24buCQK83Ng",
+      "alias": "lucky-garden-albany",
+      "name": "Lucky Garden",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/P-i10nuidsedkvk8UScrcA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/lucky-garden-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 16,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.9,
+      "coordinates": {
+        "latitude": 42.6846,
+        "longitude": -73.79564
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "1016 Central Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12205",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "1016 Central Ave",
+          "Albany, NY 12205"
+        ]
+      },
+      "phone": "+15184822036",
+      "display_phone": "(518) 482-2036",
+      "distance": 10615.239427875535,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1030",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "2100",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1200",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "G5Vux0sbi9im7B4EMD_fuQ",
+      "alias": "shuns-kitchen-albany",
+      "name": "Shun's Kitchen",
+      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/6FPyO7Q4BDRopXooFabrig/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/shuns-kitchen-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 45,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 1.9,
+      "coordinates": {
+        "latitude": 42.66116,
+        "longitude": -73.78218
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "853 Madison Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12208",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "853 Madison Ave",
+          "Albany, NY 12208"
+        ]
+      },
+      "phone": "+15184822222",
+      "display_phone": "(518) 482-2222",
+      "distance": 11269.698872436658,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": true,
+              "start": "1530",
+              "end": "0045",
+              "day": 1
+            },
+            {
+              "is_overnight": true,
+              "start": "1530",
+              "end": "0045",
+              "day": 2
+            },
+            {
+              "is_overnight": true,
+              "start": "1530",
+              "end": "0045",
+              "day": 3
+            },
+            {
+              "is_overnight": true,
+              "start": "1530",
+              "end": "0145",
+              "day": 4
+            },
+            {
+              "is_overnight": true,
+              "start": "1530",
+              "end": "0145",
+              "day": 5
+            },
+            {
+              "is_overnight": true,
+              "start": "1530",
+              "end": "0045",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": false
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "qFCX3FGjxJyBMzyIpn09cA",
+      "alias": "en-lai-chinese-kitchen-albany",
+      "name": "En Lai Chinese Kitchen",
+      "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/tcIuWUF3MCHtrqgovvG1TQ/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/en-lai-chinese-kitchen-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 30,
+      "categories": [
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 2.8,
+      "coordinates": {
+        "latitude": 42.681458,
+        "longitude": -73.790602
+      },
+      "transactions": [
+        "pickup",
+        "delivery"
+      ],
+      "price": "$",
+      "location": {
+        "address1": "911 Central Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Albany",
+        "zip_code": "12206",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "911 Central Ave",
+          "Albany, NY 12206"
+        ]
+      },
+      "phone": "+15184381651",
+      "display_phone": "(518) 438-1651",
+      "distance": 10433.340737715835,
+      "business_hours": [],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    },
+    {
+      "id": "5B2ukDf-kvWA7mpae2Ow2w",
+      "alias": "stir-fry-88-albany",
+      "name": "Stir Fry 88",
+      "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/KPOx393u5xGsOTe2Rc1tPA/o.jpg",
+      "is_closed": false,
+      "url": "https://www.yelp.com/biz/stir-fry-88-albany?adjust_creative=AijnFn2VqH4jZRfT3IGEjA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=AijnFn2VqH4jZRfT3IGEjA",
+      "review_count": 9,
+      "categories": [
+        {
+          "alias": "food_court",
+          "title": "Food Court"
+        },
+        {
+          "alias": "chinese",
+          "title": "Chinese"
+        }
+      ],
+      "rating": 3.1,
+      "coordinates": {
+        "latitude": 42.7107630147272,
+        "longitude": -73.8161905109882
+      },
+      "transactions": [],
+      "location": {
+        "address1": "131 Wolf Rd",
+        "address2": "",
+        "address3": null,
+        "city": "Albany",
+        "zip_code": "12205",
+        "country": "US",
+        "state": "NY",
+        "display_address": [
+          "131 Wolf Rd",
+          "Albany, NY 12205"
+        ]
+      },
+      "phone": "+15184380088",
+      "display_phone": "(518) 438-0088",
+      "distance": 11208.981171832167,
+      "business_hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1000",
+              "end": "2130",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1100",
+              "end": "1800",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "attributes": {
+        "business_temp_closed": null,
+        "menu_url": null,
+        "open24_hours": null,
+        "waitlist_reservation": null
+      }
+    }
+  ],
+  "total": 58,
+  "region": {
+    "center": {
+      "longitude": -73.68172,
+      "latitude": 42.73012
+    }
+  }
+}
