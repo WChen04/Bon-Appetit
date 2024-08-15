@@ -12,7 +12,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function getRestaurants() {
         const files = [
             "../db_files/troyQuery1.json", 
-            "../db_files/troyQuery2.json"
+            "../db_files/troyQuery2.json",
+            "../db_files/query=$$$$.json",
+            "../db_files/twenty_restaurants.json",
+            "../db_files/closest.json",
+            "../db_files/chinese&indian.json",
         ];
         
         const restaurants = [];
